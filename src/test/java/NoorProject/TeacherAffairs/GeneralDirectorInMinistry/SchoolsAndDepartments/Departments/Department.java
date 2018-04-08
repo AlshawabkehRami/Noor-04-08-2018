@@ -33,7 +33,7 @@ public class Department {
     @Test
     public void AddModeratorUser() throws InterruptedException {
 
-        for ( int i=0;i<5;i++) {
+       // for ( int i=0;i<5;i++) {
             WebElement SchooleAndDeptsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SchooleAndDeptsMainMenuLocator));
             SchooleAndDeptsMainMenuLocatorWait.click();
 
@@ -53,7 +53,7 @@ public class Department {
             waitQA.until(ExpectedConditions.visibilityOfElementLocated(check_box_management_Locator)).click();
             waitQA.until(ExpectedConditions.visibilityOfElementLocated(check_box_office_Locator)).click();
             waitQA.until(ExpectedConditions.visibilityOfElementLocated(btn_add_Locator)).click();
-        }
+        //}
     }
 }
 

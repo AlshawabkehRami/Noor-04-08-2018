@@ -13,8 +13,15 @@
                     <include name="DirectorGeneralofTeachersAffairsintheMinistry"/>
                 </methods>
             </class>
-            <class name="NoorProject.TeacherAffairs.GeneralDirectorInMinistry.UsersList.DepartmentManagersInTheMinistry.DirectorOfDepartmentsInTheMinistry"/>
+            <class name="NoorProject.TeacherAffairs.GeneralDirectorInMinistry.UsersList.DepartmentManagersInTheMinistry.DirectorOfDepartmentsInTheMinistry">
+                <methods>
+                    <include name="AddDirectorOfDepartmentsInTheMinistry"/>
+                    <include name="AddedPart2"/>
+                </methods>
+            </class>
+<!--
             <class name="NoorProject.Other.NoorLogOut"/>
+-->
         </classes>
     </test>
 </suite>

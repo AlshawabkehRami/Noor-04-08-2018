@@ -4,6 +4,7 @@
 
 package NoorProject.TeacherAffairs.GeneralDirectorInMinistry.UsersList.DepartmentManagersInTheMinistry;
 
+import NoorProject.Other.NoorLogin;
 import NoorProject.TeacherAffairs.GeneralDirectorInMinistry.SchoolsAndDepartments.Departments.Department;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -266,14 +267,14 @@ public class DirectorOfDepartmentsInTheMinistry {
         By DDLCurrentWorkSerachLocator = By.xpath("/html/body/span/span/span[1]/input");
 
         WebElement DDlJobTitleLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDlJobTitleLocator));
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         DDlJobTitleLocatorWait.click();
         browserQA.findElement(DDlJobTitleSerachLocator).sendKeys("مدير القسم في الوزارة" , Keys.ENTER);
 
 
         WebElement DDLCurrentWorkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLCurrentWorkLocator));
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         DDLCurrentWorkLocatorWait.click();
         browserQA.findElement(DDLCurrentWorkSerachLocator).sendKeys("مدير القسم في الوزارة" , Keys.ENTER);
@@ -286,11 +287,27 @@ public class DirectorOfDepartmentsInTheMinistry {
             browserQA.findElement(CBTeacherDepartmentLocator).click();
             browserQA.findElement(btnSaveLocator).click();
         } else {
+            // اغلاق المتصفح القديم
+            browserQA.close();
+            // فتح متصفح جديد لاضافة الاقسام والفئات التشكيلية
+            NoorLogin LoginAgain = new NoorLogin();
+            LoginAgain.DirectorGeneralofTeachersAffairsintheMinistry();
+            //اضافة الفئات التشكيلية
+            Department AddNewDept = new Department();
+            AddNewDept.AddModeratorUser();
+            browserQA.close();
+            // العودة مرة اخرى للمتصفح لاستكمال عملية اضافة المستخدم
+            NoorLogin LoginTaecherAffiar = new NoorLogin();
+            LoginTaecherAffiar.DirectorGeneralofTeachersAffairsintheMinistry();
 
+            DirectorOfDepartmentsInTheMinistry AddPart1 = new DirectorOfDepartmentsInTheMinistry();
+            AddPart1.AddDirectorOfDepartmentsInTheMinistry();
+            DirectorOfDepartmentsInTheMinistry AddPart2 = new DirectorOfDepartmentsInTheMinistry();
+            AddPart2.AddedPart2();
 
-            Assert.fail("يجب اضافة اقسام للفئات التشكيلية");
         }
         browserQA.close();
+
     }
 
 
