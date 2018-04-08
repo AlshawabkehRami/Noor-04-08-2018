@@ -210,7 +210,7 @@ public class AllReports {
         }
 
         WebElement ddlFormNameSearchLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLFormNameSearchLoactorIR));
-        ddlFormNameSearchLoactorWait.sendKeys("Rami0550814558" , Keys.ENTER);
+        ddlFormNameSearchLoactorWait.sendKeys("abdullah" , Keys.ENTER);
 
         try {
             WebElement btnSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNSearchLocatorIR));
@@ -269,7 +269,7 @@ public class AllReports {
             FormNameLoactorWait.click();
         }
 
-        browserQA.findElement(FormNameSearchLoactorAR).sendKeys("Rami0550814558" , Keys.ENTER);
+        browserQA.findElement(FormNameSearchLoactorAR).sendKeys("abdullah" , Keys.ENTER);
 
         try {
             WebElement ibtnSearchLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNSearchLoactorAR));
