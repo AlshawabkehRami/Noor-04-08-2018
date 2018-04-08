@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+  ~ Created By Rami AlShawabkeh  4/5/18 3:53 PM
+  -->
+
+<!--
+  ~ Created By Rami AlShawabkeh  4/5/18 2:42 PM
+  -->
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="مسؤول الامن والسلامة قي المدرسة">
+
+    <test name="اضافة المستخدمين">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Users.TheUsers">
+                <methods>
+                    <include name="loginAndSwitchPrfileUsers"/>
+                    <include name="addGeneralDirectorOfSchoolSecurityAndSafetyOfficer"/>
+                    <include name="addSchoolSecurityAndSafetyOfficer"/>
+                </methods>
+            </class>
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+
+    </test>
+
+
+</suite>

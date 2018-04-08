@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!--
-  ~ Created By Rami AlShawabkeh 4/1/18 3:31 PM
+  ~ Created By Rami AlShawabkeh  4/5/18 2:42 PM
   -->
-
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
@@ -26,6 +25,7 @@
                     <include name="deleteVisitsTypes"/>
                 </methods>
             </class>
+            <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
 
     </test>
