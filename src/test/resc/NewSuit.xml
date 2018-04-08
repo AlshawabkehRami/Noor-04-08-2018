@@ -12,15 +12,16 @@
 
 
     <suite-files>
-        <suite-file path="QA/SafetyAndSecurity/A1GeneralDirectorOfSchoolSecurityAndSafety/AllReports/Reports.xml"/>
-        <suite-file path="QA/SafetyAndSecurity/A1GeneralDirectorOfSchoolSecurityAndSafety/Forms/ExternalItems.xml"/>
-        <suite-file path="QA/SafetyAndSecurity/A1GeneralDirectorOfSchoolSecurityAndSafety/Forms/FormSections.xml"/>
-        <suite-file path="QA/SafetyAndSecurity/A1GeneralDirectorOfSchoolSecurityAndSafety/Setting/TypesOfVisits.xml"/>
-        <suite-file path="QA/SafetyAndSecurity/A1GeneralDirectorOfSchoolSecurityAndSafety/SafetyForms/SafetyForms.xml"/>
-        <suite-file path="QA/SafetyAndSecurity/A1GeneralDirectorOfSchoolSecurityAndSafety/Users/UsersMenu.xml"/>
-        <suite-file path="QA/SafetyAndSecurity/A1GeneralDirectorOfSchoolSecurityAndSafety/Forms/InternalItems.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/A1GeneralDirectorOfSchoolSecurityAndSafety/Reports.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/A1GeneralDirectorOfSchoolSecurityAndSafety/ExternalItems.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/A1GeneralDirectorOfSchoolSecurityAndSafety/FormSections.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/A1GeneralDirectorOfSchoolSecurityAndSafety/TypesOfVisits.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/A1GeneralDirectorOfSchoolSecurityAndSafety/SafetyForms.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/A1GeneralDirectorOfSchoolSecurityAndSafety/UsersMenu.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/A1GeneralDirectorOfSchoolSecurityAndSafety/InternalItems.xml"/>
         <suite-file path="QA/SafetyAndSecurity/SchoolAdmin/TheReportSA.xml"/>
         <suite-file path="QA/SafetyAndSecurity/A2SSOfficerInMinstry/TheReport.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/A2SSOfficerInMinstry/ExternalItems.xml"/>
 
 
     </suite-files>

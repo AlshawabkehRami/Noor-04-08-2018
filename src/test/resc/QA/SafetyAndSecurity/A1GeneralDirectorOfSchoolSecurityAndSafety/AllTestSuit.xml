@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!--
+  ~ Created By  Rami AlShawabkeh  4/8/18 3:35 PM
+  -->
+
+
+<!--
+  ~ Created By Rami AlShawabkeh  4/5/18 11:49 AM
+  -->
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="جميع حالات الاختبار لمدير عام الامن والسلامة المدرسية">
+
+
+    <suite-files>
+      <suite-file path="ExternalItems.xml"/>
+        <suite-file path="FormSections.xml"/>
+        <suite-file path="InternalItems.xml"/>
+        <suite-file path="Reports.xml"/>
+        <suite-file path="SafetyForms.xml"/>
+        <suite-file path="TypesOfVisits.xml"/>
+        <suite-file path="UsersMenu.xml"/>
+    </suite-files>
+
+
+</suite>

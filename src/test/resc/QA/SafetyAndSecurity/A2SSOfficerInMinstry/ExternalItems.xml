@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+  ~ Created By  Rami AlShawabkeh  4/8/18 3:10 PM
+  -->
+
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="نماذج الامن والسلامة\موظف الامن والسلامةِ/البنود الخارجية">
+
+    <test name="/البنود الخارجية/نماذج الامن والسلامة\موظف الامن والسلامةِ">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SchoolSecurityandSafetyOfficer"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.A2SSOfficerInMinstry.TheReports.Forms.ExternalItems.ExternalItems">
+                <methods>
+                    <include name="LoginUserAndSwitchProfileAdminEX"/>
+                    <include name="addExternalItems"/>
+                    <include name="viewExternalItems"/>
+                    <include name="editExternalItems"/>
+                    <include name="deleteExternalItems"/>
+                </methods>
+            </class>
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+
+    </test>
+
+</suite>
