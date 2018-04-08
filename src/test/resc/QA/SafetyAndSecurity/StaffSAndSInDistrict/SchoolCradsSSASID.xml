@@ -16,7 +16,7 @@
                     <include name="StaffSAndSInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.StaffSAndSInDistrict.Cards.SchoolCards"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSStaffInDistrict.Cards.SchoolCards"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
 

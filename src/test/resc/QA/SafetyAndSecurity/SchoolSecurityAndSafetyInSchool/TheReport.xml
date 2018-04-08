@@ -19,7 +19,7 @@
                     <include name="SchoolSecurityAndSafetyInSchoolQA"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SchoolSecurityAndSafetyInSchool.TheReport.SchoolCardInformation"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSInTheSchools.TheReport.SchoolCardInformation"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
 
@@ -33,7 +33,7 @@
                     <include name="SchoolSecurityAndSafetyInSchoolQA"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SchoolSecurityAndSafetyInSchool.TheReport.SchoolData"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSInTheSchools.TheReport.SchoolData"/>
             <class name="NoorProject.Other.NoorLogOut"/>
 
         </classes>
@@ -47,7 +47,7 @@
                     <include name="SchoolSecurityAndSafetyInSchoolQA"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SchoolSecurityAndSafetyInSchool.TheReport.UserDataInSchools"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSInTheSchools.TheReport.UserDataInSchools"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
 

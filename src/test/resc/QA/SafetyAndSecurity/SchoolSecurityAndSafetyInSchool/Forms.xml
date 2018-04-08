@@ -20,7 +20,7 @@
                     <include name="SchoolSecurityAndSafetyInSchoolQA"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SchoolSecurityAndSafetyInSchool.Forms.SafteyForms"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSInTheSchools.Forms.SafteyForms"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
 

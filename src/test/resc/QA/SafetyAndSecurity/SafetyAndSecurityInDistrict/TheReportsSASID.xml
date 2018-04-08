@@ -17,7 +17,7 @@
                     <include name="SecurityAndSafetyManagersInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.BuildingAndMaintenanceReports.BuildingData"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSMangerInDistrict.ReportsMenu.BuildingAndMaintenanceReports.BuildingData"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
@@ -30,7 +30,7 @@
                     <include name="SecurityAndSafetyManagersInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.BuildingAndMaintenanceReports.DistributeStudentsToClasses"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSMangerInDistrict.ReportsMenu.BuildingAndMaintenanceReports.DistributeStudentsToClasses"/>
             <class name="NoorProject.Other.NoorLogOut"/>
 
         </classes>
@@ -42,7 +42,7 @@
                     <include name="SecurityAndSafetyManagersInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.StatisticalReports.NumberOfStudentsWhoOwnTheSchoolBuilding"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSMangerInDistrict.ReportsMenu.StatisticalReports.NumberOfStudentsWhoOwnTheSchoolBuilding"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
@@ -53,7 +53,7 @@
                     <include name="SecurityAndSafetyManagersInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.StatisticalReports.StatisticalAssessmentOfSafetyAndSecurityCompilation"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSMangerInDistrict.ReportsMenu.StatisticalReports.StatisticalAssessmentOfSafetyAndSecurityCompilation"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
@@ -64,7 +64,7 @@
                     <include name="SecurityAndSafetyManagersInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.StatisticalReports.StatisticalAssessmentOfSafetyAndSecurityDetailed"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSMangerInDistrict.ReportsMenu.StatisticalReports.StatisticalAssessmentOfSafetyAndSecurityDetailed"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
@@ -75,7 +75,7 @@
                     <include name="SecurityAndSafetyManagersInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.SchoolSecurityAndSafetyReports.DataSecurityAndSafetyOfficialsInSchools"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSMangerInDistrict.ReportsMenu.SchoolSecurityAndSafetyReports.DataSecurityAndSafetyOfficialsInSchools"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
@@ -86,7 +86,7 @@
                     <include name="SecurityAndSafetyManagersInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.SchoolSecurityAndSafetyReports.SecurityAndSafetyAssessmentRate"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSMangerInDistrict.ReportsMenu.SchoolSecurityAndSafetyReports.SecurityAndSafetyAssessmentRate"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
@@ -97,7 +97,7 @@
                     <include name="SecurityAndSafetyManagersInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.SchoolSecurityAndSafetyReports.SecurityAndSafetyInputRatio"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSMangerInDistrict.ReportsMenu.SchoolSecurityAndSafetyReports.SecurityAndSafetyInputRatio"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
@@ -108,7 +108,7 @@
                     <include name="SecurityAndSafetyManagersInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.Schools.SchoolsThatHaveCompletedTheFormAndHaveNotBeenApprovedByTheSchoolLeader"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSMangerInDistrict.ReportsMenu.Schools.SchoolsThatHaveCompletedTheFormAndHaveNotBeenApprovedByTheSchoolLeader"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
@@ -119,7 +119,7 @@
                     <include name="SecurityAndSafetyManagersInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.Schools.SchoolsThatHaveNotCompletedTheForm"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSMangerInDistrict.ReportsMenu.Schools.SchoolsThatHaveNotCompletedTheForm"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
@@ -130,7 +130,7 @@
                     <include name="SecurityAndSafetyManagersInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.Schools.SchoolData"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSMangerInDistrict.ReportsMenu.Schools.SchoolData"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
@@ -141,7 +141,7 @@
                     <include name="SecurityAndSafetyManagersInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.Schools.SchoolDataWithEducationalStages"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSMangerInDistrict.ReportsMenu.Schools.SchoolDataWithEducationalStages"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
@@ -153,7 +153,7 @@
                     <include name="SecurityAndSafetyManagersInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.SchoolSecurityAndSafetyReports.UserDataInSchools"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSMangerInDistrict.ReportsMenu.SchoolSecurityAndSafetyReports.UserDataInSchools"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
 

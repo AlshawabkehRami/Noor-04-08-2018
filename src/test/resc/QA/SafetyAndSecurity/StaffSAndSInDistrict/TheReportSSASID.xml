@@ -11,7 +11,7 @@
                     <include name="StaffSAndSInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.StaffSAndSInDistrict.TheReport.BuildingAndMaintenanceReports.BuildingDataStaff"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSStaffInDistrict.TheReport.BuildingAndMaintenanceReports.BuildingDataStaff"/>
             <class name="NoorProject.Other.NoorLogOut"/>
 
         </classes>
@@ -25,7 +25,7 @@
                     <include name="StaffSAndSInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.StaffSAndSInDistrict.TheReport.Schools.SchoolDataWithEducationalStagesStaff"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSStaffInDistrict.TheReport.Schools.SchoolDataWithEducationalStagesStaff"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
 
@@ -38,7 +38,7 @@
                     <include name="StaffSAndSInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.StaffSAndSInDistrict.TheReport.Schools.SchoolsThatHaveCompletedTheFormAndHaveNotBeenApprovedByTheSchoolLeaderStaff"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSStaffInDistrict.TheReport.Schools.SchoolsThatHaveCompletedTheFormAndHaveNotBeenApprovedByTheSchoolLeaderStaff"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
 
@@ -50,7 +50,7 @@
                     <include name="StaffSAndSInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.StaffSAndSInDistrict.TheReport.Schools.SchoolsThatHaveNotCompletedTheFormStaff"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSStaffInDistrict.TheReport.Schools.SchoolsThatHaveNotCompletedTheFormStaff"/>
             <class name="NoorProject.Other.NoorLogOut"/>
 
         </classes>
@@ -63,7 +63,7 @@
                     <include name="StaffSAndSInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.StaffSAndSInDistrict.TheReport.SchoolSecurityAndSafetyReports.SecurityAndSafetyAssessmentRateStaff"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSStaffInDistrict.TheReport.SchoolSecurityAndSafetyReports.SecurityAndSafetyAssessmentRateStaff"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
 
@@ -75,7 +75,7 @@
                     <include name="StaffSAndSInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.StaffSAndSInDistrict.TheReport.SchoolSecurityAndSafetyReports.SecurityAndSafetyInputRatioStaff"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSStaffInDistrict.TheReport.SchoolSecurityAndSafetyReports.SecurityAndSafetyInputRatioStaff"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
 
@@ -87,7 +87,7 @@
                     <include name="StaffSAndSInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.StaffSAndSInDistrict.TheReport.SchoolSecurityAndSafetyReports.UserDataInSchoolsStaff"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSStaffInDistrict.TheReport.SchoolSecurityAndSafetyReports.UserDataInSchoolsStaff"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
 
@@ -99,7 +99,7 @@
                     <include name="StaffSAndSInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.StaffSAndSInDistrict.TheReport.SchoolSecurityAndSafetyReports.SchoolCardInformation"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSStaffInDistrict.TheReport.SchoolSecurityAndSafetyReports.SchoolCardInformation"/>
             <class name="NoorProject.Other.NoorLogOut"/>
 
         </classes>
@@ -112,7 +112,7 @@
                     <include name="StaffSAndSInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.StaffSAndSInDistrict.TheReport.StatisticalReports.NumberOfStudentsWhoOwnTheSchoolBuildingStaff"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSStaffInDistrict.TheReport.StatisticalReports.NumberOfStudentsWhoOwnTheSchoolBuildingStaff"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
 

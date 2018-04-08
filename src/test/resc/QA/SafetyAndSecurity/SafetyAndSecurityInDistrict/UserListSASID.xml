@@ -16,7 +16,7 @@
                     <include name="SecurityAndSafetyManagersInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.UsersMenu.PrivilegeUser.UserAuthorityEmployee"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSMangerInDistrict.UsersMenu.PrivilegeUser.UserAuthorityEmployee"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
@@ -27,7 +27,7 @@
                     <include name="SecurityAndSafetyManagersInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.UsersMenu.EmployeesInTheSecurityAndSafetyDepartment.StaffMember"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SSMangerInDistrict.UsersMenu.EmployeesInTheSecurityAndSafetyDepartment.StaffMember"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
