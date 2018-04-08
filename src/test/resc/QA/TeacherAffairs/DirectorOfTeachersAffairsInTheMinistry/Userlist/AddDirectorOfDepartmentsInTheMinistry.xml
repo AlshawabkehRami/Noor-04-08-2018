@@ -13,6 +13,7 @@
                     <include name="DirectorGeneralofTeachersAffairsintheMinistry"/>
                 </methods>
             </class>
+            <class name="NoorProject.TeacherAffairs.GeneralDirectorInMinistry.SchoolsAndDepartments.Departments.Department"/>
             <class name="NoorProject.TeacherAffairs.GeneralDirectorInMinistry.UsersList.DepartmentManagersInTheMinistry.DirectorOfDepartmentsInTheMinistry">
                 <methods>
                     <include name="AddDirectorOfDepartmentsInTheMinistry"/>

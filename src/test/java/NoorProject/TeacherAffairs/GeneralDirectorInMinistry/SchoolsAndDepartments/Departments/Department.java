@@ -33,7 +33,7 @@ public class Department {
     @Test
     public void AddModeratorUser() throws InterruptedException {
 
-       // for ( int i=0;i<5;i++) {
+       // for ( int i=0;i<50;i++) {
             WebElement SchooleAndDeptsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SchooleAndDeptsMainMenuLocator));
             SchooleAndDeptsMainMenuLocatorWait.click();
 

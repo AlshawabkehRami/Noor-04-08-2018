@@ -287,28 +287,13 @@ public class DirectorOfDepartmentsInTheMinistry {
             browserQA.findElement(CBTeacherDepartmentLocator).click();
             browserQA.findElement(btnSaveLocator).click();
         } else {
-            // اغلاق المتصفح القديم
-            browserQA.close();
-            // فتح متصفح جديد لاضافة الاقسام والفئات التشكيلية
-            NoorLogin LoginAgain = new NoorLogin();
-            LoginAgain.DirectorGeneralofTeachersAffairsintheMinistry();
-            //اضافة الفئات التشكيلية
-            Department AddNewDept = new Department();
-            AddNewDept.AddModeratorUser();
-            browserQA.close();
-            // العودة مرة اخرى للمتصفح لاستكمال عملية اضافة المستخدم
-            NoorLogin LoginTaecherAffiar = new NoorLogin();
-            LoginTaecherAffiar.DirectorGeneralofTeachersAffairsintheMinistry();
 
-            DirectorOfDepartmentsInTheMinistry AddPart1 = new DirectorOfDepartmentsInTheMinistry();
-            AddPart1.AddDirectorOfDepartmentsInTheMinistry();
-            DirectorOfDepartmentsInTheMinistry AddPart2 = new DirectorOfDepartmentsInTheMinistry();
-            AddPart2.AddedPart2();
 
+            Assert.fail("يجب اضافة اقسام للفئات التشكيلية");
         }
         browserQA.close();
-
     }
 
 
 }
+
