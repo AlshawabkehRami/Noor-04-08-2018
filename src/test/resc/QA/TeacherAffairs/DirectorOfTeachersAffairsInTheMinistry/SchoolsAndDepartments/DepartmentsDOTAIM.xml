@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+  ~ Created By Rami Alshawabkeh  3/18/18 3:21 PM
+  -->
+
+<!--
+  ~ Created By Rami Alshawabkeh  3/18/18 3:17 PM
+  -->
+
+
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="المدراس والاقسام">
+
+    <test name="أضافةالاقسام">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="DirectorGeneralofTeachersAffairsintheMinistry"/>
+                </methods>
+            </class>
+            <class name="NoorProject.TeacherAffairs.GeneralDirectorInMinistry.SchoolsAndDepartments.Departments.Department"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+
+    </test>
+
+</suite>

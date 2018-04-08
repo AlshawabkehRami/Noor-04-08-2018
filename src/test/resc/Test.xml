@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+  ~ Created By Rami AlShawabkeh 4/1/18 3:31 PM
+  -->
+
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="مسؤول الامن والسلامة قي المدرسة">
+
+    <test name="أنواع الزيارات/اضافة/تعديل\حذف">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.Settings.VisitsTypes">
+                <methods>
+                    <include name="switchProfileUserAdmin"/>
+                    <include name="addVisitsTypes"/>
+                    <include name="editVisitsTypes"/>
+                    <include name="deleteVisitsTypes"/>
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+
+
+</suite>

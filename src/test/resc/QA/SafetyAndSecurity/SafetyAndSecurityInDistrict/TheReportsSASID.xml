@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+  ~ Created By Rami Alshawabkeh  3/19/18 4:03 PM
+  -->
+
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="التقارير">
+
+    <test name="بيانات المباني/مدير الامن والسلامة بادارة التعليم">
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SecurityAndSafetyManagersInDistrictLogin"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.BuildingAndMaintenanceReports.BuildingData"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+    </test>
+
+
+    <test name="توزيع الطلاب على الفصول/مدير الامن والسلامة بادارة التعليم">
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SecurityAndSafetyManagersInDistrictLogin"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.BuildingAndMaintenanceReports.DistributeStudentsToClasses"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+
+        </classes>
+    </test>
+    <test name="عدد الطلاب مع ملكية مبنى المدرسة/مدير الامن والسلامة بادارة التعليم">
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SecurityAndSafetyManagersInDistrictLogin"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.StatisticalReports.NumberOfStudentsWhoOwnTheSchoolBuilding"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+    </test>
+    <test name="إحصائي عن تقييم الأمن والسلامة - تجميعي/مدير الامن والسلامة بادارة التعليم">
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SecurityAndSafetyManagersInDistrictLogin"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.StatisticalReports.StatisticalAssessmentOfSafetyAndSecurityCompilation"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+    </test>
+    <test name="إحصائي عن تقييم الأمن والسلامة - تفصيلي/مدير الامن والسلامة بادارة التعليم">
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SecurityAndSafetyManagersInDistrictLogin"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.StatisticalReports.StatisticalAssessmentOfSafetyAndSecurityDetailed"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+    </test>
+    <test name="بيانات مسؤولي الامن والسلامة في المدارس/مدير الامن والسلامة بادارة التعليم">
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SecurityAndSafetyManagersInDistrictLogin"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.SchoolSecurityAndSafetyReports.DataSecurityAndSafetyOfficialsInSchools"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+    </test>
+    <test name="الأمن والسلامة - نسبة التقييم/مدير الامن والسلامة بادارة التعليم">
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SecurityAndSafetyManagersInDistrictLogin"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.SchoolSecurityAndSafetyReports.SecurityAndSafetyAssessmentRate"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+    </test>
+    <test name="الأمن والسلامة - نسبة الإدخال/مدير الامن والسلامة بادارة التعليم">
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SecurityAndSafetyManagersInDistrictLogin"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.SchoolSecurityAndSafetyReports.SecurityAndSafetyInputRatio"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+    </test>
+    <test name="المدارس التي قامت بتعبئة الاستمارة ولم يتم اعتمادها من قائد المدرسة/مدير الامن والسلامة بادارة التعليم">
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SecurityAndSafetyManagersInDistrictLogin"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.Schools.SchoolsThatHaveCompletedTheFormAndHaveNotBeenApprovedByTheSchoolLeader"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+    </test>
+    <test name="المدارس التي لم تقم بتعبئة الاستمارة/مدير الامن والسلامة بادارة التعليم">
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SecurityAndSafetyManagersInDistrictLogin"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.Schools.SchoolsThatHaveNotCompletedTheForm"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+    </test>
+    <test name="بيانات المدرسة/مدير الامن والسلامة بادارة التعليم">
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SecurityAndSafetyManagersInDistrictLogin"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.Schools.SchoolData"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+    </test>
+    <test name="بيانات المدرسة مع المراحل التعليمية/مدير الامن والسلامة بادارة التعليم">
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SecurityAndSafetyManagersInDistrictLogin"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.Schools.SchoolDataWithEducationalStages"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+    </test>
+    <test name="بيانات المستخدمين بالمدارس/مدير الامن والسلامة بادارة التعليم">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SecurityAndSafetyManagersInDistrictLogin"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.SchoolSecurityAndSafetyReports.UserDataInSchools"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+
+    </test>
+
+</suite>

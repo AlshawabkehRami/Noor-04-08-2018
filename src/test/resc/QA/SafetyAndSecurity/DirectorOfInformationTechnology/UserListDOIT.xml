@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+  ~ Created By Rami Alshawabkeh  3/18/18 4:16 PM
+  -->
+
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="  مدير تقنية المعلومات">
+
+    <test name="أضافة مدير الامن والسلامة بادارة التربية والتعليم">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="DirectorOfInformationTechnology"/>
+                </methods>
+            </class>
+            <class name="NoorProject.DirectorOfInformationTechnology.UsersMenu.SecurityAndSafetyManagersInDistrict"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+
+        </classes>
+
+    </test>
+
+</suite>

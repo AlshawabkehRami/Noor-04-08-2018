@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+  ~ Created By Rami AlShawabkeh 3/27/18 3:27 PM
+  -->
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="مدير مدرسة">
+
+    <test name="عرض بيانات المستخدمين بالمدرسة">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SchoolAdminLoginQA"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SchoolAdmin.TheReport.UserDataInSchools"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+
+        </classes>
+
+    </test>
+    <test name="بيانات المدرسة">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SchoolAdminLoginQA"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SchoolAdmin.TheReport.SchoolData"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+
+        </classes>
+
+    </test>
+    <test name="معلومات بطاقات المدارس">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SchoolAdminLoginQA"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SchoolAdmin.TheReport.SchoolCardInformation"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+
+        </classes>
+
+    </test>
+</suite>

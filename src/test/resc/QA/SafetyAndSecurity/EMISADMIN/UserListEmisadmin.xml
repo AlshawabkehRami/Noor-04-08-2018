@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+  ~ Created By Rami Alshawabkeh  3/18/18 3:53 PM
+  -->
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="مستخدمو مدير النظام">
+
+    <test name="المدراء العامون للأمن والسلامة المدرسية">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="EmisadminUser"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EMISAdmin.UsersMenu.GeneralDirectorOfSchoolSecurityAndSafety.GeneralDirectorOfSchoolSecurityAndSafetyUser"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+
+        </classes>
+
+    </test>
+
+
+</suite>
