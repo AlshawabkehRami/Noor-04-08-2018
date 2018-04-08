@@ -31,9 +31,7 @@
                     <include name="DeleteForms"/>
                 </methods>
             </class>
-<!--
             <class name="NoorProject.Other.NoorLogOut"/>
--->
 
         </classes>
     </test>
