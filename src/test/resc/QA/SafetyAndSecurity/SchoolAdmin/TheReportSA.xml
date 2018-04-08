@@ -17,38 +17,16 @@
                     <include name="SchoolAdminLoginQA"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SchoolAdmin.TheReport.UserDataInSchools"/>
-            <class name="NoorProject.Other.NoorLogOut"/>
-
-        </classes>
-
-    </test>
-    <test name="بيانات المدرسة">
-
-        <classes>
-            <class name="NoorProject.Other.NoorLogin">
+            <class name="NoorProject.EduWaveSafeAndSecurity.SchoolAdmin.TheReport.SchoolAdminReports">
                 <methods>
-                    <include name="SchoolAdminLoginQA"/>
+                    <include name="SchoolCardInformationView"/>
+                    <include name="SchoolDataReport"/>
+                    <include name="UserDataInSchoolsView"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SchoolAdmin.TheReport.SchoolData"/>
-            <class name="NoorProject.Other.NoorLogOut"/>
 
         </classes>
 
     </test>
-    <test name="معلومات بطاقات المدارس">
 
-        <classes>
-            <class name="NoorProject.Other.NoorLogin">
-                <methods>
-                    <include name="SchoolAdminLoginQA"/>
-                </methods>
-            </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SchoolAdmin.TheReport.SchoolCardInformation"/>
-            <class name="NoorProject.Other.NoorLogOut"/>
-
-        </classes>
-
-    </test>
 </suite>
