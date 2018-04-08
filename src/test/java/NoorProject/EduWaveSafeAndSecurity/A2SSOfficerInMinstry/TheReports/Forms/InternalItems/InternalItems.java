@@ -46,7 +46,6 @@ public class InternalItems {
         @Test
         public void addInternalItems() throws InterruptedException {
 
-            //  for (int i = 0; i < 20; i++) {
 
             WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
             FormMainMenuLoactorWait.click();

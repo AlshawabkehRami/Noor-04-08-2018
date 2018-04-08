@@ -2,8 +2,10 @@
 
 
 <!--
-  ~ Created By  Rami AlShawabkeh  4/8/18 3:35 PM
+  ~ Created By  Rami AlShawabkeh  4/8/18 3:47 PM
   -->
+
+
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
@@ -11,13 +13,10 @@
 
 
     <suite-files>
-      <suite-file path="ExternalItems.xml"/>
-        <suite-file path="FormSections.xml"/>
+        <suite-file path="ExternalItems.xml"/>
         <suite-file path="InternalItems.xml"/>
-        <suite-file path="Reports.xml"/>
-        <suite-file path="SafetyForms.xml"/>
-        <suite-file path="TypesOfVisits.xml"/>
-        <suite-file path="UsersMenu.xml"/>
+        <suite-file path="SectionsForm.xml"/>
+        <suite-file path="TheReport.xml"/>
     </suite-files>
 
 

@@ -64,7 +64,7 @@ public class ExternalItems {
 
         int TableSectionSizeForCheck = SectionTableList.size();
 
-        if (TableSectionSizeForCheck == 1) {
+        if (TableSectionSizeForCheck <= 1) {
 
             SectionsForms AddSection = new SectionsForms();
             AddSection.addSectionsToTheForm();

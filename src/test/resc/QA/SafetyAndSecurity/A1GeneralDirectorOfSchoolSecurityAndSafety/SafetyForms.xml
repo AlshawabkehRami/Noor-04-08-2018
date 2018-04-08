@@ -21,17 +21,19 @@
             </class>
             <class name="NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.Forms.SafetyForms">
                 <methods>
-                    <include name="LoginUserAndSwitchProfileForms"/>
+                    <include name="loginUserAndSwitchProfileForms"/>
                     <include name="addSafetyForms"/>
+                    <include name="EditUnpublishedSafetyForms"/>
                     <include name="ViewpublishedForm"/>
                     <include name="ViewUnpublishedForm"/>
                     <include name="unPublishingForm"/>
                     <include name="PublishingForm"/>
-                    <include name="EditUnpublishedSafetyForms"/>
                     <include name="DeleteForms"/>
                 </methods>
             </class>
+<!--
             <class name="NoorProject.Other.NoorLogOut"/>
+-->
 
         </classes>
     </test>
