@@ -16,20 +16,16 @@
                     <include name="SecurityAndSafetyManagersInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.A3SSMangerInDistrict.UsersMenu.PrivilegeUser.UserAuthorityEmployee"/>
-            <class name="NoorProject.Other.NoorLogOut"/>
-        </classes>
-    </test>
-    <test name="موظفون بإدارة الأمن والسلامة بإدارة التعليم">
-        <classes>
-            <class name="NoorProject.Other.NoorLogin">
+            <class name="NoorProject.EduWaveSafeAndSecurity.A3SSMangerInDistrict.TheUsers">
                 <methods>
-                    <include name="SecurityAndSafetyManagersInDistrictLogin"/>
+                    <include name="LoginUserSwitch"/>
+                    <include name="addUserAuthorityEmployee"/>
+                    <include name="addStaffMember"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.A3SSMangerInDistrict.UsersMenu.EmployeesInTheSecurityAndSafetyDepartment.StaffMember"/>
             <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
     </test>
+
 
 </suite>
