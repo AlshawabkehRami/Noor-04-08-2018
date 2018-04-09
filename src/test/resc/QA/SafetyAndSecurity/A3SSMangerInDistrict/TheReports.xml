@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+  ~ Created By Rami Alshawabkeh  3/19/18 4:03 PM
+  -->
+
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="التقارير">
+
+    <test name="مدير الامن والسلامة بادارة التعليم">
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SecurityAndSafetyManagersInDistrictLogin"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.A3SSMangerInDistrict.ReportsMenu.TheReports">
+                <methods>
+                    <include name="LoginTotheUserAndSwitchDistrict"/>
+                    <include name="buildingInformation"/>
+                    <include name="DSTC"/>
+                    <include name="statisticalAssessmentOfSafetyAndSecurityCompilationReport"/>
+                    <include name="statisticalAssessmentOfSafetyAndSecurityDetailedReport"/>
+                    <include name="numberOfStudentsWhoOwnTheSchoolBuildingReport"/>
+                    <include name="SchoolsThatHaveCompletedTheFormAndHaveNotBeenApprovedByTheSchoolLeaderReport"/>
+                    <include name="schoolsThatHaveNotCompletedTheFormReport"/>
+                    <include name="schoolDataReport"/>
+                    <include name="schoolDataWithEducationalStagesReport"/>
+                    <include name="assessmentRate"/>
+                    <include name="inputRatio"/>
+                    <include name="dataSecurityAndSafetyOfficialsInSchoolsReport"/>
+                    <include name="userDataInSchoolsReport"/>
+
+
+
+
+
+                </methods>
+            </class>
+<!--
+            <class name="NoorProject.Other.NoorLogOut"/>
+-->
+        </classes>
+    </test>
+
+</suite>
