@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!--
+  ~ Created By Rami AlShawabkeh 4/1/18 3:31 PM
+  -->
+
+
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="مسؤول الامن والسلامة قي المدرسة">
+
+    <test name="السلامة المدرسية \مسؤول الامن المدرسي بالمدرسة">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SchoolSecurityAndSafetyInSchoolQA"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.A6SSInTheSchools.Forms.SafteyForms"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+
+    </test>
+
+
+
+
+</suite>

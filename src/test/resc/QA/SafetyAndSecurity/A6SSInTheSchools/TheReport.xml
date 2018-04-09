@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+  ~ Created By Rami AlShawabkeh 4/1/18 3:31 PM
+  -->
+
+
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="مسؤول الامن والسلامة قي المدرسة">
+
+    <test name="نقرير معلومات بطاقات المدرسة">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SchoolSecurityAndSafetyInSchoolQA"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.A6SSInTheSchools.TheReport.SchoolCardInformation"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+
+    </test>
+
+    <test name="نقرير بيانات المدرسة">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SchoolSecurityAndSafetyInSchoolQA"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.A6SSInTheSchools.TheReport.SchoolData"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+
+        </classes>
+
+    </test>
+    <test name="نقرير بيانات المستخدمين بالمدارس ">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SchoolSecurityAndSafetyInSchoolQA"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.A6SSInTheSchools.TheReport.UserDataInSchools"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+
+    </test>
+
+
+</suite>
