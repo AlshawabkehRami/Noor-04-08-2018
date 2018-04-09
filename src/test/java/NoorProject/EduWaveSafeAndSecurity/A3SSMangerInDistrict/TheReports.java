@@ -1,8 +1,12 @@
 /*
+ * Created By  Rami AlShawabkeh  4/9/18 5:22 PM
+ */
+
+/*
  * Created By  Rami AlShawabkeh  4/9/18 4:16 PM
  */
 
-package NoorProject.EduWaveSafeAndSecurity.A3SSMangerInDistrict.ReportsMenu;
+package NoorProject.EduWaveSafeAndSecurity.A3SSMangerInDistrict;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -21,30 +25,20 @@ public class TheReports {
     private By ReportsMainMenuLocator = By.id("divMenuItem_304");
     private By SerachLinkReportLocator = By.id("lisearch_list");
     private By SerachTextReportLocator = By.id("myInput");
-    private By SearchButtonLOcator= By.id("ctl00_PlaceHolderMain_ibtnSearch");
-
-
-
+    private By SearchButtonLOcator = By.id("ctl00_PlaceHolderMain_ibtnSearch");
+    private By DDLSearchSendOptionTxtLoactor = By.xpath("/html/body/span/span/span[1]/input");
 
 
     @Test
-
     public void LoginTotheUserAndSwitchDistrict() {
-
         WebElement SwitchProfileLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SwitchProfileLocator));
         SwitchProfileLocatorWait.click();
-
         WebElement UserNameLabelLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UserNameLabelLocator));
         UserNameLabelLocatorWait.click();
-
     }
 
-
-    private By ReportNameLoactorBI = By.linkText("بيانات المباني");
-
-
-    //التقارير_تقارير المباني والصيانة
     //بيانات المباني
+    private By ReportNameLoactorBI = By.linkText("بيانات المباني");
     @Test
     public void buildingInformation() {
 
@@ -71,13 +65,7 @@ public class TheReports {
 
     private By ReportLinkLocatorDSTC = By.linkText("توزيع الطلاب على الفصول");
     private By ddlStudylevelLocatorDSTC = By.id("select2-ctl00_PlaceHolderMain_ddlStudylevel-container");
-    private By ddlStudylevelSearchLocatorDSTC = By.xpath("/html/body/span/span/span[1]/input");
     private By ddlSchoolCategorizationLocatorDSTC = By.id("select2-ctl00_PlaceHolderMain_ddlSchoolCategorization-container");
-    private By ddlSchoolCategorizationSearchLocatorDSTC = By.xpath("/html/body/span/span/span[1]/input");
-
-
-    //التقارير_تقارير المباني والصيانة
-    //
     //توزيع الطلاب على الفصول
     @Test
     public void DSTC() {
@@ -95,16 +83,16 @@ public class TheReports {
 
         WebElement ddlStudylevelLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlStudylevelLocatorDSTC));
         ddlStudylevelLocatorWait.click();
-        browserQA.findElement(ddlStudylevelSearchLocatorDSTC).sendKeys("المرحلة الثانوية" , Keys.ENTER);
+        browserQA.findElement(DDLSearchSendOptionTxtLoactor).sendKeys("المرحلة الثانوية" , Keys.ENTER);
 
         try {
             WebElement ddlSchoolCategorizationLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlSchoolCategorizationLocatorDSTC));
             ddlSchoolCategorizationLocatorWait.click();
-            browserQA.findElement(ddlSchoolCategorizationSearchLocatorDSTC).sendKeys("حكومي" , Keys.ENTER);
+            browserQA.findElement(DDLSearchSendOptionTxtLoactor).sendKeys("حكومي" , Keys.ENTER);
         } catch (Exception e) {
             WebElement ddlSchoolCategorizationLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlSchoolCategorizationLocatorDSTC));
             ddlSchoolCategorizationLocatorWait.click();
-            browserQA.findElement(ddlSchoolCategorizationSearchLocatorDSTC).sendKeys("حكومي" , Keys.ENTER);
+            browserQA.findElement(DDLSearchSendOptionTxtLoactor).sendKeys("حكومي" , Keys.ENTER);
         }
 
         try {
@@ -126,9 +114,7 @@ public class TheReports {
 
     private By TheReportNameLocatorSC = By.linkText("إحصائي عن تقييم الأمن والسلامة - تجميعي");
     private By drop_down_l_LocatorSC = By.id("select2-ctl00_PlaceHolderMain_ddlSupervisionCenter-container");
-    private By txt_field_1_LocatorSC = By.xpath("/html/body/span/span/span[1]/input");
     private By drop_down_2_LocatorSC = By.id("select2-ctl00_PlaceHolderMain_ddlFormName-container");
-    private By txt_field_2_LocatorSC = By.xpath("/html/body/span/span/span[1]/input");
 
     //
 //إحصائي عن تقييم الأمن والسلامة - تجميعي
@@ -146,12 +132,12 @@ public class TheReports {
         statistical_assessment_of_safety_and_security_aggregate_link_wait.click();
         WebElement drop_down_1_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(drop_down_l_LocatorSC));
         drop_down_1_Locator_wait.click();
-        WebElement txt_field_1_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(txt_field_1_LocatorSC));
+        WebElement txt_field_1_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLSearchSendOptionTxtLoactor));
         txt_field_1_Locator_wait.sendKeys("مكتب الخالدية الشمالية" , Keys.ENTER);
         Thread.sleep(300);
         WebElement drop_down_2_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(drop_down_2_LocatorSC));
         drop_down_2_Locator_wait.click();
-        WebElement txt_field_2_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(txt_field_2_LocatorSC));
+        WebElement txt_field_2_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLSearchSendOptionTxtLoactor));
         txt_field_2_Locator_wait.sendKeys("Selenium Form Dont Delete" , Keys.ENTER);
 
         try {
@@ -172,9 +158,7 @@ public class TheReports {
 
     private By TheReportNameLocatorSD = By.linkText("إحصائي عن تقييم الأمن والسلامة - تفصيلي");
     private By SupervisionCenterLocatorSD = By.xpath("//*[@id=\"select2-ctl00_PlaceHolderMain_ddlSupervisionCenter-container\"]");
-    private By SearchSupervisionCenterLocatorSD = By.xpath("/html/body/span/span/span[1]/input");
     private By FormNameLocatorSD = By.id("select2-ctl00_PlaceHolderMain_ddlFormName-container");
-    private By FormNameSearchLocatorSD = By.xpath("/html/body/span/span/span[1]/input");
 
     //
 //إحصائي عن تقييم الأمن والسلامة - تفصيلي
@@ -196,7 +180,7 @@ public class TheReports {
         WebElement SupervisionCenterLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SupervisionCenterLocatorSD));
         SupervisionCenterLocatorWait.click();
 
-        WebElement SearchSupervisionCenterLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchSupervisionCenterLocatorSD));
+        WebElement SearchSupervisionCenterLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLSearchSendOptionTxtLoactor));
         SearchSupervisionCenterLocatorWait.sendKeys("مكتب الخالدية الشمالية" , Keys.ENTER);
 
         Thread.sleep(300);
@@ -204,7 +188,7 @@ public class TheReports {
         WebElement FormNameLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormNameLocatorSD));
         FormNameLocatorWait.click();
 
-        WebElement FormNameSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormNameSearchLocatorSD));
+        WebElement FormNameSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLSearchSendOptionTxtLoactor));
         FormNameSearchLocatorWait.sendKeys("Selenium Form Dont Delete" , Keys.ENTER);
 
         Thread.sleep(300);
@@ -228,7 +212,6 @@ public class TheReports {
 
     private By TheReportNameLocatorNSSB = By.linkText("عدد الطلاب مع ملكية مبنى المدرسة");
     private By Drop_down_list_LocatorNSSB = By.id("select2-ctl00_PlaceHolderMain_ddlSupervisionCenter-container");
-    private By Txt_fieldNSSB = By.xpath("/html/body/span/span/span[1]/input");
 
     //
 //عدد الطلاب مع ملكية مبنى المدرسة
@@ -245,7 +228,7 @@ public class TheReports {
         NumberOfStudentsWhoOwnTheSchoolBuilding_link_wait.click();
         WebElement drop_down_list_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(Drop_down_list_LocatorNSSB));
         drop_down_list_Locator_wait.click();
-        WebElement txt_field_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(Txt_fieldNSSB));
+        WebElement txt_field_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLSearchSendOptionTxtLoactor));
         txt_field_wait.sendKeys("مكتب الخالدية الشمالية" , Keys.ENTER);
 
         try {
@@ -265,7 +248,6 @@ public class TheReports {
 
     private By TheReportNameLocatorAI = By.linkText("المدارس التي قامت بتعبئة الاستمارة ولم يتم اعتمادها من مدير المدرسة");
     private By drop_down_list_LocatorAI = By.id("select2-ctl00_PlaceHolderMain_ddlFormName-container");
-    private By txt_field_LocatorAI = By.xpath("/html/body/span/span/span[1]/input");
 
     //
 //المدارس التي قامت بتعبئة الاستمارة ولم يتم اعتمادها من قائد المدرسة
@@ -282,7 +264,7 @@ public class TheReports {
         SchoolsThatHaveCompletedTheFormAndHaveNotBeenApprovedByTheSchoolLeader_link_Locator_wait.click();
         WebElement drop_down_list_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(drop_down_list_LocatorAI));
         drop_down_list_Locator_wait.click();
-        WebElement txt_field_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(txt_field_LocatorAI));
+        WebElement txt_field_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLSearchSendOptionTxtLoactor));
         txt_field_Locator_wait.sendKeys("Form12" , Keys.ENTER);
         Thread.sleep(300);
         WebElement btn_search_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchButtonLOcator));
@@ -300,7 +282,6 @@ public class TheReports {
 
     private By TheReportNameLocatorSHCF = By.linkText("المدارس التي لم تقم بتعبئة الاستمارة");
     private By drop_down_list_LocatorSHCF = By.id("select2-ctl00_PlaceHolderMain_ddlFormName-container");
-    private By txt_field_LocatorSHCF = By.xpath("/html/body/span/span/span[1]/input");
 
 
     @Test
@@ -316,7 +297,7 @@ public class TheReports {
         SchoolsThatHaveNotCompletedTheForm_Locator_wait.click();
         WebElement drop_down_list_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(drop_down_list_LocatorSHCF));
         drop_down_list_Locator_wait.click();
-        WebElement txt_field_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(txt_field_LocatorSHCF));
+        WebElement txt_field_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLSearchSendOptionTxtLoactor));
         txt_field_Locator_wait.sendKeys("Selenium Form Dont Delete" , Keys.ENTER);
         Thread.sleep(300);
         WebElement btn_search_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchButtonLOcator));
@@ -331,7 +312,6 @@ public class TheReports {
 
     private By school_data_LocatorSDD = By.linkText("بيانات المدرسة");
     private By drop_down_list_LocatorSDD = By.id("select2-ctl00_PlaceHolderMain_ddlSupervisionCenter-container");
-    private By txt_field_LocatorSDD = By.xpath("/html/body/span/span/span[1]/input");
 
     //
 //بيانات المدرسة
@@ -348,7 +328,7 @@ public class TheReports {
         school_data_Locator_wait.click();
         WebElement drop_down_list_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(drop_down_list_LocatorSDD));
         drop_down_list_Locator_wait.click();
-        WebElement txt_field_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(txt_field_LocatorSDD));
+        WebElement txt_field_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLSearchSendOptionTxtLoactor));
         txt_field_Locator_wait.sendKeys("مكتب الخالدية الشمالية" , Keys.ENTER);
         Thread.sleep(300);
         WebElement btn_search_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchButtonLOcator));
@@ -362,10 +342,8 @@ public class TheReports {
     }
 
 
-
     private By TheReportNameLocatorSDES = By.linkText("بيانات المدرسة مع المراحل التعليمية");
     private By OfficeNameLOcaterSDES = By.id("select2-ctl00_PlaceHolderMain_ddlSupervisionCenter-container");
-    private By OfficeNameSearchLOcaterSDES = By.xpath("/html/body/span/span/span[1]/input");
 
 
     //
@@ -384,7 +362,7 @@ public class TheReports {
         ReportLOcatrWait.click();
         WebElement OfficeNameLOcaterWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(OfficeNameLOcaterSDES));
         OfficeNameLOcaterWait.click();
-        browserQA.findElement(OfficeNameSearchLOcaterSDES).sendKeys("مكتب الخالدية الشمالية" , Keys.ENTER);
+        browserQA.findElement(DDLSearchSendOptionTxtLoactor).sendKeys("مكتب الخالدية الشمالية" , Keys.ENTER);
 
         Thread.sleep(1000);
         WebElement SearchBTNLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchButtonLOcator));
@@ -425,7 +403,6 @@ public class TheReports {
 
     private By ReportLinkLocatorSASAR = By.linkText("الأمن والسلامة - نسبة التقييم");
     private By DDLFormNameLocatorSASAR = By.id("select2-ctl00_PlaceHolderMain_ddlFormName-container");
-    private By DDLFormNameSrearchLocatorSASAR = By.xpath("/html/body/span/span/span[1]/input");
 
 
     //
@@ -444,7 +421,7 @@ public class TheReports {
         browserQA.findElement(ReportLinkLocatorSASAR).click();
         WebElement DDLFormNameLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLFormNameLocatorSASAR));
         DDLFormNameLocatorWait.click();
-        browserQA.findElement(DDLFormNameSrearchLocatorSASAR).sendKeys("Form12" , Keys.ENTER);
+        browserQA.findElement(DDLSearchSendOptionTxtLoactor).sendKeys("Selenium Form Dont Delete" , Keys.ENTER);
 
         try {
             WebElement SearchButtonLOcatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchButtonLOcator));
@@ -465,14 +442,12 @@ public class TheReports {
 
     private By ReportLinkLocatorIRR = By.linkText("الأمن والسلامة - نسبة الإدخال");
     private By DDlFormNameLocatorIRR = By.id("select2-ctl00_PlaceHolderMain_ddlFormName-container");
-    private By DDlFormNameSearchLocatorIRR = By.xpath("/html/body/span/span/span[1]/input");
 
 
     //
 //الأمن والسلامة - نسبة الإدخال
     @Test
     public void inputRatio() throws InterruptedException {
-
 
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
@@ -490,7 +465,7 @@ public class TheReports {
         WebElement DDlFormNameLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDlFormNameLocatorIRR));
         DDlFormNameLocatorWait.click();
 
-        WebElement DDlFormNameSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDlFormNameSearchLocatorIRR));
+        WebElement DDlFormNameSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLSearchSendOptionTxtLoactor));
         DDlFormNameSearchLocatorWait.sendKeys("Selenium Form Dont Delete" , Keys.ENTER);
 
         Thread.sleep(1000);

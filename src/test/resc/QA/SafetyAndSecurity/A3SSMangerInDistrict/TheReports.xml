@@ -17,7 +17,7 @@
                     <include name="SecurityAndSafetyManagersInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.A3SSMangerInDistrict.ReportsMenu.TheReports">
+            <class name="NoorProject.EduWaveSafeAndSecurity.A3SSMangerInDistrict.TheReports">
                 <methods>
                     <include name="LoginTotheUserAndSwitchDistrict"/>
                     <include name="buildingInformation"/>
@@ -40,9 +40,7 @@
 
                 </methods>
             </class>
-<!--
             <class name="NoorProject.Other.NoorLogOut"/>
--->
         </classes>
     </test>
 
