@@ -39,10 +39,11 @@ public class SafetyForms {
 
 
     }
+
     Random Rand = new Random();
     int RandomNumber = Rand.nextInt(1000000);
 
-    String FormSDescrption="Rami"+RandomNumber;
+    String FormSDescrption = "نموذج رقم" + RandomNumber;
 
     private By FormStatusLocator = By.id("select2-ctl00_PlaceHolderMain_ddlFormStatus-container");
     private By FormStatusSearchLocator = By.xpath("/html/body/span/span/span[1]/input");
@@ -51,44 +52,29 @@ public class SafetyForms {
     @Test
     public void addSafetyForms() throws InterruptedException {
 
-
-
-
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
-
-        WebElement FormStatusLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusLocator));
-        FormStatusLocatorWait.click();
-
-        WebElement FormStatusSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusSearchLocator));
-        FormStatusSearchLocatorWait.sendKeys("غير منشور" , Keys.ENTER);
-
-        Thread.sleep(1000);
-
-        WebElement SerachButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachButtonLocator));
-        SerachButtonLocatorWait.click();
-
         List FormsTableList = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[3]/div[2]/div/div/table[1]/tbody/tr/td[1]"));
         int FormsTableListSize = FormsTableList.size();
 
         if (FormsTableListSize <= 1) {
 
             int FormsTableListSizeAdd1 = FormsTableList.size() + 2;
-            String FormsTableListSizeAddFormat1 = String.format("%02d" , FormsTableListSizeAdd1);
+            String FormatAdd1 = String.format("%02d" , FormsTableListSizeAdd1);
 
-            By AddFormDescLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormsTableListSizeAddFormat1 + "_tbAddFormDesc");
+            By AddFormDescLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormatAdd1 + "_tbAddFormDesc");
             Thread.sleep(2000);
             WebElement AddFormDescLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddFormDescLocator));
             AddFormDescLocatorWait.sendKeys(FormSDescrption);
 
-            By FromDateFooterLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormsTableListSizeAddFormat1 + "_clrFromDateFooter_ibtnOpenCalendar");
+            By FromDateFooterLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormatAdd1 + "_clrFromDateFooter_ibtnOpenCalendar");
             WebElement FromDateFooterLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FromDateFooterLocator));
             FromDateFooterLocatorWait.click();
 
             WebElement FromDayFooterLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FromDayFooterLocator));
             FromDayFooterLocatorWait.click();
 
-            By ToDateFooterLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormsTableListSizeAddFormat1 + "_clrToDateFooter_ibtnOpenCalendar");
+            By ToDateFooterLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormatAdd1 + "_clrToDateFooter_ibtnOpenCalendar");
 
             WebElement ToDateFooterLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ToDateFooterLocator));
             ToDateFooterLocatorWait.click();
@@ -96,7 +82,7 @@ public class SafetyForms {
             WebElement ToDayFooterLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ToDayFooterLocator));
             ToDayFooterLocatorWait.click();
 
-            By AddLinkLOcator = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormsTableListSizeAddFormat1 + "_lbtnAddFormDesc");
+            By AddLinkLOcator = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormatAdd1 + "_lbtnAddFormDesc");
             WebElement AddLinkLOcatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddLinkLOcator));
             AddLinkLOcatorWait.click();
 
@@ -111,22 +97,22 @@ public class SafetyForms {
         if (FormsTableListSize >= 2 && FormsTableListSize < 22) {
 
             int FormsTableListSizeAdd2 = FormsTableList.size() + 1;
-            String FormsTableListSizeAddFormat2 = String.format("%02d" , FormsTableListSizeAdd2);
+            String FormatAdd2 = String.format("%02d" , FormsTableListSizeAdd2);
 
-            By AddFormDescLocator2 = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormsTableListSizeAddFormat2 + "_tbAddFormDesc");
+            By AddFormDescLocator2 = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormatAdd2 + "_tbAddFormDesc");
 
             Thread.sleep(2000);
             WebElement AddFormDescLocatorWait2 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddFormDescLocator2));
             AddFormDescLocatorWait2.sendKeys(FormSDescrption);
 
-            By FromDateFooterLocator2 = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormsTableListSizeAddFormat2 + "_clrFromDateFooter_ibtnOpenCalendar");
+            By FromDateFooterLocator2 = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormatAdd2 + "_clrFromDateFooter_ibtnOpenCalendar");
             WebElement FromDateFooterLocatorWait2 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FromDateFooterLocator2));
             FromDateFooterLocatorWait2.click();
 
             WebElement FromDayFooterLocatorWait2 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FromDayFooterLocator));
             FromDayFooterLocatorWait2.click();
 
-            By ToDateFooterLocator2 = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormsTableListSizeAddFormat2 + "_clrToDateFooter_ibtnOpenCalendar");
+            By ToDateFooterLocator2 = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormatAdd2 + "_clrToDateFooter_ibtnOpenCalendar");
 
             WebElement ToDateFooterLocatorWait2 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ToDateFooterLocator2));
             ToDateFooterLocatorWait2.click();
@@ -134,7 +120,7 @@ public class SafetyForms {
             WebElement ToDayFooterLocatorWait2 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ToDayFooterLocator));
             ToDayFooterLocatorWait2.click();
 
-            By AddLinkLOcator2 = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormsTableListSizeAddFormat2 + "_lbtnAddFormDesc");
+            By AddLinkLOcator2 = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormatAdd2 + "_lbtnAddFormDesc");
             WebElement AddLinkLOcatorWait2 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddLinkLOcator2));
             AddLinkLOcatorWait2.click();
 
@@ -152,22 +138,22 @@ public class SafetyForms {
 
 
             int FormsTableListSizeAdd23 = FormsTableList.size();
-            String FormsTableListSizeAddFormat23 = String.format("%02d" , FormsTableListSizeAdd23);
+            String FormatAdd3 = String.format("%02d" , FormsTableListSizeAdd23);
 
-            By AddFormDescLocator23 = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormsTableListSizeAddFormat23 + "_tbAddFormDesc");
+            By AddFormDescLocator23 = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormatAdd3 + "_tbAddFormDesc");
 
             Thread.sleep(2000);
             WebElement AddFormDescLocatorWait23 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddFormDescLocator23));
             AddFormDescLocatorWait23.sendKeys(FormSDescrption);
 
-            By FromDateFooterLocator23 = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormsTableListSizeAddFormat23 + "_clrFromDateFooter_ibtnOpenCalendar");
+            By FromDateFooterLocator23 = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormatAdd3 + "_clrFromDateFooter_ibtnOpenCalendar");
             WebElement FromDateFooterLocatorWait23 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FromDateFooterLocator23));
             FromDateFooterLocatorWait23.click();
 
             WebElement FromDayFooterLocatorWait23 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FromDayFooterLocator));
             FromDayFooterLocatorWait23.click();
 
-            By ToDateFooterLocator23 = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormsTableListSizeAddFormat23 + "_clrToDateFooter_ibtnOpenCalendar");
+            By ToDateFooterLocator23 = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormatAdd3 + "_clrToDateFooter_ibtnOpenCalendar");
 
             WebElement ToDateFooterLocatorWait23 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ToDateFooterLocator23));
             ToDateFooterLocatorWait23.click();
@@ -175,7 +161,7 @@ public class SafetyForms {
             WebElement ToDayFooterLocatorWait23 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ToDayFooterLocator));
             ToDayFooterLocatorWait23.click();
 
-            By AddLinkLOcator2 = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormsTableListSizeAddFormat23 + "_lbtnAddFormDesc");
+            By AddLinkLOcator2 = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormatAdd3 + "_lbtnAddFormDesc");
             WebElement AddLinkLOcatorWait23 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddLinkLOcator2));
             AddLinkLOcatorWait23.click();
 
@@ -189,103 +175,25 @@ public class SafetyForms {
         }
 
 
-
-
-
-
-
-
     }
 
 
-    private By GVForms = By.id("ctl00_PlaceHolderMain_gvForms_ctl02_lbtnView");
-    private By BTNBack = By.id("ctl00_PlaceHolderMain_ibtnBack");
     private By SearchLoactor = By.id("ctl00_PlaceHolderMain_ibtnSearch");
 
     @Test
-    public void ViewpublishedForm() throws InterruptedException {
+    public void ViewForm() throws InterruptedException {
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
-
-        WebElement DDLFormStatusLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusLocator));
-        DDLFormStatusLoactorWait.click();
-
-        WebElement TextFormStatusSearchLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusSearchLocator));
-        TextFormStatusSearchLoactorWait.sendKeys("منشور" , Keys.ENTER);
-
-
-        Thread.sleep(1000);
-        WebElement SearchLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchLoactor));
-        SearchLoactorWait.click();
-        browserQA.findElement(GVForms).click();
-        browserQA.findElement(BTNBack).click();
-
-
-    }
-
-
-    @Test
-    public void ViewUnpublishedForm() throws InterruptedException {
-
-        WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
-        FormMainMenuLoactorWait.click();
-
-        WebElement DDLFormStatusLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusLocator));
-        DDLFormStatusLoactorWait.click();
-
-        WebElement TextFormStatusSearchLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusSearchLocator));
-        TextFormStatusSearchLoactorWait.sendKeys("غير منشور" , Keys.ENTER);
 
         Thread.sleep(1000);
         WebElement SearchLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchLoactor));
         SearchLoactorWait.click();
 
-        browserQA.findElement(GVForms).click();
-        browserQA.findElement(BTNBack).click();
-
 
     }
 
-    private By UnPublishingLinkLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl02_lbtnUnPublish");
     private By YesConfrmationLocator = By.id("ctl00_ibtnYes");
-
-    @Test
-    public void unPublishingForm() throws InterruptedException {
-
-
-        WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
-        FormMainMenuLoactorWait.click();
-
-        WebElement FormStatusLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusLocator));
-        FormStatusLocatorWait.click();
-
-        WebElement FormStatusSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusSearchLocator));
-        FormStatusSearchLocatorWait.sendKeys("منشور" , Keys.ENTER);
-
-        Thread.sleep(1000);
-        WebElement SerachButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchLoactor));
-        SerachButtonLocatorWait.click();
-
-
-        WebElement PublishingLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UnPublishingLinkLocator));
-        PublishingLinkLocatorWait.click();
-
-
-        WebElement YesConfrmationLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(YesConfrmationLocator));
-        YesConfrmationLocatorWait.click();
-
-        By MessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
-
-        WebElement MessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(MessageLocator));
-
-        String ActualResult = browserQA.findElement(MessageLocator).getText();
-        String ExcpectedResult = "تم إلغاء النشر النموذج بنجاح.";
-
-        Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم عملية الغاء النشر للنموذج");
-
-    }
-
     private By PublishingLinkLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl02_lbtnPublish");
 
     @Test
@@ -379,46 +287,87 @@ public class SafetyForms {
     @Test
     public void DeleteForms() throws InterruptedException {
 
-
-
-
-
-        By FromDescrptionLocator=By.id("select2-ctl00_PlaceHolderMain_ddlFormName-container");
-        By FromDescrptionSearchLocator=By.xpath("/html/body/span/span/span[1]/input");
-
-
         WebElement FormMainMenuLoactorWait2 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait2.click();
 
-        WebElement FromDescrptionLocatorWait=waitQA.until(ExpectedConditions.visibilityOfElementLocated(FromDescrptionLocator));
-        FromDescrptionLocatorWait.click();
+        List FormsTableDeleteList = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[3]/div[2]/div/div/table[1]/tbody/tr/td[1]"));
+        int FormsTableListSizeDelete = FormsTableDeleteList.size();
 
-        WebElement FromDescrptionSearchLocatorWait=waitQA.until(ExpectedConditions.visibilityOfElementLocated(FromDescrptionSearchLocator));
-        FromDescrptionSearchLocatorWait.sendKeys(FormSDescrption,Keys.ENTER);
-
-        Thread.sleep(1000);
-
-        WebElement SerachButtonLocatorWait2 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachButtonLocator));
-        SerachButtonLocatorWait2.click();
-
-        By DeleteLinkLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl02_lbtnDelete");
-
-        WebElement DeleteLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteLinkLocator));
-        DeleteLinkLocatorWait.click();
-
-        By YesButtonLocator = By.id("ctl00_ibtnYes");
-
-        WebElement YesButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(YesButtonLocator));
-        YesButtonLocatorWait.click();
-
-        By DeleteValidationMessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
-        WebElement DeleteValidationMessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteValidationMessageLocator));
-
-        String ActualResult = browserQA.findElement(DeleteValidationMessageLocator).getText();
-        String ExpercteResult = "تم حذف النموذج بنجاح.";
+        System.out.println(FormsTableListSizeDelete);
 
 
-        Assert.assertEquals(ActualResult , ExpercteResult , "يوجد مشكلة في الية الحذف");
+        if (FormsTableListSizeDelete == 1) {
+            SafetyForms AddNewForm = new SafetyForms();
+            AddNewForm.addSafetyForms();
+            By FromDescrptionLocator = By.id("select2-ctl00_PlaceHolderMain_ddlFormName-container");
+            By FromDescrptionSearchLocator = By.xpath("/html/body/span/span/span[1]/input");
+
+
+            WebElement FromDescrptionLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FromDescrptionLocator));
+            FromDescrptionLocatorWait.click();
+
+            WebElement FromDescrptionSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FromDescrptionSearchLocator));
+            FromDescrptionSearchLocatorWait.sendKeys(FormSDescrption , Keys.ENTER);
+
+            Thread.sleep(1000);
+
+            WebElement SerachButtonLocatorWait2 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachButtonLocator));
+            SerachButtonLocatorWait2.click();
+
+            By DeleteLinkLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl02_lbtnDelete");
+
+            WebElement DeleteLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteLinkLocator));
+            DeleteLinkLocatorWait.click();
+
+            By YesButtonLocator = By.id("ctl00_ibtnYes");
+
+            WebElement YesButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(YesButtonLocator));
+            YesButtonLocatorWait.click();
+
+            By DeleteValidationMessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+            WebElement DeleteValidationMessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteValidationMessageLocator));
+
+            String ActualResult = browserQA.findElement(DeleteValidationMessageLocator).getText();
+            String ExpercteResult = "تم حذف النموذج بنجاح.";
+
+
+            Assert.assertEquals(ActualResult , ExpercteResult , "يوجد مشكلة في الية الحذف");
+
+        } else {
+            By FromDescrptionLocator = By.id("select2-ctl00_PlaceHolderMain_ddlFormName-container");
+            By FromDescrptionSearchLocator = By.xpath("/html/body/span/span/span[1]/input");
+
+
+            WebElement FromDescrptionLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FromDescrptionLocator));
+            FromDescrptionLocatorWait.click();
+
+            WebElement FromDescrptionSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FromDescrptionSearchLocator));
+            FromDescrptionSearchLocatorWait.sendKeys(FormSDescrption , Keys.ENTER);
+
+            Thread.sleep(1000);
+
+            WebElement SerachButtonLocatorWait2 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachButtonLocator));
+            SerachButtonLocatorWait2.click();
+
+            By DeleteLinkLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl02_lbtnDelete");
+
+            WebElement DeleteLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteLinkLocator));
+            DeleteLinkLocatorWait.click();
+
+            By YesButtonLocator = By.id("ctl00_ibtnYes");
+
+            WebElement YesButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(YesButtonLocator));
+            YesButtonLocatorWait.click();
+
+            By DeleteValidationMessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+            WebElement DeleteValidationMessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteValidationMessageLocator));
+
+            String ActualResult = browserQA.findElement(DeleteValidationMessageLocator).getText();
+            String ExpercteResult = "تم حذف النموذج بنجاح.";
+
+
+            Assert.assertEquals(ActualResult , ExpercteResult , "يوجد مشكلة في الية الحذف");
+        }
 
 
     }

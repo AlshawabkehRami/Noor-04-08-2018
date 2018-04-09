@@ -24,9 +24,7 @@
                     <include name="loginUserAndSwitchProfileForms"/>
                     <include name="addSafetyForms"/>
                     <include name="EditUnpublishedSafetyForms"/>
-                    <include name="ViewpublishedForm"/>
-                    <include name="ViewUnpublishedForm"/>
-                    <include name="unPublishingForm"/>
+                    <include name="ViewForm"/>
                     <include name="PublishingForm"/>
                     <include name="DeleteForms"/>
                 </methods>

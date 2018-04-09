@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!--
+  ~ Created By  Rami AlShawabkeh  4/9/18 2:34 PM
+  -->
+
+<!--
   ~ Created By Rami Al Shawabkeh 4/4/18 10:08 AM
   -->
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
@@ -24,8 +28,9 @@
                     <include name="deleteSections"/>
                 </methods>
             </class>
+
             <class name="NoorProject.Other.NoorLogOut"/>
-        </classes>
+    </classes>
     </test>
 
 </suite>
