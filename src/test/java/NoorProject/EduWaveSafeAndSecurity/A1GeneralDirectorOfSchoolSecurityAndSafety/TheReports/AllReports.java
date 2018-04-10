@@ -302,7 +302,7 @@ public class AllReports {
     //
 //بيانات المدرسة
     @Test
-    public void InfoSchoolReport() {
+    public void InfoSchoolReport() throws InterruptedException {
 
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
@@ -332,6 +332,7 @@ public class AllReports {
         WebElement txt_drop_down_managements_LocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLDistrictSearchLocatorSR));
         txt_drop_down_managements_LocatorWait.sendKeys("الحد الغربي" , Keys.ENTER);
 
+        Thread.sleep(1000);
         try {
             WebElement education_office_LocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLOfficeLocatorSR));
             education_office_LocatorWait.click();

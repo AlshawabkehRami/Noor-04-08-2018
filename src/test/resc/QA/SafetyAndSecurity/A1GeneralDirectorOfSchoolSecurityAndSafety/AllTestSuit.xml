@@ -11,11 +11,11 @@
 
 
     <suite-files>
+        <suite-file path="Reports.xml"/>
         <suite-file path="SafetyForms.xml"/>
         <suite-file path="Sections.xml"/>
         <suite-file path="ExternalItems.xml"/>
         <suite-file path="InternalItems.xml"/>
-        <suite-file path="Reports.xml"/>
         <suite-file path="TypesOfVisits.xml"/>
         <suite-file path="UsersMenu.xml"/>
     </suite-files>

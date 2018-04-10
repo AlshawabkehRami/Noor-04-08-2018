@@ -173,6 +173,9 @@ public class TheUsers {
         Thread.sleep(1000);
         WebElement BirthDateLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BirthDateLocator));
         BirthDateLocatorWait.click();
+
+        Thread.sleep(1000);
+
         WebElement BirthDateLocatorDateWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BirthDateLocatorDate));
         BirthDateLocatorDateWait.click();
 

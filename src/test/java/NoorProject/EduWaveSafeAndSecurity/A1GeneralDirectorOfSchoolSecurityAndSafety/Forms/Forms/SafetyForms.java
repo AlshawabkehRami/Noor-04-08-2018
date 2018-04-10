@@ -60,7 +60,7 @@ public class SafetyForms {
         if (FormsTableListSize <= 1) {
 
             int FormsTableListSizeAdd1 = FormsTableList.size() + 2;
-            String FormatAdd1 = String.format("%02d" , FormsTableListSizeAdd1);
+            String FormatAdd1 = String.format("%02d", FormsTableListSizeAdd1);
 
             By AddFormDescLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormatAdd1 + "_tbAddFormDesc");
             Thread.sleep(2000);
@@ -91,13 +91,13 @@ public class SafetyForms {
             String AddValidationMessageLoactorString = browserQA.findElement(AddValidationMessageLoactor).getText();
             String message = "تم إضافة النموذج بنجاح";
 
-            Assert.assertEquals(message , AddValidationMessageLoactorString , "لم تتم الاضافة بنجاح");
+            Assert.assertEquals(message, AddValidationMessageLoactorString, "لم تتم الاضافة بنجاح");
         }
 
         if (FormsTableListSize >= 2 && FormsTableListSize < 22) {
 
             int FormsTableListSizeAdd2 = FormsTableList.size() + 1;
-            String FormatAdd2 = String.format("%02d" , FormsTableListSizeAdd2);
+            String FormatAdd2 = String.format("%02d", FormsTableListSizeAdd2);
 
             By AddFormDescLocator2 = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormatAdd2 + "_tbAddFormDesc");
 
@@ -129,7 +129,7 @@ public class SafetyForms {
             String AddValidationMessageLoactorString2 = browserQA.findElement(AddValidationMessageLoactor).getText();
             String message2 = "تم إضافة النموذج بنجاح";
 
-            Assert.assertEquals(message2 , AddValidationMessageLoactorString2 , "لم تتم الاضافة بنجاح");
+            Assert.assertEquals(message2, AddValidationMessageLoactorString2, "لم تتم الاضافة بنجاح");
 
 
         }
@@ -138,7 +138,7 @@ public class SafetyForms {
 
 
             int FormsTableListSizeAdd23 = FormsTableList.size();
-            String FormatAdd3 = String.format("%02d" , FormsTableListSizeAdd23);
+            String FormatAdd3 = String.format("%02d", FormsTableListSizeAdd23);
 
             By AddFormDescLocator23 = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + FormatAdd3 + "_tbAddFormDesc");
 
@@ -170,7 +170,7 @@ public class SafetyForms {
             String AddValidationMessageLoactorString23 = browserQA.findElement(AddValidationMessageLoactor).getText();
             String message23 = "تم إضافة النموذج بنجاح";
 
-            Assert.assertEquals(message23 , AddValidationMessageLoactorString23 , "لم تتم الاضافة بنجاح");
+            Assert.assertEquals(message23, AddValidationMessageLoactorString23, "لم تتم الاضافة بنجاح");
 
         }
 
@@ -208,7 +208,7 @@ public class SafetyForms {
         FormStatusLocatorWait.click();
 
         WebElement FormStatusSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusSearchLocator));
-        FormStatusSearchLocatorWait.sendKeys("غير منشور" , Keys.ENTER);
+        FormStatusSearchLocatorWait.sendKeys("غير منشور", Keys.ENTER);
 
         Thread.sleep(1000);
         WebElement SerachButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchLoactor));
@@ -255,7 +255,7 @@ public class SafetyForms {
         FormStatusLocatorWait.click();
 
         WebElement FormStatusSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusSearchLocator));
-        FormStatusSearchLocatorWait.sendKeys("غير منشور" , Keys.ENTER);
+        FormStatusSearchLocatorWait.sendKeys("غير منشور", Keys.ENTER);
 
         Thread.sleep(1000);
         WebElement BTNSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchLoactor));
@@ -286,7 +286,7 @@ public class SafetyForms {
         String ActualResult = browserQA.findElement(UpadteMessageLOcator).getText();
         String ExpectedResult = "تمت عملية حفظ البيانات بنجاح.";
 
-        Assert.assertEquals(ActualResult , ExpectedResult , "لم تتم عملية التعديل بنجاح");
+        Assert.assertEquals(ActualResult, ExpectedResult, "لم تتم عملية التعديل بنجاح");
 
     }
 
@@ -314,7 +314,7 @@ public class SafetyForms {
             FromDescrptionLocatorWait.click();
 
             WebElement FromDescrptionSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FromDescrptionSearchLocator));
-            FromDescrptionSearchLocatorWait.sendKeys(FormSDescrption , Keys.ENTER);
+            FromDescrptionSearchLocatorWait.sendKeys(FormSDescrption, Keys.ENTER);
 
             Thread.sleep(1000);
 
@@ -338,7 +338,7 @@ public class SafetyForms {
             String ExpercteResult = "تم حذف النموذج بنجاح.";
 
 
-            Assert.assertEquals(ActualResult , ExpercteResult , "يوجد مشكلة في الية الحذف");
+            Assert.assertEquals(ActualResult, ExpercteResult, "يوجد مشكلة في الية الحذف");
 
         } else {
             By FromDescrptionLocator = By.id("select2-ctl00_PlaceHolderMain_ddlFormName-container");
@@ -349,7 +349,7 @@ public class SafetyForms {
             FromDescrptionLocatorWait.click();
 
             WebElement FromDescrptionSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FromDescrptionSearchLocator));
-            FromDescrptionSearchLocatorWait.sendKeys(FormSDescrption , Keys.ENTER);
+            FromDescrptionSearchLocatorWait.sendKeys(FormSDescrption, Keys.ENTER);
 
             Thread.sleep(1000);
 
@@ -363,6 +363,7 @@ public class SafetyForms {
 
             By YesButtonLocator = By.id("ctl00_ibtnYes");
 
+            Thread.sleep(2000);
             WebElement YesButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(YesButtonLocator));
             YesButtonLocatorWait.click();
 
@@ -373,7 +374,7 @@ public class SafetyForms {
             String ExpercteResult = "تم حذف النموذج بنجاح.";
 
 
-            Assert.assertEquals(ActualResult , ExpercteResult , "يوجد مشكلة في الية الحذف");
+            Assert.assertEquals(ActualResult, ExpercteResult, "يوجد مشكلة في الية الحذف");
         }
 
 
