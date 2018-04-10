@@ -17,7 +17,7 @@
                     <include name="SchoolAdminLoginQA"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.A5SchoolAdmin.TheReport.SchoolAdminReports">
+            <class name="NoorProject.EduWaveSafeAndSecurity.A5SchoolAdmin.Reports">
                 <methods>
                     <include name="SchoolCardInformationView"/>
                     <include name="SchoolDataReport"/>

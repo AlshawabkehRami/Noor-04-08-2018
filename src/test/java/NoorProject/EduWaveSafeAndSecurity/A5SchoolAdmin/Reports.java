@@ -1,8 +1,8 @@
 /*
- * Created By  Rami AlShawabkeh  4/8/18 12:32 PM
+ * Created By  Rami AlShawabkeh  4/10/18 2:59 PM
  */
 
-package NoorProject.EduWaveSafeAndSecurity.A5SchoolAdmin.TheReport;
+package NoorProject.EduWaveSafeAndSecurity.A5SchoolAdmin;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -12,8 +12,7 @@ import org.testng.annotations.Test;
 
 import static NoorProject.Other.NoorLogin.waitQA;
 
-public class SchoolAdminReports {
-
+public class Reports {
 
     private By ReportsMenuLocator = By.id("divMenuItem_321");
     private By SearchFieldLocator = By.id("lisearch_list");
@@ -103,7 +102,6 @@ public class SchoolAdminReports {
     @Test
     public void UserDataInSchoolsView() throws InterruptedException {
 
-        //for (int i=0;i<5;i++) {
 
         WebElement ReportsMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMenuLocator));
         ReportsMenuLocatorWait.click();
@@ -130,8 +128,8 @@ public class SchoolAdminReports {
         System.out.println(ActualResult);
         Assert.assertEquals(ActualResult , ExpectedResult , "التقرير المطلوب غير متوفر");
 
-        //   }
 
 
     }
 }
+
