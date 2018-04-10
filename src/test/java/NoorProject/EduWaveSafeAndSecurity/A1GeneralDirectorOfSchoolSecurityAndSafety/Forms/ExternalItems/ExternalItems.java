@@ -1,5 +1,6 @@
 package NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.ExternalItems;
 
+import NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.Forms.SafetyForms;
 import NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.SectionsForm.SectionsForms;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -42,6 +43,10 @@ public class ExternalItems {
     //مدير عام الامن والسلامة/ أضافة البنود الخارجية
     @Test
     public void addExternalItems() throws InterruptedException {
+
+        SafetyForms AddForm = new SafetyForms();
+        AddForm.addSafetyForms();
+
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
