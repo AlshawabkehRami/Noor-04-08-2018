@@ -229,7 +229,14 @@ public class SafetyForms {
         String ActualResult = browserQA.findElement(MessageLocator).getText();
         String ExcpectedResult = "تم نشر النموذج بنجاح.";
 
-        Assert.assertEquals(ActualResult , ExcpectedResult , "يجب اضافة الاقسام والبنود الخارجية والبنود الداخلية");
+        if (ActualResult.equals("لايمكن النشر لعدم توفر الاقسام,البنود الخارجية,البنود الداخلية,المحددات.")) {
+
+            System.out.println("يجب اضافة الاقسام والبنود الخارجية والبنود الداخلية");
+
+        } else {
+            Assert.fail("حدث خلل اثناء عملية الحفظ");
+        }
+
 
     }
 
