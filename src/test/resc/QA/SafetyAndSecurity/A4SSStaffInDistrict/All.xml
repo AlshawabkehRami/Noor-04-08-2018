@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  ~ Created By  Rami AlShawabkeh  4/10/18 2:52 PM
+  -->
+
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="جميع حالات الاختبار لموظف الامن والسلامة المدرسية في الادارة">
+
+
+    <suite-files>
+        <suite-file path="SchoolCrads.xml"/>
+        <suite-file path="TheReport.xml"/>
+    </suite-files>
+
+
+</suite>
