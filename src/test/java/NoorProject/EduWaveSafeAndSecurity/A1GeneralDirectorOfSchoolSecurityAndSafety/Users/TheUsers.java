@@ -497,7 +497,6 @@ public class TheUsers {
             //اخذ رقم الهوية للمسنخدم بعد الاضافة
             DirectorOfDepartmentsInTheMinistry CallClassID1 = new DirectorOfDepartmentsInTheMinistry();
             CallClassID1.UserId();
-            System.out.println(UserIdToPassString);
             String UserIdAfterAdded1 = UserIdToPassString;
             //تكملة عملية الاضافة
             DirectorOfDepartmentsInTheMinistry Add21 = new DirectorOfDepartmentsInTheMinistry();
