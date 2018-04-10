@@ -34,11 +34,14 @@ public class VisitsTypes {
         UserNameLabelLocatorWait.click();
     }
 
+
+    Random Rand = new Random();
+    int RandomNumber = Rand.nextInt(1000000);
+    public String RandomString="نوع زيارة رقم"+RandomNumber;
     @Test
 //اضافة انواع الزيارات/مدير عام الامن والسلامة المدرسية
     public void addVisitsTypes() {
 
-        //  for (int i=0;i<20;i++) {
         WebElement SettingsMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SettingsMenuLoactor));
         SettingsMenuLoactorWait.click();
 
@@ -50,22 +53,19 @@ public class VisitsTypes {
 
         int TableSzie = VisitsTypesTableListAdd.size();
 
-        // System.out.println(TableSzie);
 
         if (TableSzie <= 1) {
 
 
             int TableSizeAdd = VisitsTypesTableListAdd.size() + 2;
             String TableSizeAddFormat1 = String.format("%02d" , TableSizeAdd);
-            //  System.out.println("TableSzie <= 1:::" + TableSizeAddFormat1);
 
             By VisitsTypesDescLocator = By.id("ctl00_PlaceHolderMain_gvVisitType_ctl" + TableSizeAddFormat1 + "_tbVisitTypeDesc");
 
-            Random Rand = new Random();
-            int RandomNumber = Rand.nextInt(1000000);
+
 
             WebElement VisitsTypesDescLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(VisitsTypesDescLocator));
-            VisitsTypesDescLocatorWait.sendKeys("VisitsTypes" + RandomNumber);
+            VisitsTypesDescLocatorWait.sendKeys(RandomString);
 
             By AddLinkLocator = By.id("ctl00_PlaceHolderMain_gvVisitType_ctl" + TableSizeAddFormat1 + "_lbtnAdd");
 
@@ -88,14 +88,13 @@ public class VisitsTypes {
             int TableSizeAdd = VisitsTypesTableListAdd.size() + 1;
             String TableSizeAddFormat2 = String.format("%02d" , TableSizeAdd);
 
-            // System.out.println("TableSzie >= 2 && TableSzie < 22" + TableSizeAddFormat2);
             By VisitsTypesDescLocator = By.id("ctl00_PlaceHolderMain_gvVisitType_ctl" + TableSizeAddFormat2 + "_tbVisitTypeDesc");
 
             Random Rand = new Random();
             int RandomNumber = Rand.nextInt(1000000);
 
             WebElement VisitsTypesDescLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(VisitsTypesDescLocator));
-            VisitsTypesDescLocatorWait.sendKeys("VisitsTypes" + RandomNumber);
+            VisitsTypesDescLocatorWait.sendKeys(RandomString);
 
             By AddLinkLocator = By.id("ctl00_PlaceHolderMain_gvVisitType_ctl" + TableSizeAddFormat2 + "_lbtnAdd");
 
@@ -119,14 +118,13 @@ public class VisitsTypes {
             int TableSizeAdd = VisitsTypesTableListAdd.size();
             String TableSizeAddFormat3 = String.format("%02d" , TableSizeAdd);
 
-            // System.out.println("TableSzie >= 22" + TableSizeAddFormat3);
             By VisitsTypesDescLocator = By.id("ctl00_PlaceHolderMain_gvVisitType_ctl" + TableSizeAddFormat3 + "_tbVisitTypeDesc");
 
             Random Rand = new Random();
             int RandomNumber = Rand.nextInt(1000000);
 
             WebElement VisitsTypesDescLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(VisitsTypesDescLocator));
-            VisitsTypesDescLocatorWait.sendKeys("VisitsTypes" + RandomNumber);
+            VisitsTypesDescLocatorWait.sendKeys(RandomString);
 
             By AddLinkLocator = By.id("ctl00_PlaceHolderMain_gvVisitType_ctl" + TableSizeAddFormat3 + "_lbtnAdd");
 
@@ -145,7 +143,6 @@ public class VisitsTypes {
 
         }
 
-        //  }
 
     }
 

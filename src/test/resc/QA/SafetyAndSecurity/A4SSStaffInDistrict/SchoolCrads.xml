@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+  ~ Created By Rami Alshawabkeh  3/18/18 5:18 PM
+  -->
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="موظف الامن والسلامة بادارة التعليم">
+
+    <test name=" بطافات المدارس">
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="StaffSAndSInDistrictLogin"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.A4SSStaffInDistrict.SchoolCards">
+                <methods>
+                    <include name="SwitchUser"/>
+                    <include name="addSchoolCards"/>
+                    <include name="editSchoolCards"/>
+                    <include name="deleteSchoolCards"/>
+
+                </methods>
+            </class>
+
+            <class name="NoorProject.Other.NoorLogOut"/>
+        </classes>
+
+    </test>
+
+
+</suite>

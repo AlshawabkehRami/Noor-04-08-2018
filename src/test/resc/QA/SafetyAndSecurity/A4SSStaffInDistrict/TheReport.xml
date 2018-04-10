@@ -1,0 +1,36 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="التقارير">
+
+    <test name="بيانات المباني/موظف بإدارة الأمن و السلامة في إدارة التعليم">
+
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="StaffSAndSInDistrictLogin"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.A4SSStaffInDistrict.ReportsMenu">
+                <methods>
+                    <include name="SwitchProfile"/>
+                    <include name="buildingInformation"/>
+                    <include name="schoolDataWithEducationalStages"/>
+                    <include name="schoolsThatHaveCompletedTheFormAndHaveNotBeenApprovedByTheSchoolLeader"/>
+                    <include name="schoolsThatHaveNotCompletedTheForm"/>
+                    <include name="assessmentRate"/>
+                    <include name="securityAndSafetyAssessmentRateReport"/>
+                    <include name="inputRatio"/>
+                    <include name="UserDataInSchools"/>
+                    <include name="numberOfStudentsWhoOwnTheSchoolBuilding"/>
+                </methods>
+            </class>
+<!--
+            <class name="NoorProject.Other.NoorLogOut"/>
+-->
+
+        </classes>
+
+    </test>
+
+</suite>
