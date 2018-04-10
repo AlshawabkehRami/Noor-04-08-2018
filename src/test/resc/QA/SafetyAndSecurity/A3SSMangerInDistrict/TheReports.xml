@@ -8,9 +8,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 
-<suite name="التقارير">
+<suite name="مدير الامن والسلامة بادارة التعليم">
 
-    <test name="مدير الامن والسلامة بادارة التعليم">
+    <test name="التقارير">
         <classes>
             <class name="NoorProject.Other.NoorLogin">
                 <methods>

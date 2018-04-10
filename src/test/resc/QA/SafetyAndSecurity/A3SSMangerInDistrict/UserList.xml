@@ -9,7 +9,7 @@
 
 <suite name="مدير الامن والسلامة باردارة التعليم">
 
-    <test name="موظف صلاحيات مدير الامن والسلامة المدرسية بادارة التعليم">
+    <test name="المستخدمون">
         <classes>
             <class name="NoorProject.Other.NoorLogin">
                 <methods>

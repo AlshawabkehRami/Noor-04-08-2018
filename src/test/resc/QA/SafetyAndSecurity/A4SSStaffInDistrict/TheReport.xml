@@ -3,7 +3,7 @@
 
 <suite name="التقارير">
 
-    <test name="بيانات المباني/موظف بإدارة الأمن و السلامة في إدارة التعليم">
+    <test name="موظف بإدارة الأمن و السلامة في إدارة التعليم">
 
         <classes>
             <class name="NoorProject.Other.NoorLogin">

@@ -9,7 +9,7 @@
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="جميع حالات الاختبار لمدير عام الامن والسلامة المدرسية">
+<suite name="جميع حالات الاختبار لموظف  الامن والسلامة المدرسيةفي الوزارة">
 
 
     <suite-files>
