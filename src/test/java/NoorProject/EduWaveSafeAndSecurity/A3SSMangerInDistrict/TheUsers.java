@@ -215,10 +215,10 @@ public class TheUsers {
             DirectorOfDepartmentsInTheMinistry AddUser2 = new DirectorOfDepartmentsInTheMinistry();
             AddUser2.AddedPart2();
 
-            NoorLogin LoginToTheUser=new NoorLogin();
+            NoorLogin LoginToTheUser = new NoorLogin();
             LoginToTAMinstry.SecurityAndSafetyManagersInDistrictLogin();
 
-            TheUsers LoginUserSwitch=new TheUsers();
+            TheUsers LoginUserSwitch = new TheUsers();
             LoginUserSwitch.LoginUserSwitch();
 
 
@@ -244,7 +244,6 @@ public class TheUsers {
             String ExpectedResult2 = "تمت عملية الحفظ بنجاح.";
 
             Assert.assertEquals(ActualResult2 , ExpectedResult2 , "يوجد مشكلة");
-
 
 
         } else {
@@ -360,11 +359,64 @@ public class TheUsers {
         browserQA.findElement(btnSaveLocator).click();
         By ValidationMessageAfterAddTheUser = By.id("ctl00_PlaceHolderMain_lblResult");
         WebElement ValidationMessageAfterAddTheUserWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ValidationMessageAfterAddTheUser));
-        String MSELoctor = browserQA.findElement(ValidationMessageAfterAddTheUser).getText();
-        String MesaString = "لا يمكن اضافة ملف لعدم وجود ملف له في شؤون المعلمين";
-        Assert.assertNotEquals(MSELoctor , MesaString , "يجب اضافة ملف فئات تشكيلية ");
+        String MSELoctor2 = browserQA.findElement(ValidationMessageAfterAddTheUser).getText();
+        String MesaString2 = "لا يمكن اضافة ملف لعدم وجود ملف له في شؤون المعلمين";
+
+        if (MSELoctor2.equals(MesaString2)) {
+            System.out.println("يجب اضافة ملف فئات تشكيلية من قبل شؤون المعلمين");
+            browserQA.close();
+            NoorLogin LoginToTAMinstry2 = new NoorLogin();
+            LoginToTAMinstry2.DirectorGeneralofTeachersAffairsintheMinistry();
+
+            DirectorOfDepartmentsInTheMinistry AddUser12 = new DirectorOfDepartmentsInTheMinistry();
+            AddUser12.AddDirectorOfDepartmentsInTheMinistry();
+
+            DirectorOfDepartmentsInTheMinistry CallClassID12 = new DirectorOfDepartmentsInTheMinistry();
+            CallClassID12.UserId();
+            String UserIdAfterAdded12 = UserIdToPassString;
+
+            DirectorOfDepartmentsInTheMinistry AddUser22 = new DirectorOfDepartmentsInTheMinistry();
+            AddUser22.AddedPart2();
+
+            NoorLogin LoginToTheUser = new NoorLogin();
+            LoginToTAMinstry2.SecurityAndSafetyManagersInDistrictLogin();
+
+            TheUsers LoginUserSwitch = new TheUsers();
+            LoginUserSwitch.LoginUserSwitch();
+
+
+            WebElement UsersTypeMenuLocatorWait1 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UsersTypeMenuLocator));
+            UsersTypeMenuLocatorWait1.click();
+            WebElement ReportLinkLocatorWait1 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UserAuthorityEmployeeLocator));
+            ReportLinkLocatorWait1.click();
+            WebElement AddedNewUserLinkLocatorWait1 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddedNewUserLinkLocator));
+            AddedNewUserLinkLocatorWait1.click();
+            WebElement UserIdFieldLocatorWait1 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UserIdFieldLocator));
+
+            UserIdFieldLocatorWait1.sendKeys(UserIdAfterAdded12);
+            WebElement IbtnCheckIdentificationIDLocatorWait1 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(IbtnCheckIdentificationIDLocator));
+            IbtnCheckIdentificationIDLocatorWait1.click();
+
+            browserQA.findElement(By.id("ctl00_PlaceHolderMain_ibtnSave")).click();
+
+            By ValidationMeassage = By.id("ctl00_PlaceHolderMain_lblResult");
+
+            WebElement ValidationMeassageWait1 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ValidationMeassage));
+
+            String ActualResult2 = browserQA.findElement(ValidationMeassage).getText();
+            String ExpectedResult2 = "تمت عملية الحفظ بنجاح.";
+
+            Assert.assertEquals(ActualResult2 , ExpectedResult2 , "يوجد مشكلة");
+
+
+        } else {
+
+            Assert.fail("لم تتم عملية الاضافة بنجاح ");
+        }
+
+
+        }
 
 
     }
 
-}
