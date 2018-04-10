@@ -24,7 +24,9 @@
                      <include name="deleteExternalItems"/>
                 </methods>
             </class>
+<!--
             <class name="NoorProject.Other.NoorLogOut"/>
+-->
 
         </classes>
     </test>

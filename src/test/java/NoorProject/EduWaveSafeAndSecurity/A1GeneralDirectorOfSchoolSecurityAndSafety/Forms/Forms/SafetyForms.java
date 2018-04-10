@@ -225,9 +225,11 @@ public class SafetyForms {
         By MessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
 
         WebElement MessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(MessageLocator));
+        By MessageSucess=By.id("ctl00_PlaceHolderMain_oUpdatePanelResult");
 
         String ActualResult = browserQA.findElement(MessageLocator).getText();
         String ExcpectedResult = "تم نشر النموذج بنجاح.";
+
 
         if (ActualResult.equals("لايمكن النشر لعدم توفر الاقسام,البنود الخارجية,البنود الداخلية,المحددات.")) {
 
