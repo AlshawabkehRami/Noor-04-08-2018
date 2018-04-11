@@ -13,10 +13,10 @@
 
 
     <suite-files>
+        <suite-file path="TheReport.xml"/>
+        <suite-file path="SectionsForm.xml"/>
         <suite-file path="ExternalItems.xml"/>
         <suite-file path="InternalItems.xml"/>
-        <suite-file path="SectionsForm.xml"/>
-        <suite-file path="TheReport.xml"/>
     </suite-files>
 
 
