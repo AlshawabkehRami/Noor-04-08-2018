@@ -8,6 +8,7 @@
 
 package NoorProject.EduWaveSafeAndSecurity.A2SSOfficerInMinstry.Forms.SectionsForm;
 
+import NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.Forms.SafetyForms;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -17,6 +18,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import static NoorProject.Other.NoorLogin.browserQA;
 import static NoorProject.Other.NoorLogin.waitQA;
@@ -50,118 +52,241 @@ public class SectionsForm {
         @Test
         public void addSectionsToTheForm() throws InterruptedException {
 
+            browserQA.manage().window().maximize();
+            browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+
             WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
             FormMainMenuLoactorWait.click();
 
-            WebElement FormStatusLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusLocator));
-            FormStatusLocatorWait.click();
+       /* WebElement FormStatusLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusLocator));
+        FormStatusLocatorWait.click();*/
 
-            WebElement FormStatusSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusSearchLocator));
-            FormStatusSearchLocatorWait.sendKeys("غير منشور" , Keys.ENTER);
+            List FormTableSizeElse = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[3]/div[2]/div/div/table[1]/tbody/tr/td[1]"));
+            int TableSizeNO1 = FormTableSizeElse.size();
 
-            Thread.sleep(1000);
-            WebElement SerachButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachButtonLocator));
-            SerachButtonLocatorWait.click();
+            if (TableSizeNO1 <= 1) {
 
-            WebElement SectionsLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionsLinkLocator));
-            SectionsLinkLocatorWait.click();
+                System.out.println("No Data");
+                SafetyForms AddNewForms = new SafetyForms();
+                AddNewForms.addSafetyForms();
+
+                WebElement FormStatusLocatorWaitg = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusLocator));
+                FormStatusLocatorWaitg.click();
+
+                WebElement FormStatusSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusSearchLocator));
+                FormStatusSearchLocatorWait.sendKeys("غير منشور" , Keys.ENTER);
+
+                Thread.sleep(1000);
+                WebElement SerachButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachButtonLocator));
+                SerachButtonLocatorWait.click();
+
+                WebElement SectionsLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionsLinkLocator));
+                SectionsLinkLocatorWait.click();
+                List SectionTableList = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[1]/div[2]/div/div/table[1]/tbody/tr/td[1]"));
+
+                int TableSize = SectionTableList.size();
+
+                if (TableSize <= 1) {
+                    int TableSizeAdd = SectionTableList.size() + 2;
+                    String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
+                    System.out.println("TableSizeAdd::" + TableSizeAdd);
+                    System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
+
+                    By SectionDescrptionSplit = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_tbAddFormSectionDesc");
+                    Random Rand = new Random();
+                    int RandomNumber = Rand.nextInt(1000000);
+
+                    WebElement SectionDescrptionWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionDescrptionSplit));
+
+                    SectionDescrptionWait.sendKeys("Rami" + RandomNumber);
+
+                    By AddLinkSpilt = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_lbtnAddFormSectionDesc");
+
+                    WebElement AddLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddLinkSpilt));
+                    AddLinkWait.click();
+
+                    By AddSectionsMessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+
+                    WebElement AddSectionsMessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddSectionsMessageLocator));
+
+                    String ActualResult = browserQA.findElement(AddSectionsMessageLocator).getText();
+                    String ExcpectedResult = "تم إضافة القسم بنجاح.";
+
+                    Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم عملية اضافة القسم بنجاح");
+                }
+                if (TableSize >= 2 && TableSize < 22) {
+
+                    int TableSizeAdd = SectionTableList.size() + 1;
+                    String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
+                    System.out.println("TableSizeAdd::" + TableSizeAdd);
+                    System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
+
+                    By SectionDescrptionSplit = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_tbAddFormSectionDesc");
+
+                    Random Rand = new Random();
+                    int RandomNumber = Rand.nextInt(1000000);
+
+                    WebElement SectionDescrptionWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionDescrptionSplit));
+
+                    SectionDescrptionWait.sendKeys("Rami" + RandomNumber);
+
+                    By AddLinkSpilt = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_lbtnAddFormSectionDesc");
+
+                    WebElement AddLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddLinkSpilt));
+                    AddLinkWait.click();
+
+                    By AddSectionsMessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+
+                    WebElement AddSectionsMessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddSectionsMessageLocator));
+
+                    String ActualResult = browserQA.findElement(AddSectionsMessageLocator).getText();
+                    String ExcpectedResult = "تم إضافة القسم بنجاح.";
+
+                    Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم عملية اضافة القسم بنجاح");
+
+                }
+                if (TableSize >= 22) {
+
+                    int TableSizeAdd = SectionTableList.size();
+                    String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
+                    System.out.println("TableSizeAdd::" + TableSizeAdd);
+                    System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
+
+                    By SectionDescrptionSplit = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_tbAddFormSectionDesc");
+                    Random Rand = new Random();
+                    int RandomNumber = Rand.nextInt(1000000);
+
+                    WebElement SectionDescrptionWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionDescrptionSplit));
+
+                    SectionDescrptionWait.sendKeys("Rami" + RandomNumber);
+
+                    By AddLinkSpilt = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_lbtnAddFormSectionDesc");
+
+                    WebElement AddLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddLinkSpilt));
+                    AddLinkWait.click();
+
+                    By AddSectionsMessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+
+                    WebElement AddSectionsMessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddSectionsMessageLocator));
+
+                    String ActualResult = browserQA.findElement(AddSectionsMessageLocator).getText();
+                    String ExcpectedResult = "تم إضافة القسم بنجاح.";
+
+                    Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم عملية اضافة القسم بنجاح");
+
+                }
 
 
-            List SectionTableList = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[1]/div[2]/div/div/table[1]/tbody/tr/td[1]"));
+            } else {
+                System.out.println("Thers in Datra");
 
-            int TableSize = SectionTableList.size();
+                WebElement FormStatusLocatorWaitg = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusLocator));
+                FormStatusLocatorWaitg.click();
 
-            System.out.println("TableSize::" + TableSize);
+                WebElement FormStatusSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusSearchLocator));
+                FormStatusSearchLocatorWait.sendKeys("غير منشور" , Keys.ENTER);
 
-            if (TableSize <= 1) {
-                int TableSizeAdd = SectionTableList.size() + 2;
-                String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
-                System.out.println("TableSizeAdd::" + TableSizeAdd);
-                System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
+                Thread.sleep(1000);
+                WebElement SerachButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachButtonLocator));
+                SerachButtonLocatorWait.click();
 
-                By SectionDescrptionSplit = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_tbAddFormSectionDesc");
-                Random Rand = new Random();
-                int RandomNumber = Rand.nextInt(1000000);
+                WebElement SectionsLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionsLinkLocator));
+                SectionsLinkLocatorWait.click();
+                List SectionTableList = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[1]/div[2]/div/div/table[1]/tbody/tr/td[1]"));
 
-                WebElement SectionDescrptionWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionDescrptionSplit));
+                int TableSize = SectionTableList.size();
 
-                SectionDescrptionWait.sendKeys("Rami" + RandomNumber);
+                if (TableSize <= 1) {
+                    int TableSizeAdd = SectionTableList.size() + 2;
+                    String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
+                    System.out.println("TableSizeAdd::" + TableSizeAdd);
+                    System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
 
-                By AddLinkSpilt = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_lbtnAddFormSectionDesc");
+                    By SectionDescrptionSplit = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_tbAddFormSectionDesc");
+                    Random Rand = new Random();
+                    int RandomNumber = Rand.nextInt(1000000);
 
-                WebElement AddLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddLinkSpilt));
-                AddLinkWait.click();
+                    WebElement SectionDescrptionWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionDescrptionSplit));
 
-                By AddSectionsMessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+                    SectionDescrptionWait.sendKeys("Rami" + RandomNumber);
 
-                WebElement AddSectionsMessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddSectionsMessageLocator));
+                    By AddLinkSpilt = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_lbtnAddFormSectionDesc");
 
-                String ActualResult = browserQA.findElement(AddSectionsMessageLocator).getText();
-                String ExcpectedResult = "تم إضافة القسم بنجاح.";
+                    WebElement AddLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddLinkSpilt));
+                    AddLinkWait.click();
 
-                Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم عملية اضافة القسم بنجاح");
+                    By AddSectionsMessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+
+                    WebElement AddSectionsMessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddSectionsMessageLocator));
+
+                    String ActualResult = browserQA.findElement(AddSectionsMessageLocator).getText();
+                    String ExcpectedResult = "تم إضافة القسم بنجاح.";
+
+                    Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم عملية اضافة القسم بنجاح");
+                }
+                if (TableSize >= 2 && TableSize < 22) {
+
+                    int TableSizeAdd = SectionTableList.size() + 1;
+                    String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
+                    System.out.println("TableSizeAdd::" + TableSizeAdd);
+                    System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
+
+                    By SectionDescrptionSplit = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_tbAddFormSectionDesc");
+
+                    Random Rand = new Random();
+                    int RandomNumber = Rand.nextInt(1000000);
+
+                    WebElement SectionDescrptionWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionDescrptionSplit));
+
+                    SectionDescrptionWait.sendKeys("Rami" + RandomNumber);
+
+                    By AddLinkSpilt = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_lbtnAddFormSectionDesc");
+
+                    WebElement AddLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddLinkSpilt));
+                    AddLinkWait.click();
+
+                    By AddSectionsMessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+
+                    WebElement AddSectionsMessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddSectionsMessageLocator));
+
+                    String ActualResult = browserQA.findElement(AddSectionsMessageLocator).getText();
+                    String ExcpectedResult = "تم إضافة القسم بنجاح.";
+
+                    Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم عملية اضافة القسم بنجاح");
+
+                }
+                if (TableSize >= 22) {
+
+                    int TableSizeAdd = SectionTableList.size();
+                    String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
+                    System.out.println("TableSizeAdd::" + TableSizeAdd);
+                    System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
+
+                    By SectionDescrptionSplit = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_tbAddFormSectionDesc");
+                    Random Rand = new Random();
+                    int RandomNumber = Rand.nextInt(1000000);
+
+                    WebElement SectionDescrptionWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionDescrptionSplit));
+
+                    SectionDescrptionWait.sendKeys("Rami" + RandomNumber);
+
+                    By AddLinkSpilt = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_lbtnAddFormSectionDesc");
+
+                    WebElement AddLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddLinkSpilt));
+                    AddLinkWait.click();
+
+                    By AddSectionsMessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+
+                    WebElement AddSectionsMessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddSectionsMessageLocator));
+
+                    String ActualResult = browserQA.findElement(AddSectionsMessageLocator).getText();
+                    String ExcpectedResult = "تم إضافة القسم بنجاح.";
+
+                    Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم عملية اضافة القسم بنجاح");
+                }
+
+
             }
-            if (TableSize >= 2 && TableSize < 22) {
-
-                int TableSizeAdd = SectionTableList.size() + 1;
-                String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
-                System.out.println("TableSizeAdd::" + TableSizeAdd);
-                System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
-
-                By SectionDescrptionSplit = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_tbAddFormSectionDesc");
-
-                Random Rand = new Random();
-                int RandomNumber = Rand.nextInt(1000000);
-
-                WebElement SectionDescrptionWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionDescrptionSplit));
-
-                SectionDescrptionWait.sendKeys("Rami" + RandomNumber);
-
-                By AddLinkSpilt = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_lbtnAddFormSectionDesc");
-
-                WebElement AddLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddLinkSpilt));
-                AddLinkWait.click();
-
-                By AddSectionsMessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
-
-                WebElement AddSectionsMessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddSectionsMessageLocator));
-
-                String ActualResult = browserQA.findElement(AddSectionsMessageLocator).getText();
-                String ExcpectedResult = "تم إضافة القسم بنجاح.";
-
-                Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم عملية اضافة القسم بنجاح");
-
-            }
-            if (TableSize >= 22) {
-
-                int TableSizeAdd = SectionTableList.size();
-                String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
-                System.out.println("TableSizeAdd::" + TableSizeAdd);
-                System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
-
-                By SectionDescrptionSplit = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_tbAddFormSectionDesc");
-                Random Rand = new Random();
-                int RandomNumber = Rand.nextInt(1000000);
-
-                WebElement SectionDescrptionWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionDescrptionSplit));
-
-                SectionDescrptionWait.sendKeys("Rami" + RandomNumber);
-
-                By AddLinkSpilt = By.id("ctl00_PlaceHolderMain_gvSections_ctl" + TableSizeAddFormat + "_lbtnAddFormSectionDesc");
-
-                WebElement AddLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddLinkSpilt));
-                AddLinkWait.click();
-
-                By AddSectionsMessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
-
-                WebElement AddSectionsMessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddSectionsMessageLocator));
-
-                String ActualResult = browserQA.findElement(AddSectionsMessageLocator).getText();
-                String ExcpectedResult = "تم إضافة القسم بنجاح.";
-
-                Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم عملية اضافة القسم بنجاح");
-            }
-
 
         }
 
@@ -170,6 +295,10 @@ public class SectionsForm {
         //مدير عام الامن والسلامة/ عرض الاقسام الاقسام
         @Test
         public void ViewSectionsOfTheForms() throws InterruptedException {
+
+
+            browserQA.manage().window().maximize();
+            browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
 
 
             WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
@@ -204,6 +333,9 @@ public class SectionsForm {
         public void editSectionsOfTheForm() throws InterruptedException {
 
 
+            browserQA.manage().window().maximize();
+            browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+
             WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
             FormMainMenuLoactorWait.click();
 
@@ -222,7 +354,22 @@ public class SectionsForm {
             WebElement SectionsLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionsLinkLocator));
             SectionsLinkLocatorWait.click();
 
+    /*    System.out.println("Rami" + RandomNumber);
 
+        WebElement table = browserQA.findElement(By.id("ctl00_PlaceHolderMain_gvSections"));
+
+        List<WebElement> allrows = table.findElements(By.tagName("tr"));
+
+        for (WebElement row : allrows) {
+            List<WebElement> Cells = row.findElements(By.tagName("td"));
+            for (WebElement Cell : Cells) {
+                if (Cell.getText().contains("Rami" + RandomNumber))
+                    System.out.println(Cell.getText());
+
+            }
+
+        }
+*/
             WebElement EditLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(EditLinkLocator));
             EditLinkLocatorWait.click();
 
@@ -248,6 +395,7 @@ public class SectionsForm {
             Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم عملية التعديل بنجاح");
 
 
+
         }
 
         private By DeleteLinkLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl02_lbtnDelete");
@@ -258,6 +406,9 @@ public class SectionsForm {
 
         public void deleteSections() throws InterruptedException {
 
+
+            browserQA.manage().window().maximize();
+            browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
 
             WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
             FormMainMenuLoactorWait.click();

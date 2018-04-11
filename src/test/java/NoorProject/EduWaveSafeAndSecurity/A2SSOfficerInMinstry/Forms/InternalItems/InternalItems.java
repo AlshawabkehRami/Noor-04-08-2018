@@ -19,6 +19,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import static NoorProject.Other.NoorLogin.browserQA;
 import static NoorProject.Other.NoorLogin.waitQA;
@@ -49,6 +50,10 @@ public class InternalItems {
 
         @Test
         public void addInternalItems() throws InterruptedException {
+
+
+            browserQA.manage().window().maximize();
+            browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
 
 
             WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
@@ -205,13 +210,16 @@ public class InternalItems {
 
 
             }
-            //}
         }
 
 
         @Test
 
         public void deleteInternalItems() throws InterruptedException {
+
+
+            browserQA.manage().window().maximize();
+            browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
 
 
             List SectionTableListDelet = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[1]/div[2]/div/div/table[1]/tbody/tr/td[1]"));
@@ -243,12 +251,13 @@ public class InternalItems {
 
             Assert.assertEquals(DeleteActualResult,DeleteExcpectedResult,"لم تتم عملية الحذف بنجاح ");
 
-
         }
 
         @Test
 
         public void editInternalItems() throws InterruptedException {
+            browserQA.manage().window().maximize();
+            browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
 
             List SectionTableListDelet = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[1]/div[2]/div/div/table[1]/tbody/tr/td[1]"));
 
@@ -278,9 +287,6 @@ public class InternalItems {
             String ExcpectedResultUpdate="تم تعديل البند الداخلي بنجاح.";
 
             Assert.assertEquals(ActualResultUpdate,ExcpectedResultUpdate,"لم تتم عملية التعديل بنجاح ");
-
-
-
 
         }
 
