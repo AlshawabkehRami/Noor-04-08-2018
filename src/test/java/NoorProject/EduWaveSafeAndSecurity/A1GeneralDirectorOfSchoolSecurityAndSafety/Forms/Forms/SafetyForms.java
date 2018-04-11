@@ -379,9 +379,10 @@ public class SafetyForms {
             WebElement DeleteLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteLinkLocator));
             DeleteLinkLocatorWait.click();
 
+            Thread.sleep(2000);
+
             By YesButtonLocator = By.id("ctl00_ibtnYes");
 
-            Thread.sleep(2000);
             WebElement YesButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(YesButtonLocator));
             YesButtonLocatorWait.click();
 
