@@ -647,8 +647,10 @@ public class ExternalItems {
             System.out.println("لا يمكن الحذف لان هناك بند داخلي مرتبط به.");
 
         }
+        if (ActualResult.equals(ExcpectedReeult)) {
 
-        else {
+            System.out.println("تمت عملية الحذف بنجاح");
+        } else {
 
             Assert.fail("حدث خلل في عملية الحذف");
         }

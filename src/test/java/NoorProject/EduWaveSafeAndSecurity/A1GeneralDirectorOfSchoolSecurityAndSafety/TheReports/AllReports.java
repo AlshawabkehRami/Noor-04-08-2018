@@ -56,7 +56,7 @@ public class AllReports {
 
         WebElement ddlLearningGenderWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlLearningGenderLocatorDSTC));
         ddlLearningGenderWait.click();
-        browserQA.findElement(ddlLearningGenderSearchLocatorDSTC).sendKeys("بنين" , Keys.ENTER);
+        browserQA.findElement(ddlLearningGenderSearchLocatorDSTC).sendKeys("بنين", Keys.ENTER);
 
 
         try {
@@ -68,7 +68,7 @@ public class AllReports {
         }
 
         WebElement ddlDistrictSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlDistrictSearchLocatorDSTC));
-        ddlDistrictSearchLocatorWait.sendKeys("الحد الغربي" , Keys.ENTER);
+        ddlDistrictSearchLocatorWait.sendKeys("الحد الغربي", Keys.ENTER);
 
 
         try {
@@ -80,7 +80,7 @@ public class AllReports {
             ddlStudylevelLocatorWait.click();
         }
 
-        browserQA.findElement(ddlStudylevelSearchLocatorDSTC).sendKeys("الثانوية" , Keys.ENTER);
+        browserQA.findElement(ddlStudylevelSearchLocatorDSTC).sendKeys("الثانوية", Keys.ENTER);
 
 
         try {
@@ -90,7 +90,7 @@ public class AllReports {
             WebElement ddlSchoolCategorizationLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlSchoolCategorizationLocatorDSTC));
             ddlSchoolCategorizationLocatorWait.click();
         }
-        browserQA.findElement(ddlSchoolCategorizationSearchLoactorDSTC).sendKeys("حكومي" , Keys.ENTER);
+        browserQA.findElement(ddlSchoolCategorizationSearchLoactorDSTC).sendKeys("حكومي", Keys.ENTER);
 
         try {
             WebElement btnSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(btnSearchLocatorDSTC));
@@ -108,7 +108,7 @@ public class AllReports {
         String ActualResult = browserQA.findElement(ReportTitleLocator).getText();
         String ExpectedResult = "توزيع الطلاب على الفصول تجميعي";
 
-        Assert.assertEquals(ActualResult , ExpectedResult , "التقرير المطلوب غير متوفر");
+        Assert.assertEquals(ActualResult, ExpectedResult, "التقرير المطلوب غير متوفر");
     }
 
     private By BuildingInformationReportLocator = By.linkText("بيانات المباني");
@@ -137,15 +137,15 @@ public class AllReports {
         GebderWait.click();
 
         WebElement GenderSearchLocatorBIWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(GenderSearchLocatorBI));
-        GenderSearchLocatorBIWait.sendKeys("بنين" , Keys.ENTER);
+        GenderSearchLocatorBIWait.sendKeys("بنين", Keys.ENTER);
 
         Thread.sleep(1000);
         WebElement ddlDistrictLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLDistrictLocatorBI));
         ddlDistrictLocatorWait.click();
 
         WebElement ddlDistrictSearchLocatorBIWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLDistrictSearchLocatorBI));
-        ddlDistrictSearchLocatorBIWait.sendKeys("الحد الغربي" , Keys.ENTER);
-
+        ddlDistrictSearchLocatorBIWait.sendKeys("الحد الغربي", Keys.ENTER);
+        Thread.sleep(1000);
 
         try {
             WebElement btnSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNSearchLocatorBI));
@@ -160,7 +160,7 @@ public class AllReports {
         WebElement ReportTitleWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportTitleLoactor));
         String ActualResult = browserQA.findElement(ReportTitleLoactor).getText();
         String ExpectedResult = "بيانات المباني";
-        Assert.assertEquals(ActualResult , ExpectedResult , "التقرير المطلوب غير متوفر");
+        Assert.assertEquals(ActualResult, ExpectedResult, "التقرير المطلوب غير متوفر");
 
 
     }
@@ -196,7 +196,7 @@ public class AllReports {
         }
 
         WebElement GenderSearchLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(GenderSearchLoactorIR));
-        GenderSearchLoactorWait.sendKeys("بنين" , Keys.ENTER);
+        GenderSearchLoactorWait.sendKeys("بنين", Keys.ENTER);
 
         try {
 
@@ -210,7 +210,7 @@ public class AllReports {
         }
 
         WebElement ddlFormNameSearchLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLFormNameSearchLoactorIR));
-        ddlFormNameSearchLoactorWait.sendKeys("Selenium Form Dont Delete" , Keys.ENTER);
+        ddlFormNameSearchLoactorWait.sendKeys("Selenium Form Dont Delete", Keys.ENTER);
 
         try {
             WebElement btnSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNSearchLocatorIR));
@@ -225,7 +225,7 @@ public class AllReports {
         String ActualResult = browserQA.findElement(ReportInsideLabelLocator).getText();
         String ExpectedResult = "الأمن والسلامة-نسب الإدخال على مستوى الوزارة";
 
-        Assert.assertEquals(ActualResult , ExpectedResult , "التقرير المطلوب غير متوفر");
+        Assert.assertEquals(ActualResult, ExpectedResult, "التقرير المطلوب غير متوفر");
 
 
     }
@@ -258,7 +258,7 @@ public class AllReports {
         GenderLoactorWait.click();
 
         WebElement GenderSearchLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(GenderSearchLoactorAR));
-        GenderSearchLoactorWait.sendKeys("بنين" , Keys.ENTER);
+        GenderSearchLoactorWait.sendKeys("بنين", Keys.ENTER);
 
         Thread.sleep(1000);
         try {
@@ -269,7 +269,7 @@ public class AllReports {
             FormNameLoactorWait.click();
         }
 
-        browserQA.findElement(FormNameSearchLoactorAR).sendKeys("Selenium Form Dont Delete" , Keys.ENTER);
+        browserQA.findElement(FormNameSearchLoactorAR).sendKeys("Selenium Form Dont Delete", Keys.ENTER);
 
         try {
             WebElement ibtnSearchLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNSearchLoactorAR));
@@ -284,7 +284,7 @@ public class AllReports {
         String ActualResult = browserQA.findElement(ReportInsideNameLoactorAR).getText();
         String ExpectedResult = "الأمن والسلامة-نسب التقييم على مستوى الوزارة";
 
-        Assert.assertEquals(ActualResult , ExpectedResult , "التقرير المطلوب غير متوفر");
+        Assert.assertEquals(ActualResult, ExpectedResult, "التقرير المطلوب غير متوفر");
 
 
     }
@@ -318,7 +318,7 @@ public class AllReports {
         drop_down_sex_LocatorWait.click();
 
         WebElement txt_male_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLGenderSearchLocatorSR));
-        txt_male_wait.sendKeys("بنين" , Keys.ENTER);
+        txt_male_wait.sendKeys("بنين", Keys.ENTER);
 
         try {
             WebElement drop_down_managements_LocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLDistrictLocatorSR));
@@ -330,7 +330,7 @@ public class AllReports {
         }
 
         WebElement txt_drop_down_managements_LocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLDistrictSearchLocatorSR));
-        txt_drop_down_managements_LocatorWait.sendKeys("الحد الغربي" , Keys.ENTER);
+        txt_drop_down_managements_LocatorWait.sendKeys("الحد الغربي", Keys.ENTER);
 
         Thread.sleep(1000);
         try {
@@ -345,7 +345,7 @@ public class AllReports {
         }
 
         WebElement education_office_Locator_txtWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLOfficeSearchLocatorSR));
-        education_office_Locator_txtWait.sendKeys("مكتب الخالدية" , Keys.ENTER);
+        education_office_Locator_txtWait.sendKeys("مكتب الخالدية", Keys.ENTER);
 
         try {
             WebElement btn_search_LocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNSearchLocator));
@@ -359,7 +359,7 @@ public class AllReports {
         waitQA.until(ExpectedConditions.visibilityOfElementLocated(Info_Schools_Locator));
         String ActualResult = browserQA.findElement(Info_Schools_Locator).getText();
         String ExpectedResult = "بيانات المدرسة";
-        Assert.assertEquals(ActualResult , ExpectedResult , "التقرير المطلوب غير متوفر");
+        Assert.assertEquals(ActualResult, ExpectedResult, "التقرير المطلوب غير متوفر");
 
 
     }
@@ -392,7 +392,7 @@ public class AllReports {
         ddlLearningGender_LocatorWait.click();
 
         WebElement GenderSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(GenderSearchLocatorSDWES));
-        GenderSearchLocatorWait.sendKeys("بنين" , Keys.ENTER);
+        GenderSearchLocatorWait.sendKeys("بنين", Keys.ENTER);
 
         Thread.sleep(2000);
         WebElement DDLDistrictLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLDistrictLocatorSDWES));
@@ -400,14 +400,14 @@ public class AllReports {
 
 
         WebElement DistrictSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DistrictSearchLocatorSDWES));
-        DistrictSearchLocatorWait.sendKeys("الحد الغربي" , Keys.ENTER);
+        DistrictSearchLocatorWait.sendKeys("الحد الغربي", Keys.ENTER);
 
         Thread.sleep(1000);
         WebElement OfficeLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(OfficeLocatorSDWES));
         OfficeLocatorWait.click();
 
         WebElement OfficeSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(OfficeSearchLocatorSDWES));
-        OfficeSearchLocatorWait.sendKeys("الخالدية" , Keys.ENTER);
+        OfficeSearchLocatorWait.sendKeys("الخالدية", Keys.ENTER);
 
 
         Thread.sleep(1000);
@@ -444,17 +444,17 @@ public class AllReports {
         TheReportLoactorWait.click();
 
         waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLGenderLocatorUDIS)).click();
-        waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLGenderSearchLocatorUDIS)).sendKeys("بنين" , Keys.ENTER);
+        waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLGenderSearchLocatorUDIS)).sendKeys("بنين", Keys.ENTER);
         Thread.sleep(100);
         waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLDistrictLocatorUDIS)).click();
-        waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLDistrictSearchLocatorUDIS)).sendKeys("الحد الغربي" , Keys.ENTER);
+        waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLDistrictSearchLocatorUDIS)).sendKeys("الحد الغربي", Keys.ENTER);
         Thread.sleep(100);
         waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNSearchLocatorUDIS)).click();
 
         waitQA.until(ExpectedConditions.visibilityOfElementLocated(info_schools_LocatorUDIS));
         String ActualResult = browserQA.findElement(info_schools_LocatorUDIS).getText();
         String ExpectedResult = "بيانات المستخدمين بالمدارس";
-        Assert.assertEquals(ActualResult , ExpectedResult , "البيانات غير صحيحة");
+        Assert.assertEquals(ActualResult, ExpectedResult, "البيانات غير صحيحة");
 
     }
 
@@ -483,7 +483,7 @@ public class AllReports {
 
         WebElement GenderLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(GenderLocatorSWOSB));
         GenderLocatorWait.click();
-        browserQA.findElement(FemalelocatorSWOSB).sendKeys("بنات" , Keys.ENTER);
+        browserQA.findElement(FemalelocatorSWOSB).sendKeys("بنات", Keys.ENTER);
 
 
         try {
@@ -494,7 +494,7 @@ public class AllReports {
             ddlDistrictLocatorWait.click();
         }
 
-        browserQA.findElement(DDLDistrictSearchLocatorSWOSB).sendKeys("عمان" , Keys.ENTER);
+        browserQA.findElement(DDLDistrictSearchLocatorSWOSB).sendKeys("عمان", Keys.ENTER);
 
         Thread.sleep(1000);
         try {
@@ -505,7 +505,7 @@ public class AllReports {
             ddlSupervisionCenteLocatorWait.click();
         }
 
-        browserQA.findElement(DDLSupervisionCenteSearchLocatorSWOSB).sendKeys("عمان" , Keys.ENTER);
+        browserQA.findElement(DDLSupervisionCenteSearchLocatorSWOSB).sendKeys("عمان", Keys.ENTER);
 
         Thread.sleep(1000);
         WebElement ibtnSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNSearchLocatorSWOSB));
@@ -518,7 +518,7 @@ public class AllReports {
         String ActualResult = browserQA.findElement(ReportTitleInsidLoactor).getText();
         String ExpectedResult = " عدد الطلاب مع ملكية مبنى المدرسة";
 
-        Assert.assertEquals(ActualResult , ExpectedResult , "لايمكن عرض التقرير المطلوب");
+        Assert.assertEquals(ActualResult, ExpectedResult, "لايمكن عرض التقرير المطلوب");
 
     }
 

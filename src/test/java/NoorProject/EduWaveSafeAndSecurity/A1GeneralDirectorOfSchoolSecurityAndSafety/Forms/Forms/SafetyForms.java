@@ -235,7 +235,13 @@ public class SafetyForms {
 
             System.out.println("يجب اضافة الاقسام والبنود الخارجية والبنود الداخلية");
 
-        } else {
+        }
+
+        if (ActualResult.equals("تم نشر النموذج بنجاح.")){
+
+            System.out.println("تمت عملية نشر النموذج بنجاح");
+        }
+        else {
             Assert.fail("حدث خلل اثناء عملية الحفظ");
         }
 
