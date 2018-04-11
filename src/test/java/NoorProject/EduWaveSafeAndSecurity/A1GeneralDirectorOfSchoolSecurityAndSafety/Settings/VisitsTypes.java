@@ -29,7 +29,7 @@ public class VisitsTypes {
 
     public void switchProfileUserAdmin() {
         browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
         WebElement SwitchProfileLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SwitchProfileLocator));
         SwitchProfileLocatorWait.click();
@@ -41,13 +41,14 @@ public class VisitsTypes {
 
     Random Rand = new Random();
     int RandomNumber = Rand.nextInt(1000000);
-    public String RandomString="نوع زيارة رقم"+RandomNumber;
+    public String RandomString = "نوع زيارة رقم" + RandomNumber;
+
     @Test
 //اضافة انواع الزيارات/مدير عام الامن والسلامة المدرسية
     public void addVisitsTypes() {
 
         browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
         WebElement SettingsMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SettingsMenuLoactor));
         SettingsMenuLoactorWait.click();
 
@@ -67,7 +68,6 @@ public class VisitsTypes {
             String TableSizeAddFormat1 = String.format("%02d" , TableSizeAdd);
 
             By VisitsTypesDescLocator = By.id("ctl00_PlaceHolderMain_gvVisitType_ctl" + TableSizeAddFormat1 + "_tbVisitTypeDesc");
-
 
 
             WebElement VisitsTypesDescLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(VisitsTypesDescLocator));
@@ -161,7 +161,7 @@ public class VisitsTypes {
 
     public void editVisitsTypes() {
         browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
         WebElement SettingsMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SettingsMenuLoactor));
         SettingsMenuLoactorWait.click();
@@ -233,14 +233,14 @@ public class VisitsTypes {
     }
 
 
-    private  By DeletelinkLOcator = By.id("ctl00_PlaceHolderMain_gvVisitType_ctl02_lbtnDelete");
-    private  By YesDeleteLocator = By.id("ctl00_ibtnYes");
+    private By DeletelinkLOcator = By.id("ctl00_PlaceHolderMain_gvVisitType_ctl02_lbtnDelete");
+    private By YesDeleteLocator = By.id("ctl00_ibtnYes");
 
     @Test
 
     public void deleteVisitsTypes() {
         browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
 
         WebElement SettingsMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SettingsMenuLoactor));
@@ -289,7 +289,14 @@ public class VisitsTypes {
             String ActualResult = browserQA.findElement(MessageLocatorDelete).getText();
             String ExpectedResult = "تمت عملية الحذف بنجاح";
 
-            Assert.assertEquals(ActualResult , ExpectedResult , "لم تتم عملية الحذف بنجاح");
+
+            if (ActualResult.equals("لا يمكن الحذف لارتباط نوع الزيارة ببطاقة مدرسة.")) {
+
+                System.out.println("لا يمكن الحذف لارتباط نوع الزيارة ببطاقة مدرسة.");
+            } else {
+                Assert.fail("حدث خلل اثناء عملية الحفظ");
+            }
+
         }
 
 

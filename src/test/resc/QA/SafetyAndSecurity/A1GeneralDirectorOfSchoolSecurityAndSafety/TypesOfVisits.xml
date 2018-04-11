@@ -24,12 +24,14 @@
             <class name="NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Settings.VisitsTypes">
                 <methods>
                     <include name="switchProfileUserAdmin"/>
-                    <include name="addVisitsTypes"/>
-                    <include name="editVisitsTypes"/>
+                    <!--<include name="addVisitsTypes"/>
+                    <include name="editVisitsTypes"/>-->
                     <include name="deleteVisitsTypes"/>
                 </methods>
             </class>
+<!--
             <class name="NoorProject.Other.NoorLogOut"/>
+-->
         </classes>
 
     </test>
