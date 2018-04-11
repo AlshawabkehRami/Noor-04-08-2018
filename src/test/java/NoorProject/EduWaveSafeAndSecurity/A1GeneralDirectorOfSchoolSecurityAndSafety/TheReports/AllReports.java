@@ -41,7 +41,7 @@ public class AllReports {
     public void ViewDistributeStudentsToClassesReport() {
 
         browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+        browserQA.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
 
 
         WebElement SwitchProfileLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SwitchProfileLocator));
@@ -353,13 +353,9 @@ public class AllReports {
         WebElement education_office_Locator_txtWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLOfficeSearchLocatorSR));
         education_office_Locator_txtWait.sendKeys("مكتب الخالدية", Keys.ENTER);
 
-        try {
-            WebElement btn_search_LocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNSearchLocator));
-            btn_search_LocatorWait.click();
-        } catch (Exception e) {
-            WebElement btn_search_LocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNSearchLocator));
-            btn_search_LocatorWait.click();
-        }
+        Thread.sleep(1000);
+        WebElement btn_search_LocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNSearchLocator));
+        btn_search_LocatorWait.click();
 
 
         waitQA.until(ExpectedConditions.visibilityOfElementLocated(Info_Schools_Locator));
