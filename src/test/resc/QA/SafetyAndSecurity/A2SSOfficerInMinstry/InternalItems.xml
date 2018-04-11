@@ -19,7 +19,7 @@
                     <include name="SchoolSecurityandSafetyOfficer"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.A2SSOfficerInMinstry.TheReports.Forms.InternalItems.InternalItems">
+            <class name="InternalItems">
                 <methods>
                     <include name="LoginToTheUserII"/>
                     <include name="addInternalItems"/>

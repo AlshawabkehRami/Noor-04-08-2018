@@ -1,8 +1,12 @@
 /*
+ * Created By  Rami AlShawabkeh  4/11/18 3:58 PM
+ */
+
+/*
  * Created By  Rami AlShawabkeh  4/8/18 3:08 PM
  */
 
-package NoorProject.EduWaveSafeAndSecurity.A2SSOfficerInMinstry.TheReports.Forms.InternalItems;
+package NoorProject.EduWaveSafeAndSecurity.A2SSOfficerInMinstry.Forms.InternalItems;
 
 import NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.ExternalItems.ExternalItems;
 import NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.SectionsForm.SectionsForms;

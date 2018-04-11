@@ -16,7 +16,7 @@
                     <include name="SchoolSecurityandSafetyOfficer"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.A2SSOfficerInMinstry.TheReports.Forms.SectionsForm.SectionsForm">
+            <class name="SectionsForm">
                 <methods>
                   <include name="LoginUserAndSwitchProfileAdmin"/>
                     <include name="addSectionsToTheForm"/>

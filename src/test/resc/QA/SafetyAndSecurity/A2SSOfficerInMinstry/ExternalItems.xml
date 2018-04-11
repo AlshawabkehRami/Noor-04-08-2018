@@ -18,7 +18,7 @@
                     <include name="SchoolSecurityandSafetyOfficer"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.A2SSOfficerInMinstry.TheReports.Forms.ExternalItems.ExternalItems">
+            <class name="ExternalItems">
                 <methods>
                     <include name="LoginUserAndSwitchProfileAdminEX"/>
                     <include name="addExternalItems"/>

@@ -1,8 +1,12 @@
 /*
+ * Created By  Rami AlShawabkeh  4/11/18 3:58 PM
+ */
+
+/*
  * Created By  Rami AlShawabkeh  4/8/18 3:08 PM
  */
 
-package NoorProject.EduWaveSafeAndSecurity.A2SSOfficerInMinstry.TheReports.Forms.SectionsForm;
+package NoorProject.EduWaveSafeAndSecurity.A2SSOfficerInMinstry.Forms.SectionsForm;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
