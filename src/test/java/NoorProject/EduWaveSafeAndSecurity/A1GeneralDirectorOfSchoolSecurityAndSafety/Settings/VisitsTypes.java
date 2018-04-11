@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import static NoorProject.Other.NoorLogin.browserQA;
 import static NoorProject.Other.NoorLogin.waitQA;
@@ -27,6 +28,9 @@ public class VisitsTypes {
     @Test
 
     public void switchProfileUserAdmin() {
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+
         WebElement SwitchProfileLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SwitchProfileLocator));
         SwitchProfileLocatorWait.click();
 
@@ -42,6 +46,8 @@ public class VisitsTypes {
 //اضافة انواع الزيارات/مدير عام الامن والسلامة المدرسية
     public void addVisitsTypes() {
 
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
         WebElement SettingsMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SettingsMenuLoactor));
         SettingsMenuLoactorWait.click();
 
@@ -154,6 +160,8 @@ public class VisitsTypes {
 //تعديل انواع الزيارات/مدير عام الامن والسلامة المدرسية
 
     public void editVisitsTypes() {
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
 
         WebElement SettingsMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SettingsMenuLoactor));
         SettingsMenuLoactorWait.click();
@@ -231,6 +239,9 @@ public class VisitsTypes {
     @Test
 
     public void deleteVisitsTypes() {
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+
 
         WebElement SettingsMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SettingsMenuLoactor));
         SettingsMenuLoactorWait.click();

@@ -11,6 +11,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
 import static NoorProject.Other.NoorLogin.browserQA;
 import static NoorProject.Other.NoorLogin.waitQA;
 
@@ -37,6 +39,10 @@ public class AllReports {
     //توزيع الطلاب على الفصول
     @Test
     public void ViewDistributeStudentsToClassesReport() {
+
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+
 
         WebElement SwitchProfileLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SwitchProfileLocator));
         SwitchProfileLocatorWait.click();

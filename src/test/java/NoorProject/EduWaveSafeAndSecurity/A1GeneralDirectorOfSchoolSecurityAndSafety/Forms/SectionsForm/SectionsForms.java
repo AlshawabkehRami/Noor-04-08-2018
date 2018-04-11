@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import static NoorProject.Other.NoorLogin.browserQA;
 import static NoorProject.Other.NoorLogin.loginFormLAbelLocator;
@@ -32,6 +33,9 @@ public class SectionsForms {
 
     public void LoginUserAndSwitchProfileAdmin() {
 
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+
         WebElement SwitchProfileLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SwitchProfileLocator));
         SwitchProfileLocatorWait.click();
 
@@ -45,6 +49,9 @@ public class SectionsForms {
     //مدير عام الامن والسلامة/ أضافة الاقسام
     @Test
     public void addSectionsToTheForm() throws InterruptedException {
+
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
@@ -286,6 +293,9 @@ public class SectionsForms {
     @Test
     public void ViewSectionsOfTheForms() throws InterruptedException {
 
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
@@ -318,6 +328,8 @@ public class SectionsForms {
     @Test
     public void editSectionsOfTheForm() throws InterruptedException {
 
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
@@ -388,6 +400,9 @@ public class SectionsForms {
 
     public void deleteSections() throws InterruptedException {
 
+
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
