@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 
-
 <!--
   ~ Created By Rami AlShawabkeh  4/5/18 10:21 AM
   -->
@@ -10,7 +9,7 @@
 
 <suite name="مدير عام الامن والسلامة المدرسية">
 
-    <test name="التقارير">
+    <test name="نماذج الامن والسلامة المدرسية">
         <classes>
             <class name="NoorProject.Other.NoorLogin">
                 <methods>
@@ -21,10 +20,10 @@
                 <methods>
                     <include name="loginUserAndSwitchProfileForms"/>
                     <include name="addSafetyForms"/>
+                    <include name="DeleteForms"/>
                     <include name="EditUnpublishedSafetyForms"/>
                     <include name="ViewForm"/>
                     <include name="PublishingForm"/>
-                    <include name="DeleteForms"/>
                 </methods>
             </class>
             <class name="NoorProject.Other.NoorLogOut"/>
