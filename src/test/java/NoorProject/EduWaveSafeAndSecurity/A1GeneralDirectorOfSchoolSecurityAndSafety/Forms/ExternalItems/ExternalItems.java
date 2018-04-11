@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import static NoorProject.Other.NoorLogin.browserQA;
 import static NoorProject.Other.NoorLogin.waitQA;
@@ -30,6 +31,9 @@ public class ExternalItems {
 
     public void LoginUserAndSwitchProfileAdminEX() {
 
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+
         WebElement SwitchProfileLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SwitchProfileLocator));
         SwitchProfileLocatorWait.click();
 
@@ -43,6 +47,9 @@ public class ExternalItems {
     //مدير عام الامن والسلامة/ أضافة البنود الخارجية
     @Test
     public void addExternalItems() throws InterruptedException {
+
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
 
         SafetyForms AddForm = new SafetyForms();
         AddForm.addSafetyForms();
@@ -510,6 +517,8 @@ public class ExternalItems {
     @Test
     public void viewExternalItems() throws InterruptedException {
 
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
@@ -548,6 +557,8 @@ public class ExternalItems {
     @Test
     public void editExternalItems() throws InterruptedException {
 
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
@@ -604,6 +615,8 @@ public class ExternalItems {
 
 
     public void deleteExternalItems() throws InterruptedException {
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
 
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));

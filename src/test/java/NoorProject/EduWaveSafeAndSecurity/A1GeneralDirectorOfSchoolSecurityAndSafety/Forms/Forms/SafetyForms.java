@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import static NoorProject.Other.NoorLogin.browserQA;
 import static NoorProject.Other.NoorLogin.waitQA;
@@ -30,6 +31,9 @@ public class SafetyForms {
 
     @Test
     public void loginUserAndSwitchProfileForms() {
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+
 
         WebElement SwitchProfileLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SwitchProfileLocator));
         SwitchProfileLocatorWait.click();
@@ -51,6 +55,9 @@ public class SafetyForms {
 
     @Test
     public void addSafetyForms() throws InterruptedException {
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
@@ -182,6 +189,9 @@ public class SafetyForms {
 
     @Test
     public void ViewForm() throws InterruptedException {
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
@@ -198,6 +208,8 @@ public class SafetyForms {
 
     @Test
     public void PublishingForm() throws InterruptedException {
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
 
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
