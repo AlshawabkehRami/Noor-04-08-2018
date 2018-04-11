@@ -29,7 +29,9 @@
                     <include name="schoolsThatHaveNotCompletedTheFormReport"/>
                     <include name="schoolDataReport"/>
                     <include name="schoolDataWithEducationalStagesReport"/>
+<!--
                     <include name="assessmentRate"/>
+-->
                     <include name="inputRatio"/>
                     <include name="dataSecurityAndSafetyOfficialsInSchoolsReport"/>
                     <include name="userDataInSchoolsReport"/>

@@ -20,7 +20,6 @@ import org.testng.annotations.Test;
 import java.util.Random;
 
 import static NoorProject.Other.NoorLogin.browserQA;
-import static NoorProject.Other.NoorLogin.loginFormLAbelLocator;
 import static NoorProject.Other.NoorLogin.waitQA;
 import static NoorProject.TeacherAffairs.GeneralDirectorInMinistry.UsersList.DepartmentManagersInTheMinistry.DirectorOfDepartmentsInTheMinistry.UserIdToPassString;
 
