@@ -2,13 +2,14 @@ package NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndS
 
 import NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.Forms.SafetyForms;
 import com.sun.xml.internal.ws.api.model.ExceptionType;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -34,7 +35,7 @@ public class SectionsForms {
     public void LoginUserAndSwitchProfileAdmin() {
 
         browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
         WebElement SwitchProfileLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SwitchProfileLocator));
         SwitchProfileLocatorWait.click();
@@ -51,7 +52,7 @@ public class SectionsForms {
     public void addSectionsToTheForm() throws InterruptedException {
 
         browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
@@ -294,7 +295,7 @@ public class SectionsForms {
     public void ViewSectionsOfTheForms() throws InterruptedException {
 
         browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
@@ -329,7 +330,7 @@ public class SectionsForms {
     public void editSectionsOfTheForm() throws InterruptedException {
 
         browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
@@ -349,22 +350,6 @@ public class SectionsForms {
         WebElement SectionsLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionsLinkLocator));
         SectionsLinkLocatorWait.click();
 
-    /*    System.out.println("Rami" + RandomNumber);
-
-        WebElement table = browserQA.findElement(By.id("ctl00_PlaceHolderMain_gvSections"));
-
-        List<WebElement> allrows = table.findElements(By.tagName("tr"));
-
-        for (WebElement row : allrows) {
-            List<WebElement> Cells = row.findElements(By.tagName("td"));
-            for (WebElement Cell : Cells) {
-                if (Cell.getText().contains("Rami" + RandomNumber))
-                    System.out.println(Cell.getText());
-
-            }
-
-        }
-*/
         WebElement EditLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(EditLinkLocator));
         EditLinkLocatorWait.click();
 
@@ -398,11 +383,11 @@ public class SectionsForms {
     //مدير عام الامن والسلامة حذف الاقسام
     @Test
 
-    public void deleteSections() throws InterruptedException {
+    public void deleteSections() throws InterruptedException, IOException {
 
 
         browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
@@ -420,20 +405,96 @@ public class SectionsForms {
         WebElement SectionsLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionsLinkLocator));
         SectionsLinkLocatorWait.click();
 
-        WebElement DeleteLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteLinkLocator));
-        DeleteLinkLocatorWait.click();
+        List SectionTableSize = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[1]/div[2]/div/div/table[1]/tbody/tr/td[1]"));
+        int TableSizeDotSize = SectionTableSize.size();
 
-        WebElement YesConfrmationLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(YesConfrmationLocator));
-        YesConfrmationLocatorWait.click();
 
-        By MessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+        if (TableSizeDotSize == (1)) {
 
-        WebElement MessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(MessageLocator));
 
-        String ActualResult = browserQA.findElement(MessageLocator).getText();
-        String ExpectedResult = "تم حذف القسم بنجاح.";
+            By SectionDescLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl03_tbAddFormSectionDesc");
+            WebElement SectionDescLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionDescLocator));
+            SectionDescLocatorWait.sendKeys("Rami");
 
-        Assert.assertEquals(ActualResult , ExpectedResult , "لايمكن الحذف للقسم");
+            By AddLinkLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl03_lbtnAddFormSectionDesc");
+            WebElement AddLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddLinkLocator));
+            AddLinkLocatorWait.click();
+
+            WebElement DeleteLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteLinkLocator));
+            DeleteLinkLocatorWait.click();
+
+            WebElement YesConfrmationLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(YesConfrmationLocator));
+            YesConfrmationLocatorWait.click();
+
+            By MessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+
+            WebElement MessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(MessageLocator));
+
+            String ActualResult = browserQA.findElement(MessageLocator).getText();
+            String ExpectedResult = "تم حذف القسم بنجاح.";
+
+
+            if (ActualResult.equals("لايمكن الحذف لارتباطه ببند خارجي.")) {
+
+                System.out.println("لايمكن الحذف لارتباطه ببند خارجي.");
+            }
+
+            if (ActualResult.equals("تم حذف القسم بنجاح.")) {
+
+                System.out.println("تم حذف القسم بنجاح.");
+
+            }
+            if (!ActualResult.equals("لايمكن الحذف لارتباطه ببند خارجي.") && !ActualResult.equals(ExpectedResult)) {
+
+                TakesScreenshot Ts = (TakesScreenshot) browserQA;
+                File Src = Ts.getScreenshotAs(OutputType.FILE);
+                FileUtils.copyFile(Src , new File("./TakeScreenShot/DeleteSection.png"));
+
+                Assert.fail("حدث خلل لعميلة الحذف");
+
+            }
+
+
+        } else {
+
+            WebElement DeleteLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteLinkLocator));
+            DeleteLinkLocatorWait.click();
+
+            WebElement YesConfrmationLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(YesConfrmationLocator));
+            YesConfrmationLocatorWait.click();
+
+            By MessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+
+            WebElement MessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(MessageLocator));
+
+            String ActualResult = browserQA.findElement(MessageLocator).getText();
+            String ExpectedResult = "تم حذف القسم بنجاح.";
+
+
+            if (ActualResult.equals("لايمكن الحذف لارتباطه ببند خارجي.")) {
+
+                System.out.println("لايمكن الحذف لارتباطه ببند خارجي.");
+            }
+
+            if (ActualResult.equals("تم حذف القسم بنجاح.")) {
+
+                System.out.println("تم حذف القسم بنجاح.");
+
+            }
+            if (!ActualResult.equals("لايمكن الحذف لارتباطه ببند خارجي.") && !ActualResult.equals(ExpectedResult)) {
+
+
+                TakesScreenshot Ts = (TakesScreenshot) browserQA;
+                File Src = Ts.getScreenshotAs(OutputType.FILE);
+                FileUtils.copyFile(Src , new File("./TakeScreenShot/DeleteSection.png"));
+
+                Assert.fail("حدث خلل لعميلة الحذف");
+
+
+            }
+
+
+        }
 
 
     }
