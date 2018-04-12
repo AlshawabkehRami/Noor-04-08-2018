@@ -235,7 +235,6 @@ public class InternalItems {
         By DeleteLink = By.id("ctl00_PlaceHolderMain_gvInternalItems_ctl02_lbtnDelete");
 
         WebElement DeleteLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteLink));
-
         DeleteLinkWait.click();
 
         By YesLocator = By.id("ctl00_ibtnYes");
@@ -275,8 +274,6 @@ public class InternalItems {
         Thread.sleep(1000);
 
         WebElement EditlinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(Editlink));
-        Thread.sleep(2000);
-
         EditlinkWait.click();
 
         By UpadteLinkLocator = By.id("ctl00_PlaceHolderMain_gvInternalItems_ctl02_lbtnUpdate");
