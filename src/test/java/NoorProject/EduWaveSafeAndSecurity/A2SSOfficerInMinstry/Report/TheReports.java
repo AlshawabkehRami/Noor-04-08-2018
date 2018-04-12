@@ -445,7 +445,7 @@ public class TheReports {
     @Test
     public void aasessmentRateReport() throws InterruptedException {
 
-
+        Thread.sleep(1000);
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
         ReportsMainMenuLocatorWait.click();
 
