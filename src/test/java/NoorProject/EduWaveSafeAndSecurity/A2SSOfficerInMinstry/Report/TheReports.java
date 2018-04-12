@@ -20,6 +20,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
 import static NoorProject.Other.NoorLogin.browserQA;
 import static NoorProject.Other.NoorLogin.waitQA;
 
@@ -53,6 +55,9 @@ public class TheReports {
     //بيانات المباني
     @Test
     public void buildingInformation() throws InterruptedException {
+
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
@@ -124,6 +129,9 @@ public class TheReports {
     //توزيع الطلاب على الفصول
     @Test
     public void distributeStudentsToClasses() {
+
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
@@ -203,6 +211,9 @@ public class TheReports {
     @Test
     public void dataSecurityAndSafetyOfficialsInSchools() {
 
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
+
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
         ReportsMainMenuLocatorWait.click();
@@ -251,6 +262,9 @@ public class TheReports {
 //بيانات المدرسة
     @Test
     public void infoSchoolReport() throws InterruptedException {
+
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
@@ -316,6 +330,9 @@ public class TheReports {
     public void schoolDataWithEducationalStagesReport() {
 
 
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
+
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
         ReportsMainMenuLocatorWait.click();
 
@@ -379,6 +396,9 @@ public class TheReports {
     @Test
     public void inputRatio() throws InterruptedException {
 
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
+
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
         ReportsMainMenuLocatorWait.click();
@@ -440,6 +460,9 @@ public class TheReports {
     @Test
     public void aasessmentRateReport() throws InterruptedException {
 
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
+
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
         ReportsMainMenuLocatorWait.click();
@@ -498,6 +521,10 @@ public class TheReports {
     ///عدد الطلاب مع ملكية مبنى المدرسة
     @Test
     public void studentsWithOwnershipOfTheSchoolBuilding() throws InterruptedException {
+
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
+
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
         ReportsMainMenuLocatorWait.click();
@@ -565,6 +592,9 @@ public class TheReports {
 //بيانات المستخدمين بالمدارس
     @Test
     public void userDataInTheSchools() throws InterruptedException {
+
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
         ReportsMainMenuLocatorWait.click();
