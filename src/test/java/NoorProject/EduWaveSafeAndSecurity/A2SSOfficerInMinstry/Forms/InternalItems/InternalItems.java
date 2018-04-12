@@ -234,10 +234,12 @@ public class InternalItems {
 
             By DeleteLink = By.id("ctl00_PlaceHolderMain_gvInternalItems_ctl02_lbtnDelete");
 
+            Thread.sleep(1000);
             WebElement DeleteLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteLink));
             DeleteLinkWait.click();
 
             By YesLocator = By.id("ctl00_ibtnYes");
+            Thread.sleep(1000);
 
             WebElement YesLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(YesLocator));
             YesLocatorWait.click();
@@ -270,11 +272,13 @@ public class InternalItems {
             }
 
             By Editlink=By.id("ctl00_PlaceHolderMain_gvInternalItems_ctl02_lbtnEdit");
+            Thread.sleep(1000);
 
             WebElement EditlinkWait=waitQA.until(ExpectedConditions.visibilityOfElementLocated(Editlink));
             EditlinkWait.click();
 
             By UpadteLinkLocator=By.id("ctl00_PlaceHolderMain_gvInternalItems_ctl02_lbtnUpdate");
+            Thread.sleep(1000);
 
             WebElement UpadteLinkLocatorWait=waitQA.until(ExpectedConditions.visibilityOfElementLocated(UpadteLinkLocator));
             UpadteLinkLocatorWait.click();
