@@ -501,14 +501,10 @@ public class AllReports {
 
         browserQA.findElement(DDLDistrictSearchLocatorSWOSB).sendKeys("عمان", Keys.ENTER);
 
-        Thread.sleep(1000);
-        try {
-            WebElement ddlSupervisionCenteLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLSupervisionCenteLocatorSWOSB));
-            ddlSupervisionCenteLocatorWait.click();
-        } catch (Exception e) {
-            WebElement ddlSupervisionCenteLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLSupervisionCenteLocatorSWOSB));
-            ddlSupervisionCenteLocatorWait.click();
-        }
+        Thread.sleep(2000);
+
+        WebElement ddlSupervisionCenteLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLSupervisionCenteLocatorSWOSB));
+        ddlSupervisionCenteLocatorWait.click();
 
         browserQA.findElement(DDLSupervisionCenteSearchLocatorSWOSB).sendKeys("عمان", Keys.ENTER);
 
