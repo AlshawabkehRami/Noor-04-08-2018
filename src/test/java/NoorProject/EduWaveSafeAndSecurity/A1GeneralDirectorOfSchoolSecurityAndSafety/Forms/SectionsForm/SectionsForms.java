@@ -448,7 +448,7 @@ public class SectionsForms {
 
                 TakesScreenshot Ts = (TakesScreenshot) browserQA;
                 File Src = Ts.getScreenshotAs(OutputType.FILE);
-                FileUtils.copyFile(Src , new File("./TakeScreenShot/DeleteSection.png"));
+                FileUtils.copyFile(Src , new File("src/test/resc/TakeScreenShot/DeleteSection.png"));
 
                 Assert.fail("حدث خلل لعميلة الحذف");
 
@@ -486,7 +486,7 @@ public class SectionsForms {
 
                 TakesScreenshot Ts = (TakesScreenshot) browserQA;
                 File Src = Ts.getScreenshotAs(OutputType.FILE);
-                FileUtils.copyFile(Src , new File("./TakeScreenShot/DeleteSection.png"));
+                FileUtils.copyFile(Src , new File("src/test/resc/TakeScreenShot/DeleteSection.png"));
 
                 Assert.fail("حدث خلل لعميلة الحذف");
 

@@ -20,16 +20,14 @@
             <class name="NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.SectionsForm.SectionsForms">
                 <methods>
                     <include name="LoginUserAndSwitchProfileAdmin"/>
-                  <!--  <include name="addSectionsToTheForm"/>
+                    <include name="addSectionsToTheForm"/>
                     <include name="ViewSectionsOfTheForms"/>
-                    <include name="editSectionsOfTheForm"/>-->
+                    <include name="editSectionsOfTheForm"/>
                     <include name="deleteSections"/>
                 </methods>
             </class>
 
-<!--
             <class name="NoorProject.Other.NoorLogOut"/>
--->
     </classes>
     </test>
 
