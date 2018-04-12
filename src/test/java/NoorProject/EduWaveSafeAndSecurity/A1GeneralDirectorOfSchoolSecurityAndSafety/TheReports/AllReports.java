@@ -178,7 +178,7 @@ public class AllReports {
     //    //التقارير_تقارير الامن والسلامة المدرسية
     //الأمن والسلامة-نسب الإدخال على مستوى الوزارة
     @Test
-    public void SecurityAndSafety_InputRatioReport() {
+    public void SecurityAndSafety_InputRatioReport() throws InterruptedException {
 
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
@@ -215,13 +215,10 @@ public class AllReports {
         WebElement ddlFormNameSearchLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLFormNameSearchLoactorIR));
         ddlFormNameSearchLoactorWait.sendKeys("Selenium Form Dont Delete", Keys.ENTER);
 
-        try {
-            WebElement btnSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNSearchLocatorIR));
-            btnSearchLocatorWait.click();
-        } catch (Exception f) {
-            WebElement btnSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNSearchLocatorIR));
-            btnSearchLocatorWait.click();
-        }
+        Thread.sleep(1000);
+        WebElement btnSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNSearchLocatorIR));
+        btnSearchLocatorWait.click();
+
 
         By ReportInsideLabelLocator = By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div/div[7]/div/span/div/table/tbody/tr[4]/td[3]/div/div[1]/div/table/tbody/tr/td/table/tbody/tr[1]/td/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[5]/td[3]/table/tbody/tr/td/div/div");
         WebElement ReportInsideLabelLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportInsideLabelLocator));
@@ -250,6 +247,7 @@ public class AllReports {
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
         ReportsMainMenuLocatorWait.click();
 
+        Thread.sleep(1000);
         WebElement SearchLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchLinkLocator));
         SearchLinkLocatorWait.click();
 
@@ -311,6 +309,7 @@ public class AllReports {
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
         ReportsMainMenuLocatorWait.click();
 
+        Thread.sleep(1000);
         WebElement SearchLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchLinkLocator));
         SearchLinkLocatorWait.click();
 
@@ -431,10 +430,17 @@ public class AllReports {
     public void UserDataInTheSchoolsReports() throws InterruptedException {
 
 
-        Thread.sleep(1000);
-        WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
-        ReportsMainMenuLocatorWait.click();
+        try {
 
+            WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
+            ReportsMainMenuLocatorWait.click();
+
+        } catch (Exception e) {
+
+            WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
+            ReportsMainMenuLocatorWait.click();
+
+        }
         WebElement SearchLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchLinkLocator));
         SearchLinkLocatorWait.click();
 
