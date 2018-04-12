@@ -444,7 +444,7 @@ public class SectionsForms {
                 System.out.println("تم حذف القسم بنجاح.");
 
             }
-            if (!ActualResult.equals("لايمكن الحذف لارتباطه ببند خارجي.") && !ActualResult.equals(ExpectedResult)) {
+            if (!ActualResult.equals("لايمكن الحذف لارتباطه ببند خارجي.") || !ActualResult.equals(ExpectedResult)) {
 
                 TakesScreenshot Ts = (TakesScreenshot) browserQA;
                 File Src = Ts.getScreenshotAs(OutputType.FILE);
