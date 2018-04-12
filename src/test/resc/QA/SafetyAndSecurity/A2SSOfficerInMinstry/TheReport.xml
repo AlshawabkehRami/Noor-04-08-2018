@@ -17,7 +17,7 @@
                     <include name="SchoolSecurityandSafetyOfficer"/>
                 </methods>
             </class>
-            <class name="TheReports">
+            <class name="NoorProject.EduWaveSafeAndSecurity.A2SSOfficerInMinstry.Report.TheReports">
                 <methods>
                     <include name="LoginAndSwitchUserMinstry"/>
                     <include name="buildingInformation"/>
