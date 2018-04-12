@@ -44,6 +44,10 @@ public class TheReports {
 
     public void LoginAndSwitchUserMinstry() {
 
+        browserQA.manage().window().maximize();
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
+
+
         WebElement SwitchProfileLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SwitchProfileLocator));
         SwitchProfileLocatorWait.click();
 
@@ -56,8 +60,7 @@ public class TheReports {
     @Test
     public void buildingInformation() throws InterruptedException {
 
-        browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
+
 
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
@@ -209,10 +212,8 @@ public class TheReports {
     private By btnSearchLocatorDSSOS = By.id("ctl00_PlaceHolderMain_ibtnSearch");
 
     @Test
-    public void dataSecurityAndSafetyOfficialsInSchools() {
+    public void dataSecurityAndSafetyOfficialsInSchools()   {
 
-        browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
@@ -263,8 +264,6 @@ public class TheReports {
     @Test
     public void infoSchoolReport() throws InterruptedException {
 
-        browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
@@ -327,11 +326,9 @@ public class TheReports {
     //
 //بيانات المدرسة مع المراحل التعليمية
     @Test
-    public void schoolDataWithEducationalStagesReport() {
+    public void schoolDataWithEducationalStagesReport()   {
 
 
-        browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
         ReportsMainMenuLocatorWait.click();
@@ -396,8 +393,7 @@ public class TheReports {
     @Test
     public void inputRatio() throws InterruptedException {
 
-        browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
+
 
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
@@ -458,8 +454,6 @@ public class TheReports {
     @Test
     public void aasessmentRateReport() throws InterruptedException {
 
-        browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
@@ -520,8 +514,6 @@ public class TheReports {
     @Test
     public void studentsWithOwnershipOfTheSchoolBuilding() throws InterruptedException {
 
-        browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
@@ -591,8 +583,6 @@ public class TheReports {
     @Test
     public void userDataInTheSchools() throws InterruptedException {
 
-        browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
         ReportsMainMenuLocatorWait.click();
