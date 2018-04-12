@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+  ~ Created By  Rami AlShawabkeh  4/11/18 5:25 PM
+  -->
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="مستخدم جهة خارجية">
+
+    <test name="all tabs">
+        <classes>
+            <class name="IMAMProject.Login">
+                <methods>
+                    <include name="AThirdPartyUser"/>
+                </methods>
+            </class>
+            <class name="IMAMProject.AThirdPartyUser.SmokeTest">
+                <methods>
+                    <include name="personalInformation"/>
+                    <include name="training"/>
+                    <include name="queryTheResult"/>
+                    <include name="downloadData"/>
+
+
+                </methods>
+            </class>
+            <!--
+                        <class name="NoorProject.Other.NoorLogOut"/>
+            -->
+        </classes>
+    </test>
+
+</suite>
