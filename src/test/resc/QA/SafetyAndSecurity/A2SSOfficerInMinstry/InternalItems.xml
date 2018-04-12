@@ -28,7 +28,9 @@
 
                 </methods>
             </class>
+<!--
             <class name="NoorProject.Other.NoorLogOut"/>
+-->
         </classes>
 
     </test>

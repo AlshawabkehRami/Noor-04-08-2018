@@ -10,6 +10,7 @@ package NoorProject.EduWaveSafeAndSecurity.A2SSOfficerInMinstry.Forms.InternalIt
 
 import NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.ExternalItems.ExternalItems;
 import NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.SectionsForm.SectionsForms;
+import NoorProject.EduWaveSafeAndSecurity.A2SSOfficerInMinstry.Report.TheReports;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -218,40 +219,248 @@ public class InternalItems {
     public void deleteInternalItems() throws InterruptedException {
 
         browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
 
+        WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
+        FormMainMenuLoactorWait.click();
+
+        WebElement FormStatusLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusLocator));
+        FormStatusLocatorWait.click();
+
+        WebElement FormStatusSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusSearchLocator));
+        FormStatusSearchLocatorWait.sendKeys("غير منشور" , Keys.ENTER);
+
+        Thread.sleep(1000);
+        WebElement SerachButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachButtonLocator));
+        SerachButtonLocatorWait.click();
+
+        WebElement SectionsLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionsLinkLocator));
+        SectionsLinkLocatorWait.click();
+
+//-----------------------------------------------------------------------------------------------
         List SectionTableListDelet = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[1]/div[2]/div/div/table[1]/tbody/tr/td[1]"));
 
         int TableSizeForSections = SectionTableListDelet.size();
 
         if (TableSizeForSections <= 1) {
-            NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.InternalItems.InternalItems AddedDelete = new NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.InternalItems.InternalItems();
-            AddedDelete.addInternalItems();
+
+            By SectionDescLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl03_tbAddFormSectionDesc");
+            WebElement SectionDescLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionDescLocator));
+            SectionDescLocatorWait.sendKeys("Test");
+
+            By AddLinkLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl03_lbtnAddFormSectionDesc");
+            WebElement AddLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddLinkLocator));
+            AddLinkLocatorWait.click();
+
+            By ExternalLinkLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl02_lbtnItems");
+            WebElement ExternalLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ExternalLinkLocator));
+            ExternalLinkLocatorWait.click();
+
+            By ExternalDescLocator = By.id("ctl00_PlaceHolderMain_gvItems_ctl03_tbAddFormItemDesc");
+            WebElement ExternalDescLocatorWasit = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ExternalDescLocator));
+            ExternalDescLocatorWasit.sendKeys("Test");
+
+            By AddExternaLink = By.id("ctl00_PlaceHolderMain_gvItems_ctl03_lbtnAddFormItemDesc");
+            WebElement AddExternaLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddExternaLink));
+            AddExternaLinkWait.click();
+
+            By InternalLink = By.id("ctl00_PlaceHolderMain_gvItems_ctl02_lbtnInternalItems");
+
+            WebElement InternalLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(InternalLink));
+            InternalLinkWait.click();
+
+            By AddFormInternalItemDesc = By.id("ctl00_PlaceHolderMain_gvInternalItems_ctl03_tbAddFormInternalItemDesc");
+            By AddEvaluationWeight = By.id("ctl00_PlaceHolderMain_gvInternalItems_ctl03_tbAddEvaluationWeight");
+            By AddFormInternalItem = By.id("ctl00_PlaceHolderMain_gvInternalItems_ctl03_lbtnAddFormInternalItem");
+            By lbtnDelete = By.id("ctl00_PlaceHolderMain_gvInternalItems_ctl02_lbtnDelete");
+
+            Thread.sleep(1000);
+
+            WebElement AddFormInternalItemDescWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddFormInternalItemDesc));
+            AddFormInternalItemDescWait.sendKeys("Test");
+            WebElement AddEvaluationWeightWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddEvaluationWeight));
+            AddEvaluationWeightWait.sendKeys("10");
+            WebElement AddFormInternalItemWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddFormInternalItem));
+            AddFormInternalItemWait.click();
+            WebElement lbtnDeleteWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(lbtnDelete));
+            lbtnDeleteWait.click();
+
+            By yes = By.id("ctl00_ibtnYes");
+            WebElement yesWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(yes));
+            yesWait.click();
+
+            By DeleteMessage = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+            WebElement DeleteMessageWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteMessage));
+
+            String DeleteActualREsult = browserQA.findElement(DeleteMessage).getText();
+            String DeleteExcprctedResult = "تم حذف البند الداخلي بنجاح.";
+
+
+            if (DeleteActualREsult.equals(DeleteExcprctedResult)) {
+
+                System.out.println("تم حذف البند الداخلي بنجاح.");
+            }
+
+            if (!DeleteActualREsult.equals(DeleteExcprctedResult)) {
+
+                Assert.fail();
+
+            }
+
+        }
+        //-----------------------------------------------------------------------------------------------
+
+//yes
+        else {
+
+            By ExternalLinkLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl02_lbtnItems");
+            WebElement ExternalLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ExternalLinkLocator));
+            ExternalLinkLocatorWait.click();
+
+            List ExternalList = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[1]/div[2]/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr/td[1]"));
+            int ExternalListSize = ExternalList.size();
+
+            if (ExternalListSize <= 1) {
+
+                By ExternalDescLocator = By.id("ctl00_PlaceHolderMain_gvItems_ctl03_tbAddFormItemDesc");
+                WebElement ExternalDescLocatorWasit = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ExternalDescLocator));
+                ExternalDescLocatorWasit.sendKeys("Test");
+
+                By AddExternaLink = By.id("ctl00_PlaceHolderMain_gvItems_ctl03_lbtnAddFormItemDesc");
+                WebElement AddExternaLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddExternaLink));
+                AddExternaLinkWait.click();
+
+                By InternalLink = By.id("ctl00_PlaceHolderMain_gvItems_ctl02_lbtnInternalItems");
+
+                WebElement InternalLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(InternalLink));
+                InternalLinkWait.click();
+                By AddFormInternalItemDesc = By.id("ctl00_PlaceHolderMain_gvInternalItems_ctl03_tbAddFormInternalItemDesc");
+                By AddEvaluationWeight = By.id("ctl00_PlaceHolderMain_gvInternalItems_ctl03_tbAddEvaluationWeight");
+                By AddFormInternalItem = By.id("ctl00_PlaceHolderMain_gvInternalItems_ctl03_lbtnAddFormInternalItem");
+                By lbtnDelete = By.id("ctl00_PlaceHolderMain_gvInternalItems_ctl02_lbtnDelete");
+
+                Thread.sleep(1000);
+
+                WebElement AddFormInternalItemDescWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddFormInternalItemDesc));
+                AddFormInternalItemDescWait.sendKeys("Test");
+                WebElement AddEvaluationWeightWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddEvaluationWeight));
+                AddEvaluationWeightWait.sendKeys("10");
+                WebElement AddFormInternalItemWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddFormInternalItem));
+                AddFormInternalItemWait.click();
+                WebElement lbtnDeleteWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(lbtnDelete));
+                lbtnDeleteWait.click();
+
+                By yes = By.id("ctl00_ibtnYes");
+                WebElement yesWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(yes));
+                yesWait.click();
+
+                By DeleteMessage = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+                WebElement DeleteMessageWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteMessage));
+
+                String DeleteActualREsult = browserQA.findElement(DeleteMessage).getText();
+                String DeleteExcprctedResult = "تم حذف البند الداخلي بنجاح.";
+
+
+                if (DeleteActualREsult.equals(DeleteExcprctedResult)) {
+
+                    System.out.println("تم حذف البند الداخلي بنجاح.");
+                }
+
+                if (!DeleteActualREsult.equals(DeleteExcprctedResult)) {
+
+                    Assert.fail();
+
+                }
+
+
+            }
+//yes
+            else {
+
+
+                By InternalLink = By.id("ctl00_PlaceHolderMain_gvItems_ctl02_lbtnInternalItems");
+
+                WebElement InternalLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(InternalLink));
+                InternalLinkWait.click();
+
+
+                List InternalList = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[1]/div[2]/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr/td[1]"));
+                int InternalListSize = InternalList.size();
+
+                if (InternalListSize <= 1) {
+                    By AddFormInternalItemDesc = By.id("ctl00_PlaceHolderMain_gvInternalItems_ctl03_tbAddFormInternalItemDesc");
+                    By AddEvaluationWeight = By.id("ctl00_PlaceHolderMain_gvInternalItems_ctl03_tbAddEvaluationWeight");
+                    By AddFormInternalItem = By.id("ctl00_PlaceHolderMain_gvInternalItems_ctl03_lbtnAddFormInternalItem");
+                    By lbtnDelete = By.id("ctl00_PlaceHolderMain_gvInternalItems_ctl02_lbtnDelete");
+
+                    Thread.sleep(1000);
+
+                    WebElement AddFormInternalItemDescWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddFormInternalItemDesc));
+                    AddFormInternalItemDescWait.sendKeys("Test");
+                    WebElement AddEvaluationWeightWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddEvaluationWeight));
+                    AddEvaluationWeightWait.sendKeys("10");
+                    WebElement AddFormInternalItemWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddFormInternalItem));
+                    AddFormInternalItemWait.click();
+                    WebElement lbtnDeleteWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(lbtnDelete));
+                    lbtnDeleteWait.click();
+
+                    By yes = By.id("ctl00_ibtnYes");
+                    WebElement yesWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(yes));
+                    yesWait.click();
+
+                    By DeleteMessage = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+                    WebElement DeleteMessageWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteMessage));
+
+                    String DeleteActualREsult = browserQA.findElement(DeleteMessage).getText();
+                    String DeleteExcprctedResult = "تم حذف البند الداخلي بنجاح.";
+
+
+                    if (DeleteActualREsult.equals(DeleteExcprctedResult)) {
+
+                        System.out.println("تم حذف البند الداخلي بنجاح.");
+                    }
+
+                    if (!DeleteActualREsult.equals(DeleteExcprctedResult)) {
+
+                        Assert.fail();
+
+                    }
+
+                } else {
+                    By lbtnDelete = By.id("ctl00_PlaceHolderMain_gvInternalItems_ctl02_lbtnDelete");
+
+                    WebElement lbtnDeleteWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(lbtnDelete));
+                    lbtnDeleteWait.click();
+
+                    By yes = By.id("ctl00_ibtnYes");
+                    WebElement yesWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(yes));
+                    yesWait.click();
+
+                    By DeleteMessage = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+                    WebElement DeleteMessageWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteMessage));
+
+                    String DeleteActualREsult = browserQA.findElement(DeleteMessage).getText();
+                    String DeleteExcprctedResult = "تم حذف البند الداخلي بنجاح.";
+
+
+                    if (DeleteActualREsult.equals(DeleteExcprctedResult)) {
+
+                        System.out.println("تم حذف البند الداخلي بنجاح.");
+                    }
+
+                    if (!DeleteActualREsult.equals(DeleteExcprctedResult)) {
+
+                        Assert.fail();
+
+                    }
+                }
+            }
         }
 
-
-        By DeleteLink = By.id("ctl00_PlaceHolderMain_gvInternalItems_ctl02_lbtnDelete");
-
-        WebElement DeleteLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteLink));
-        DeleteLinkWait.click();
-
-        By YesLocator = By.id("ctl00_ibtnYes");
-
-        WebElement YesLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(YesLocator));
-        YesLocatorWait.click();
-
-        By DeleteMessage=By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
-
-        WebElement DeleteMessageWait=waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteMessage));
-
-        String DeleteActualResult=browserQA.findElement(DeleteMessage).getText();
-        String DeleteExcpectedResult="تم حذف البند الداخلي بنجاح.";
-
-        Assert.assertEquals(DeleteActualResult,DeleteExcpectedResult,"لم تتم عملية الحذف بنجاح ");
-
-
     }
+
+
 
     @Test
 
