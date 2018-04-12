@@ -2,13 +2,14 @@ package NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndS
 
 import NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.Forms.SafetyForms;
 import NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.SectionsForm.SectionsForms;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -614,7 +615,7 @@ public class ExternalItems {
     //مدير عام الامن والسلامة حذف البنود الخارجية
 
 
-    public void deleteExternalItems() throws InterruptedException {
+    public void deleteExternalItems() throws InterruptedException, IOException {
         browserQA.manage().window().maximize();
         browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
@@ -664,9 +665,19 @@ public class ExternalItems {
 
             System.out.println("تمت عملية الحذف بنجاح");
         }
+
+
         if (!ActualResult.equals("لا يمكن الحذف لان هناك بند داخلي مرتبط به.") || !ActualResult.equals(ExcpectedReeult)) {
 
-            Assert.fail("حدث خلل في عملية الحذف");
+
+            TakesScreenshot Ts = (TakesScreenshot) browserQA;
+            File Src = Ts.getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(Src , new File("src/test/resc/TakeScreenShot/DeleteExternal.png"));
+
+
+            System.out.println("حدث خلل في عملية الحذف");
+            System.out.println(ActualResult);
+
         }
 
 

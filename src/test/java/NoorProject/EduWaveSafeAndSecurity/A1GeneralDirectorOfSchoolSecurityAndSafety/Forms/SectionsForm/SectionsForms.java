@@ -444,7 +444,7 @@ public class SectionsForms {
                 System.out.println("تم حذف القسم بنجاح.");
 
             }
-            if (!ActualResult.equals("لايمكن الحذف لارتباطه ببند خارجي.") || !ActualResult.equals(ExpectedResult)) {
+            if (!ActualResult.equals("لايمكن الحذف لارتباطه ببند خارجي.") && !ActualResult.equals(ExpectedResult)) {
 
                 TakesScreenshot Ts = (TakesScreenshot) browserQA;
                 File Src = Ts.getScreenshotAs(OutputType.FILE);
@@ -481,14 +481,19 @@ public class SectionsForms {
                 System.out.println("تم حذف القسم بنجاح.");
 
             }
-            if (!ActualResult.equals("لايمكن الحذف لارتباطه ببند خارجي.") || !ActualResult.equals(ExpectedResult)) {
+            if (!ActualResult.equals("لايمكن الحذف لارتباطه ببند خارجي.")&& !ActualResult.equals(ExpectedResult)) {
+
+
 
 
                 TakesScreenshot Ts = (TakesScreenshot) browserQA;
                 File Src = Ts.getScreenshotAs(OutputType.FILE);
                 FileUtils.copyFile(Src , new File("src/test/resc/TakeScreenShot/DeleteSection.png"));
 
-                Assert.fail("حدث خلل لعميلة الحذف");
+
+                System.out.println("حدث خلل في عملية الحذف");
+                System.out.println(ActualResult);
+
 
 
             }
