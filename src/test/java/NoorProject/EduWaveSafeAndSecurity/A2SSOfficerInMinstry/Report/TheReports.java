@@ -392,6 +392,8 @@ public class TheReports {
 
         browserQA.findElement(SerachLoactor).click();
 
+        Thread.sleep(200);
+
         WebElement SecurityAndSafety_InputRatioReportLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(TheReportNameLocatorIR));
         SecurityAndSafety_InputRatioReportLoactorWait.click();
 
