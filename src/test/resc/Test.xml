@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+  ~ Created By  Rami AlShawabkeh  4/15/18 2:07 PM
+  -->
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="مدير مدرسة">
+
+    <test name="التقارير لمدرسة ثانوية">
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="schoolAdminsecondary"/>
+                </methods>
+            </class>
+            <class name="NoorProject.SchoolAdmin.Reports.Reports">
+                <methods>
+                    <include name="loginAndSwitch"/>
+                    <include name="healthRegistry"/>
+<!--
+                    <include name="userTypesPermissions"/>
+-->
+<!--
+                    <include name="myPrivilege"/>
+-->
+
+
+                </methods>
+            </class>
+<!--
+            <class name="NoorProject.Other.NoorLogOut"/>
+-->
+
+        </classes>
+    </test>
+
+
+</suite>
