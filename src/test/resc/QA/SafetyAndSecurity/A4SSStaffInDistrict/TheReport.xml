@@ -25,9 +25,7 @@
                     <include name="numberOfStudentsWhoOwnTheSchoolBuilding"/>
                 </methods>
             </class>
-<!--
             <class name="NoorProject.Other.NoorLogOut"/>
--->
 
         </classes>
 
