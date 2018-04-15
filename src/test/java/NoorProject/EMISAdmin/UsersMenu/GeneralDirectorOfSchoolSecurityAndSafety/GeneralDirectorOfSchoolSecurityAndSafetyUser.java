@@ -4,6 +4,9 @@
 
 package NoorProject.EMISAdmin.UsersMenu.GeneralDirectorOfSchoolSecurityAndSafety;
 
+import NoorProject.Other.NoorLogOut;
+import NoorProject.Other.NoorLogin;
+import NoorProject.TeacherAffairs.GeneralDirectorInMinistry.UsersList.DepartmentManagersInTheMinistry.DirectorOfDepartmentsInTheMinistry;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -15,6 +18,7 @@ import java.util.Random;
 
 import static NoorProject.Other.NoorLogin.browserQA;
 import static NoorProject.Other.NoorLogin.waitQA;
+import static NoorProject.TeacherAffairs.GeneralDirectorInMinistry.UsersList.DepartmentManagersInTheMinistry.DirectorOfDepartmentsInTheMinistry.UserIdToPassString;
 
 public class GeneralDirectorOfSchoolSecurityAndSafetyUser {
 
@@ -235,12 +239,67 @@ public class GeneralDirectorOfSchoolSecurityAndSafetyUser {
         browserQA.findElement(FaxNumber).sendKeys("7" + RandomNumber);
         browserQA.findElement(btnSaveLocator).click();
 
-      /*  By ValidationMessageAfterAddTheUser = By.id("ctl00_PlaceHolderMain_lblResult");
+        By ValidationMessageAfterAddTheUser = By.id("ctl00_PlaceHolderMain_lblResult");
         WebElement ValidationMessageAfterAddTheUserWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ValidationMessageAfterAddTheUser));
 
-        String MSELoctor = browserQA.findElement(ValidationMessageAfterAddTheUser).getText();
-        String MesaString = "لا يمكن اضافة ملف لعدم وجود ملف له في شؤون المعلمين";
-        Assert.assertNotEquals(MSELoctor , MesaString , "يجب اضافة ملف فئات تشكيلية ");*/
+        String ActualResult = browserQA.findElement(ValidationMessageAfterAddTheUser).getText();
+        String ExcpectedResult = "لا يمكن اضافة ملف لعدم وجود ملف له في شؤون المعلمين";
+
+        if (ActualResult.equals(ExcpectedResult)) {
+
+            System.out.println("يجب اضافة ملف فئات تشكشلية");
+            NoorLogOut LogOut = new NoorLogOut();
+            LogOut.ValidLogOut();
+
+            NoorLogin LoginToTAMinstry = new NoorLogin();
+            LoginToTAMinstry.DirectorGeneralofTeachersAffairsintheMinistry();
+
+            DirectorOfDepartmentsInTheMinistry AddUser1 = new DirectorOfDepartmentsInTheMinistry();
+            AddUser1.AddDirectorOfDepartmentsInTheMinistry();
+
+            DirectorOfDepartmentsInTheMinistry CallClassID1 = new DirectorOfDepartmentsInTheMinistry();
+            CallClassID1.UserId();
+            String UserIdAfterAdded1 = UserIdToPassString;
+
+            DirectorOfDepartmentsInTheMinistry AddUser2 = new DirectorOfDepartmentsInTheMinistry();
+            AddUser2.AddedPart2();
+
+            NoorLogin LoginToTheUser = new NoorLogin();
+            LoginToTheUser.EmisadminUser();
+
+            WebElement UsersTypeMenuLocatorWait1= waitQA.until(ExpectedConditions.visibilityOfElementLocated(UsersTypeMenuLocator));
+            UsersTypeMenuLocatorWait1.click();
+
+            WebElement MyInputLocatorWait1 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(MyInputLocator));
+            MyInputLocatorWait1.sendKeys("المدراء العامون للأمن والسلامة المدرسية");
+
+            WebElement ReportLinkLocatorWait1 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportLinkLocator));
+            ReportLinkLocatorWait1.click();
+
+            WebElement AddedNewUserLinkLocatorWait1 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddedNewUserLinkLocator));
+            AddedNewUserLinkLocatorWait1.click();
+
+            WebElement UserIdFieldLocatorWait1 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UserIdFieldLocator));
+
+            UserIdFieldLocatorWait1.sendKeys(UserIdToPassString);
+
+            WebElement IbtnCheckIdentificationIDLocatorWait1 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(IbtnCheckIdentificationIDLocator));
+            IbtnCheckIdentificationIDLocatorWait1.click();
+            browserQA.findElement(By.id("ctl00_PlaceHolderMain_ibtnSave")).click();
+
+            By ValidationMeassage = By.id("ctl00_PlaceHolderMain_lblResult");
+
+            WebElement ValidationMeassageWait2 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ValidationMeassage));
+
+            String ActualResult2 = browserQA.findElement(ValidationMeassage).getText();
+            String ExpectedResult2 = "تمت عملية الحفظ بنجاح.";
+
+            Assert.assertEquals(ActualResult2 , ExpectedResult2 , "يوجد مشكلة");
+
+        } else {
+
+            Assert.fail("يوجد مشكلة في عمليية الحفظ");
+        }
 
 
     }
