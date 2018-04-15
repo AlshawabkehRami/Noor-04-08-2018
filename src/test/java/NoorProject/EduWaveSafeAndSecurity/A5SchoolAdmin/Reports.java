@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static NoorProject.Other.NoorLogin.browserQA;
 import static NoorProject.Other.NoorLogin.waitQA;
 
 public class Reports {
@@ -24,6 +25,8 @@ public class Reports {
     //مدير مدرسة-تقرير معلومات بطاقات المدرسة
     @Test
     public void SchoolCardInformationView() {
+
+
 
         WebElement ReportsMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMenuLocator));
         ReportsMenuLocatorWait.click();
@@ -42,18 +45,13 @@ public class Reports {
         }
 
 
-        By ErrorMessageLocator = By.id("ctl00_PlaceHolderMain_lblErrorMessage");
+        By ReortTitleLocator = By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[4]/div/span/div/table/tbody/tr[4]/td[3]/div/div[1]/div/table/tbody/tr/td/table/tbody/tr[1]/td/table/tbody/tr/td/table/tbody/tr[7]/td[3]/table/tbody/tr/td/div/div/span");
 
-        WebElement ErrorMessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ErrorMessageLocator));
-
-        if (ErrorMessageLocatorWait.getText().equals("لا يوجد بيانات وفقاً لمدخلات البحث")) {
-
-            System.out.println("يجب اضافة بطاقات للمدرسة");
-        }
-
-        WebElement TextFieldTitleLocatorElement = waitQA.until(ExpectedConditions.visibilityOfElementLocated(TextFieldTitleLocator));
-        String ExpectedResult = TextFieldTitleLocatorElement.getText();
+        WebElement ReortTitleLocatorWait=waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReortTitleLocator));
+        String ExpectedResult = browserQA.findElement(ReortTitleLocator).getText();
         String Actual_Result = "معلومات بطاقات المدارس";
+
+
         Assert.assertEquals(Actual_Result , ExpectedResult , "التقرير المطلوب غير متوفر");
 
 
@@ -127,7 +125,6 @@ public class Reports {
         System.out.println(ExpectedResult);
         System.out.println(ActualResult);
         Assert.assertEquals(ActualResult , ExpectedResult , "التقرير المطلوب غير متوفر");
-
 
 
     }
