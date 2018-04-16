@@ -427,17 +427,12 @@ public class AllReports {
     public void UserDataInTheSchoolsReports() throws InterruptedException {
 
 
-        try {
+        Thread.sleep(1000);
 
-            WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
-            ReportsMainMenuLocatorWait.click();
+        WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
+        ReportsMainMenuLocatorWait.click();
 
-        } catch (Exception e) {
 
-            WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
-            ReportsMainMenuLocatorWait.click();
-
-        }
         WebElement SearchLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchLinkLocator));
         SearchLinkLocatorWait.click();
 
@@ -496,7 +491,7 @@ public class AllReports {
             ddlDistrictLocatorWait.click();
         }
 
-        WebElement DDLDistrictSearchLocatorSWOSBWait=waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLDistrictSearchLocatorSWOSB));
+        WebElement DDLDistrictSearchLocatorSWOSBWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLDistrictSearchLocatorSWOSB));
         DDLDistrictSearchLocatorSWOSBWait.sendKeys("عمان", Keys.ENTER);
 
         Thread.sleep(2000);
