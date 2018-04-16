@@ -28,7 +28,7 @@ public class SectionsForm {
 
 
     private By SwitchProfileLocator = By.id("ctl00_oHeader_divSwitchUser");
-    private By UserNameLabelLocator = By.linkText("مدير عام الأمن والسلامة المدرسية");
+    private By UserNameLabelLocator = By.linkText("موظف الأمن والسلامة المدرسية");
     private By FormMainMenuLoactor = By.id("divMenuItem_5968");
     private By FormStatusLocator = By.id("select2-ctl00_PlaceHolderMain_ddlFormStatus-container");
     private By FormStatusSearchLocator = By.xpath("/html/body/span/span/span[1]/input");
