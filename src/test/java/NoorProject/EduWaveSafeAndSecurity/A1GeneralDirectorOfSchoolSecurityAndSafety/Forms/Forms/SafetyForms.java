@@ -30,7 +30,7 @@ public class SafetyForms {
 
 
     @Test
-    public void loginUserAndSwitchProfileForms() {
+    public void switchProfile() {
         browserQA.manage().window().maximize();
         browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 

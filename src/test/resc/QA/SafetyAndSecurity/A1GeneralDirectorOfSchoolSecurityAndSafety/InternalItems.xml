@@ -20,7 +20,7 @@
             <class name="NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.InternalItems.InternalItems">
 
                 <methods>
-                    <include name="LoginToTheUserII"/>
+                    <include name="switchProfile"/>
                     <include name="addInternalItems"/>
                     <include name="deleteInternalItems"/>
                     <include name="editInternalItems"/>

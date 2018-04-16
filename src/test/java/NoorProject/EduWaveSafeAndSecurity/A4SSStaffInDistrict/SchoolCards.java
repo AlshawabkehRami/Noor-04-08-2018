@@ -50,7 +50,7 @@ public class SchoolCards {
         Login.GeneralDirectorOfSchoolSecurityAndSafety();
 
         VisitsTypes switchProfileUserAdmin = new VisitsTypes();
-        switchProfileUserAdmin.switchProfileUserAdmin();
+        switchProfileUserAdmin.switchProfile();
 
         VisitsTypes addVisitsTypes = new VisitsTypes();
         addVisitsTypes.addVisitsTypes();

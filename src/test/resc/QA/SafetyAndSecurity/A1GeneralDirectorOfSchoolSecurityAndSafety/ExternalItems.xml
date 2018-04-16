@@ -17,11 +17,11 @@
             </class>
             <class name="NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.ExternalItems.ExternalItems">
                 <methods>
-                    <include name="LoginUserAndSwitchProfileAdminEX"/>
-                    <include name="addExternalItems"/>
-                     <include name="viewExternalItems"/>
-                     <include name="editExternalItems"/>
-                     <include name="deleteExternalItems"/>
+                    <include name="switchProfile"/>
+                    <include name="addExI"/>
+                     <include name="viewExI"/>
+                     <include name="editExI"/>
+                     <include name="deleteExI"/>
                 </methods>
             </class>
             <class name="NoorProject.Other.NoorLogOut"/>

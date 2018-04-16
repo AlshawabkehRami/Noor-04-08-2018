@@ -17,14 +17,14 @@
             </class>
             <class name="NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.TheReports.AllReports">
                 <methods>
-                    <include name="ViewDistributeStudentsToClassesReport"/>
-                    <include name="BuildingInformationReport"/>
-                    <include name="SecurityAndSafety_InputRatioReport"/>
-                    <include name="SecurityAndSafety_AssessmentRateReport"/>
-                    <include name="InfoSchoolReport"/>
-                    <include name="SchoolDataWithEducationalStagesReport"/>
-                    <include name="UserDataInTheSchoolsReports"/>
-                    <include name="StudentsWithOwnershipOfTheSchoolBuildingReport"/>
+                    <include name="viewDistributeStudentsToClasses"/>
+                    <include name="buildingInformation"/>
+                    <include name="inputRatio"/>
+                    <include name="assessmentRate"/>
+                    <include name="infoSchool"/>
+                    <include name="schoolDataWithEducationalStages"/>
+                    <include name="userDataInTheSchools"/>
+                    <include name="studentsWithOwnershipOfTheSchoolBuilding"/>
                 </methods>
             </class>
             <class name="NoorProject.Other.NoorLogOut"/>

@@ -32,7 +32,7 @@ public class SectionsForms {
 
     @Test
 
-    public void loginUserAndSwitchProfileAdmin() {
+    public void switchPrfile() {
 
         browserQA.manage().window().maximize();
         browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);

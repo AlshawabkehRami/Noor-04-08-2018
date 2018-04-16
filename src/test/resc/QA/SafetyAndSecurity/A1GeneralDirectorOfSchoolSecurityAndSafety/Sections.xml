@@ -19,10 +19,10 @@
             </class>
             <class name="NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.SectionsForm.SectionsForms">
                 <methods>
-                    <include name="LoginUserAndSwitchProfileAdmin"/>
-                    <include name="addSectionsToTheForm"/>
-                    <include name="ViewSectionsOfTheForms"/>
-                    <include name="editSectionsOfTheForm"/>
+                    <include name="switchPrfile"/>
+                    <include name="addSections"/>
+                    <include name="viewSections"/>
+                    <include name="editSections"/>
                     <include name="deleteSections"/>
                 </methods>
             </class>

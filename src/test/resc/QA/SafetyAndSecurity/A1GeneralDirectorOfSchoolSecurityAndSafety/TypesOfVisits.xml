@@ -23,7 +23,7 @@
             </class>
             <class name="NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Settings.VisitsTypes">
                 <methods>
-                    <include name="switchProfileUserAdmin"/>
+                    <include name="switchProfile"/>
                     <include name="addVisitsTypes"/>
                     <include name="editVisitsTypes"/>
                     <include name="deleteVisitsTypes"/>
