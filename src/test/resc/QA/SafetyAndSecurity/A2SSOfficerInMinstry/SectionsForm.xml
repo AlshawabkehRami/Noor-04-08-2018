@@ -18,10 +18,10 @@
             </class>
             <class name="NoorProject.EduWaveSafeAndSecurity.A2SSOfficerInMinstry.Forms.SectionsForm.SectionsForm">
                 <methods>
-                  <include name="LoginUserAndSwitchProfileAdmin"/>
-                    <include name="addSectionsToTheForm"/>
-                    <include name="ViewSectionsOfTheForms"/>
-                    <include name="editSectionsOfTheForm"/>
+                  <include name="loginUserAndSwitchProfileAdmin"/>
+                    <include name="addSections"/>
+                    <include name="viewSections"/>
+                    <include name="editSections"/>
                     <include name="deleteSections"/>
 
 
