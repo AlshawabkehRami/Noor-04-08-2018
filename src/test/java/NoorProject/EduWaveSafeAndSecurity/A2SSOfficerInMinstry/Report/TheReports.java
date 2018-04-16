@@ -42,7 +42,7 @@ public class TheReports {
 
     @Test
 
-    public void LoginAndSwitchUserMinstry() {
+    public void switchUser() {
 
         browserQA.manage().window().maximize();
         browserQA.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);

@@ -21,7 +21,7 @@
             </class>
             <class name="NoorProject.EduWaveSafeAndSecurity.A2SSOfficerInMinstry.Forms.InternalItems.InternalItems">
                 <methods>
-                    <include name="LoginToTheUserII"/>
+                    <include name="switchProfile"/>
                     <include name="addInternalItems"/>
                     <include name="deleteInternalItems"/>
                     <include name="editInternalItems"/>

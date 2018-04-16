@@ -20,7 +20,7 @@
             </class>
             <class name="NoorProject.EduWaveSafeAndSecurity.A2SSOfficerInMinstry.Forms.ExternalItems.ExternalItems">
                 <methods>
-                    <include name="loginUserAndSwitchProfileAdminEX"/>
+                    <include name="switchProfile"/>
                     <include name="addExI"/>
                     <include name="viewExI"/>
                     <include name="editExI"/>

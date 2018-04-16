@@ -39,7 +39,8 @@ public class InternalItems {
 
         @Test
 
-        public void LoginToTheUserII() {
+        public void switchProfile() {
+
             browserQA.manage().window().maximize();
             browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 

@@ -19,13 +19,13 @@
             </class>
             <class name="NoorProject.EduWaveSafeAndSecurity.A2SSOfficerInMinstry.Report.TheReports">
                 <methods>
-                    <include name="LoginAndSwitchUserMinstry"/>
+                    <include name="switchUser"/>
                     <include name="buildingInformation"/>
                     <include name="distributeStudentsToClasses"/>
-                    <include name="inputRatio"/>
                     <include name="dataSecurityAndSafetyOfficialsInSchools"/>
                     <include name="infoSchoolReport"/>
                     <include name="schoolDataWithEducationalStagesReport"/>
+                    <include name="inputRatio"/>
                     <include name="aasessmentRateReport"/>
                     <include name="studentsWithOwnershipOfTheSchoolBuilding"/>
                     <include name="userDataInTheSchools"/>

@@ -18,7 +18,7 @@
             </class>
             <class name="NoorProject.EduWaveSafeAndSecurity.A2SSOfficerInMinstry.Forms.SectionsForm.SectionsForm">
                 <methods>
-                  <include name="loginUserAndSwitchProfileAdmin"/>
+                  <include name="switchProfile"/>
                     <include name="addSections"/>
                     <include name="viewSections"/>
                     <include name="editSections"/>
