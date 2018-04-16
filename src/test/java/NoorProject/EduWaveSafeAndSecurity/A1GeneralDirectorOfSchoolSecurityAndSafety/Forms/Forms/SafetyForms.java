@@ -189,7 +189,7 @@ public class SafetyForms {
     private By SearchLoactor = By.id("ctl00_PlaceHolderMain_ibtnSearch");
 
     @Test
-    public void ViewForm() throws InterruptedException {
+    public void viewForm() throws InterruptedException {
         browserQA.manage().window().maximize();
         browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
@@ -208,7 +208,7 @@ public class SafetyForms {
     private By PublishingLinkLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl02_lbtnPublish");
 
     @Test
-    public void PublishingForm() throws InterruptedException {
+    public void publishingForm() throws InterruptedException {
         browserQA.manage().window().maximize();
         browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
@@ -276,7 +276,7 @@ public class SafetyForms {
 
     @Test
 
-    public void EditUnpublishedSafetyForms() throws InterruptedException {
+    public void editForms() throws InterruptedException {
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
@@ -323,7 +323,7 @@ public class SafetyForms {
 
 
     @Test
-    public void DeleteForms() throws InterruptedException {
+    public void deleteForms() throws InterruptedException {
 
         WebElement FormMainMenuLoactorWait2 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait2.click();

@@ -32,7 +32,7 @@ public class SectionsForms {
 
     @Test
 
-    public void LoginUserAndSwitchProfileAdmin() {
+    public void loginUserAndSwitchProfileAdmin() {
 
         browserQA.manage().window().maximize();
         browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
@@ -49,7 +49,7 @@ public class SectionsForms {
 
     //مدير عام الامن والسلامة/ أضافة الاقسام
     @Test
-    public void addSectionsToTheForm() throws InterruptedException {
+    public void addSections() throws InterruptedException {
 
         browserQA.manage().window().maximize();
         browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
@@ -292,7 +292,7 @@ public class SectionsForms {
 
     //مدير عام الامن والسلامة/ عرض الاقسام الاقسام
     @Test
-    public void ViewSectionsOfTheForms() throws InterruptedException {
+    public void viewSections() throws InterruptedException {
 
         browserQA.manage().window().maximize();
         browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
@@ -327,7 +327,7 @@ public class SectionsForms {
 
     //مدير عام الامن والسلامة/ تعديل الاقسام الاقسام
     @Test
-    public void editSectionsOfTheForm() throws InterruptedException {
+    public void editSections() throws InterruptedException {
 
         browserQA.manage().window().maximize();
         browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);

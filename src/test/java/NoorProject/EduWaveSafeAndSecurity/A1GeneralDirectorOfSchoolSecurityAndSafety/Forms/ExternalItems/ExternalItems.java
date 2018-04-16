@@ -2,13 +2,11 @@ package NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndS
 
 import NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.Forms.SafetyForms;
 import NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.SectionsForm.SectionsForms;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.Random;
@@ -30,7 +28,7 @@ public class ExternalItems {
 
     @Test
 
-    public void LoginUserAndSwitchProfileAdminEX() {
+    public void loginUserAndSwitchProfileAdminEX() {
 
         browserQA.manage().window().maximize();
         browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
@@ -47,7 +45,7 @@ public class ExternalItems {
 
     //مدير عام الامن والسلامة/ أضافة البنود الخارجية
     @Test
-    public void addExternalItems() throws InterruptedException {
+    public void addExI() throws InterruptedException {
 
         browserQA.manage().window().maximize();
         browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
@@ -80,7 +78,7 @@ public class ExternalItems {
         if (TableSectionSizeForCheck <= 1) {
 
             SectionsForms AddSection = new SectionsForms();
-            AddSection.addSectionsToTheForm();
+            AddSection.addSections();
             List SectionsTableList = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[1]/div[2]/div/div/table[1]/tbody/tr/td[1]"));
             int SectionsTableListSize = SectionsTableList.size();
 
@@ -516,7 +514,7 @@ public class ExternalItems {
 
     //مدير عام الامن والسلامة/ عرض البنود الخارجية
     @Test
-    public void viewExternalItems() throws InterruptedException {
+    public void viewExI() throws InterruptedException {
 
         browserQA.manage().window().maximize();
         browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
@@ -556,7 +554,7 @@ public class ExternalItems {
 
     //مدير عام الامن والسلامة/ تعديل  البنود الخارجية
     @Test
-    public void editExternalItems() throws InterruptedException {
+    public void editExI() throws InterruptedException {
 
         browserQA.manage().window().maximize();
         browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
@@ -712,7 +710,7 @@ public class ExternalItems {
     //مدير عام الامن والسلامة حذف البنود الخارجية
 
 
-    public void deleteExternalItems() throws InterruptedException, IOException {
+    public void deleteExI() throws InterruptedException, IOException {
 
         browserQA.manage().window().maximize();
         browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);

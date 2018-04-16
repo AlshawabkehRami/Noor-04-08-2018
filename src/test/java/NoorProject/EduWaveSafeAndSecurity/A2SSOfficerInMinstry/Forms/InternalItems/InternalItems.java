@@ -10,7 +10,6 @@ package NoorProject.EduWaveSafeAndSecurity.A2SSOfficerInMinstry.Forms.InternalIt
 
 import NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.ExternalItems.ExternalItems;
 import NoorProject.EduWaveSafeAndSecurity.A1GeneralDirectorOfSchoolSecurityAndSafety.Forms.SectionsForm.SectionsForms;
-import NoorProject.EduWaveSafeAndSecurity.A2SSOfficerInMinstry.Report.TheReports;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -80,7 +79,7 @@ public class InternalItems {
         if (TableSizeForSections <= 1) {
 
             SectionsForms AddSections = new SectionsForms();
-            AddSections.addSectionsToTheForm();
+            AddSections.addSections();
         }
         By ExternalItemsLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl02_lbtnItems");
 
@@ -93,7 +92,7 @@ public class InternalItems {
         if (ExternalItemsTableSize <= 1) {
 
             ExternalItems AddExternalItems = new ExternalItems();
-            AddExternalItems.addExternalItems();
+            AddExternalItems.addExI();
         }
 
         By InternalItemsLocator = By.id("ctl00_PlaceHolderMain_gvItems_ctl02_lbtnInternalItems");

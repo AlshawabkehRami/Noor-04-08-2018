@@ -86,7 +86,7 @@ public class ExternalItems {
             if (TableSectionSizeForCheck <= 1) {
 
                 SectionsForms AddSection = new SectionsForms();
-                AddSection.addSectionsToTheForm();
+                AddSection.addSections();
                 List SectionsTableList = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[1]/div[2]/div/div/table[1]/tbody/tr/td[1]"));
                 int SectionsTableListSize = SectionsTableList.size();
 

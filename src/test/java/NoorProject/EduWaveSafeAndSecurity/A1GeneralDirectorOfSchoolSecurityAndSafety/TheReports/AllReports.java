@@ -38,7 +38,7 @@ public class AllReports {
     //التقارير_تقارير المدارس
     //توزيع الطلاب على الفصول
     @Test
-    public void ViewDistributeStudentsToClassesReport() throws InterruptedException {
+    public void viewDistributeStudentsToClassesReport() throws InterruptedException {
 
         browserQA.manage().window().maximize();
         browserQA.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
@@ -121,7 +121,7 @@ public class AllReports {
     //التقارير_تقارير المباني والصيانة
     //بيانات المباني
     @Test
-    public void BuildingInformationReport() throws InterruptedException {
+    public void buildingInformationReport() throws InterruptedException {
 
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
@@ -175,7 +175,7 @@ public class AllReports {
     //    //التقارير_تقارير الامن والسلامة المدرسية
     //الأمن والسلامة-نسب الإدخال على مستوى الوزارة
     @Test
-    public void SecurityAndSafety_InputRatioReport() throws InterruptedException {
+    public void securityAndSafety_InputRatioReport() throws InterruptedException {
 
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
@@ -238,7 +238,7 @@ public class AllReports {
     //التقارير_تقارير الامن والسلامة المدرسية
     //الأمن والسلامة-نسب التقييم على مستوى الوزارة
     @Test
-    public void SecurityAndSafety_AssessmentRateReport() throws InterruptedException {
+    public void assessmentRateReport() throws InterruptedException {
 
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
@@ -300,7 +300,7 @@ public class AllReports {
     //
 //بيانات المدرسة
     @Test
-    public void InfoSchoolReport() throws InterruptedException {
+    public void infoSchoolReport() throws InterruptedException {
 
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
@@ -371,7 +371,7 @@ public class AllReports {
     //
 //بيانات المدرسة مع المراحل التعليمية
     @Test
-    public void SchoolDataWithEducationalStagesReport() throws InterruptedException {
+    public void schoolDataWithEducationalStagesReport() throws InterruptedException {
 
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
@@ -424,7 +424,7 @@ public class AllReports {
     //
 //بيانات المستخدمين بالمدارس
     @Test
-    public void UserDataInTheSchoolsReports() throws InterruptedException {
+    public void userDataInTheSchoolsReports() throws InterruptedException {
 
 
         Thread.sleep(1000);
@@ -466,7 +466,7 @@ public class AllReports {
 
 
     @Test
-    public void StudentsWithOwnershipOfTheSchoolBuildingReport() throws InterruptedException {
+    public void studentsWithOwnershipOfTheSchoolBuildingReport() throws InterruptedException {
 
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
