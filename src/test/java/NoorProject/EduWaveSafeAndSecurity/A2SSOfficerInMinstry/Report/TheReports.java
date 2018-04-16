@@ -129,7 +129,7 @@ public class TheReports {
     //التقارير_تقارير المدارس
     //توزيع الطلاب على الفصول
     @Test
-    public void distributeStudentsToClasses() {
+    public void distributeStudentsToClasses() throws InterruptedException {
 
         browserQA.manage().window().maximize();
         browserQA.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
@@ -162,16 +162,10 @@ public class TheReports {
         actions.moveToElement(ddlDistrictSearchLocatorElement).sendKeys("الحد الغربي", Keys.ENTER).perform();
 
 
-        try {
-            WebElement ddlStudylevelLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlStudylevelLocatorSTC));
-            ddlStudylevelLocatorWait.click();
-            browserQA.findElement(ddlStudylevelSearchLocatorSTC).sendKeys("الثانوية", Keys.ENTER);
-        } catch (Exception e) {
-
-            WebElement ddlStudylevelLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlStudylevelLocatorSTC));
-            ddlStudylevelLocatorWait.click();
-            browserQA.findElement(ddlStudylevelSearchLocatorSTC).sendKeys("الثانوية", Keys.ENTER);
-        }
+        Thread.sleep(1000);
+        WebElement ddlStudylevelLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlStudylevelLocatorSTC));
+        ddlStudylevelLocatorWait.click();
+        browserQA.findElement(ddlStudylevelSearchLocatorSTC).sendKeys("الثانوية", Keys.ENTER);
 
 
         try {
