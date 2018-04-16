@@ -65,13 +65,10 @@ public class AllReports {
         browserQA.findElement(ddlLearningGenderSearchLocatorDSTC).sendKeys("بنين", Keys.ENTER);
 
 
-        try {
-            WebElement ddlDistrictLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlDistrictLocatorDSTC));
-            ddlDistrictLocatorWait.click();
-        } catch (Exception e) {
-            WebElement ddlDistrictLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlDistrictLocatorDSTC));
-            ddlDistrictLocatorWait.click();
-        }
+        Thread.sleep(1000);
+        WebElement ddlDistrictLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlDistrictLocatorDSTC));
+        ddlDistrictLocatorWait.click();
+
 
         WebElement ddlDistrictSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlDistrictSearchLocatorDSTC));
         ddlDistrictSearchLocatorWait.sendKeys("الحد الغربي", Keys.ENTER);
@@ -499,7 +496,8 @@ public class AllReports {
             ddlDistrictLocatorWait.click();
         }
 
-        browserQA.findElement(DDLDistrictSearchLocatorSWOSB).sendKeys("عمان", Keys.ENTER);
+        WebElement DDLDistrictSearchLocatorSWOSBWait=waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLDistrictSearchLocatorSWOSB));
+        DDLDistrictSearchLocatorSWOSBWait.sendKeys("عمان", Keys.ENTER);
 
         Thread.sleep(2000);
 
