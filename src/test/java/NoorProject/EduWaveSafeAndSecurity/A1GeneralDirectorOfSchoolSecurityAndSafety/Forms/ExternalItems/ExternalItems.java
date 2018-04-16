@@ -616,13 +616,13 @@ public class ExternalItems {
 
 
     public void deleteExternalItems() throws InterruptedException, IOException {
+
         browserQA.manage().window().maximize();
         browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
-
 
         WebElement FormStatusLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusLocator));
         FormStatusLocatorWait.click();
@@ -634,53 +634,163 @@ public class ExternalItems {
         WebElement SerachButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachButtonLocator));
         SerachButtonLocatorWait.click();
 
-
         WebElement SectionsLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionsLinkLocator));
         SectionsLinkLocatorWait.click();
 
-        WebElement ExternalItemsLinkviewWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ExternalItemsLinkviewLocator));
-        ExternalItemsLinkviewWait.click();
+        List SectionTableListDelet = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[1]/div[2]/div/div/table[1]/tbody/tr/td[1]"));
 
-        By DeleteExternalItemsLocator = By.id("ctl00_PlaceHolderMain_gvItems_ctl02_lbtnDelete");
-        By YesConfrmationLocator = By.id("ctl00_ibtnYes");
+        int TableSizeForSections = SectionTableListDelet.size();
 
-        WebElement DeleteExternalItemsLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteExternalItemsLocator));
-        DeleteExternalItemsLocatorWait.click();
+        if (TableSizeForSections <= 1) {
 
-        WebElement YesConfrmationLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(YesConfrmationLocator));
-        YesConfrmationLocatorWait.click();
+            By SectionDescLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl03_tbAddFormSectionDesc");
+            WebElement SectionDescLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionDescLocator));
+            SectionDescLocatorWait.sendKeys("Test");
 
-        By MessageLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+            By AddLinkLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl03_lbtnAddFormSectionDesc");
+            WebElement AddLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddLinkLocator));
+            AddLinkLocatorWait.click();
 
-        WebElement MessageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(MessageLocator));
+            By ExternalLinkLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl02_lbtnItems");
+            WebElement ExternalLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ExternalLinkLocator));
+            ExternalLinkLocatorWait.click();
 
-        String ActualResult = browserQA.findElement(MessageLocator).getText();
-        String ExcpectedReeult = "تم حذف البند بنجاح.";
-        if (ActualResult.equals("لا يمكن الحذف لان هناك بند داخلي مرتبط به.")) {
+            By ExternalDescLocator = By.id("ctl00_PlaceHolderMain_gvItems_ctl03_tbAddFormItemDesc");
+            WebElement ExternalDescLocatorWasit = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ExternalDescLocator));
+            ExternalDescLocatorWasit.sendKeys("Test");
 
-            System.out.println("لا يمكن الحذف لان هناك بند داخلي مرتبط به.");
+            By AddExternaLink = By.id("ctl00_PlaceHolderMain_gvItems_ctl03_lbtnAddFormItemDesc");
+            WebElement AddExternaLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddExternaLink));
+            AddExternaLinkWait.click();
+
+
+            By DeleteLink = By.id("ctl00_PlaceHolderMain_gvItems_ctl02_lbtnDelete");
+
+            Thread.sleep(1000);
+
+            WebElement DeleteLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteLink));
+            DeleteLinkWait.click();
+
+            By yes = By.id("ctl00_ibtnYes");
+            WebElement yesWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(yes));
+            yesWait.click();
+
+            By DeleteMessage = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+            WebElement DeleteMessageWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteMessage));
+
+            String DeleteActualREsult = browserQA.findElement(DeleteMessage).getText();
+            String DeleteExcprctedResult = "تم حذف البند بنجاح.";
+
+            if (DeleteActualREsult.equals("تم حذف البند بنجاح.")) {
+
+                System.out.println("تم حذف البند بنجاح.");
+
+            }
+            if (DeleteActualREsult.equals("لا يمكن الحذف لان هناك بند داخلي مرتبط به.")) {
+                System.out.println("لا يمكن الحذف لان هناك بند داخلي مرتبط به.");
+
+
+            }
+
+            if (DeleteActualREsult.equals("لا يمكن حذف البند  الخارجي لارتباطه بمحددات ادخال.")) {
+                System.out.println("لا يمكن حذف البند  الخارجي لارتباطه بمحددات ادخال.");
+            } else {
+                Assert.assertEquals(DeleteActualREsult , DeleteExcprctedResult , "حدث خلل ");
+            }
+        } else {
+
+
+            By ExternalLinkLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl02_lbtnItems");
+            WebElement ExternalLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ExternalLinkLocator));
+            ExternalLinkLocatorWait.click();
+
+            List ExternalList = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[1]/div[2]/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr/td[1]"));
+            int ExternalListSize = ExternalList.size();
+
+            if (ExternalListSize <= 1) {
+
+                By ExternalDescLocator = By.id("ctl00_PlaceHolderMain_gvItems_ctl03_tbAddFormItemDesc");
+                WebElement ExternalDescLocatorWasit = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ExternalDescLocator));
+                ExternalDescLocatorWasit.sendKeys("Test");
+
+                By AddExternaLink = By.id("ctl00_PlaceHolderMain_gvItems_ctl03_lbtnAddFormItemDesc");
+                WebElement AddExternaLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddExternaLink));
+                AddExternaLinkWait.click();
+
+                By DeleteLink = By.id("ctl00_PlaceHolderMain_gvItems_ctl02_lbtnDelete");
+
+                Thread.sleep(1000);
+
+                WebElement DeleteLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteLink));
+                DeleteLinkWait.click();
+
+                By yes = By.id("ctl00_ibtnYes");
+                WebElement yesWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(yes));
+                yesWait.click();
+
+                By DeleteMessage = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+                WebElement DeleteMessageWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteMessage));
+
+                String DeleteActualREsult = browserQA.findElement(DeleteMessage).getText();
+                String DeleteExcprctedResult = "تم حذف البند بنجاح.";
+
+                if (DeleteActualREsult.equals("تم حذف البند بنجاح.")) {
+
+                    System.out.println("تم حذف البند بنجاح.");
+
+                }
+                if (DeleteActualREsult.equals("لا يمكن الحذف لان هناك بند داخلي مرتبط به.")) {
+                    System.out.println("لا يمكن الحذف لان هناك بند داخلي مرتبط به.");
+
+
+                }
+
+                if (DeleteActualREsult.equals("لا يمكن حذف البند  الخارجي لارتباطه بمحددات ادخال.")) {
+                    System.out.println("لا يمكن حذف البند  الخارجي لارتباطه بمحددات ادخال.");
+                } else {
+                    Assert.assertEquals(DeleteActualREsult , DeleteExcprctedResult , "حدث خلل ");
+                }
+
+
+            } else {
+                By DeleteLink = By.id("ctl00_PlaceHolderMain_gvItems_ctl02_lbtnDelete");
+
+                Thread.sleep(1000);
+
+                WebElement DeleteLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteLink));
+                DeleteLinkWait.click();
+
+                By yes = By.id("ctl00_ibtnYes");
+                WebElement yesWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(yes));
+                yesWait.click();
+
+                By DeleteMessage = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+                WebElement DeleteMessageWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteMessage));
+
+                String DeleteActualREsult = browserQA.findElement(DeleteMessage).getText();
+                String DeleteExcprctedResult = "تم حذف البند بنجاح.";
+
+                if (DeleteActualREsult.equals("تم حذف البند بنجاح.")) {
+
+                    System.out.println("تم حذف البند بنجاح.");
+
+                }
+                if (DeleteActualREsult.equals("لا يمكن الحذف لان هناك بند داخلي مرتبط به.")) {
+                    System.out.println("لا يمكن الحذف لان هناك بند داخلي مرتبط به.");
+
+
+                }
+
+                if (DeleteActualREsult.equals("لا يمكن حذف البند  الخارجي لارتباطه بمحددات ادخال.")) {
+                    System.out.println("لا يمكن حذف البند  الخارجي لارتباطه بمحددات ادخال.");
+                } else {
+                    Assert.assertEquals(DeleteActualREsult , DeleteExcprctedResult , "حدث خلل ");
+                }
+
+
+            }
 
         }
-        if (ActualResult.equals(ExcpectedReeult)) {
-
-            System.out.println("تمت عملية الحذف بنجاح");
-        }
-
-
-        if (!ActualResult.equals("لا يمكن الحذف لان هناك بند داخلي مرتبط به.") || !ActualResult.equals(ExcpectedReeult)) {
-
-
-            TakesScreenshot Ts = (TakesScreenshot) browserQA;
-            File Src = Ts.getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(Src , new File("src/test/resc/TakeScreenShot/DeleteExternal.png"));
-
-
-            System.out.println("حدث خلل في عملية الحذف");
-            System.out.println(ActualResult);
-
-        }
-
-
     }
 
 
