@@ -29,7 +29,7 @@ public class VisitsTypes {
 
     public void switchProfileUserAdmin() {
         browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
+        browserQA.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
 
         WebElement SwitchProfileLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SwitchProfileLocator));
         SwitchProfileLocatorWait.click();
@@ -45,10 +45,11 @@ public class VisitsTypes {
 
     @Test
 //اضافة انواع الزيارات/مدير عام الامن والسلامة المدرسية
-    public void addVisitsTypes() {
+    public void addVisitsTypes() throws InterruptedException {
 
         browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
+        browserQA.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+        Thread.sleep(500);
         WebElement SettingsMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SettingsMenuLoactor));
         SettingsMenuLoactorWait.click();
 
@@ -65,7 +66,7 @@ public class VisitsTypes {
 
 
             int TableSizeAdd = VisitsTypesTableListAdd.size() + 2;
-            String TableSizeAddFormat1 = String.format("%02d" , TableSizeAdd);
+            String TableSizeAddFormat1 = String.format("%02d", TableSizeAdd);
 
             By VisitsTypesDescLocator = By.id("ctl00_PlaceHolderMain_gvVisitType_ctl" + TableSizeAddFormat1 + "_tbVisitTypeDesc");
 
@@ -85,14 +86,14 @@ public class VisitsTypes {
             String ActualResult = browserQA.findElement(MeassageAddLocator1).getText();
             String ExpectedResult = "تمت عملية الحفظ بنجاح.";
 
-            Assert.assertEquals(ActualResult , ExpectedResult , "لم تتم اضافة الزيارة بنجاح");
+            Assert.assertEquals(ActualResult, ExpectedResult, "لم تتم اضافة الزيارة بنجاح");
 
         }
 
         if (TableSzie >= 2 && TableSzie < 22) {
 
             int TableSizeAdd = VisitsTypesTableListAdd.size() + 1;
-            String TableSizeAddFormat2 = String.format("%02d" , TableSizeAdd);
+            String TableSizeAddFormat2 = String.format("%02d", TableSizeAdd);
 
             By VisitsTypesDescLocator = By.id("ctl00_PlaceHolderMain_gvVisitType_ctl" + TableSizeAddFormat2 + "_tbVisitTypeDesc");
 
@@ -114,7 +115,7 @@ public class VisitsTypes {
             String ActualResult = browserQA.findElement(MeassageAddLocator2).getText();
             String ExpectedResult = "تمت عملية الحفظ بنجاح.";
 
-            Assert.assertEquals(ActualResult , ExpectedResult , "لم تتم اضافة الزيارة بنجاح");
+            Assert.assertEquals(ActualResult, ExpectedResult, "لم تتم اضافة الزيارة بنجاح");
 
         }
 
@@ -122,7 +123,7 @@ public class VisitsTypes {
 
 
             int TableSizeAdd = VisitsTypesTableListAdd.size();
-            String TableSizeAddFormat3 = String.format("%02d" , TableSizeAdd);
+            String TableSizeAddFormat3 = String.format("%02d", TableSizeAdd);
 
             By VisitsTypesDescLocator = By.id("ctl00_PlaceHolderMain_gvVisitType_ctl" + TableSizeAddFormat3 + "_tbVisitTypeDesc");
 
@@ -144,7 +145,7 @@ public class VisitsTypes {
             String ActualResult = browserQA.findElement(MeassageAddLocator3).getText();
             String ExpectedResult = "تمت عملية الحفظ بنجاح.";
 
-            Assert.assertEquals(ActualResult , ExpectedResult , "لم تتم اضافة الزيارة بنجاح");
+            Assert.assertEquals(ActualResult, ExpectedResult, "لم تتم اضافة الزيارة بنجاح");
 
 
         }
@@ -159,10 +160,10 @@ public class VisitsTypes {
     @Test
 //تعديل انواع الزيارات/مدير عام الامن والسلامة المدرسية
 
-    public void editVisitsTypes() {
+    public void editVisitsTypes() throws InterruptedException {
         browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
-
+        browserQA.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+        Thread.sleep(500);
         WebElement SettingsMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SettingsMenuLoactor));
         SettingsMenuLoactorWait.click();
 
@@ -201,7 +202,7 @@ public class VisitsTypes {
             String ActualResult = browserQA.findElement(MessageLocator).getText();
             String ExpectedResult = "تمت عملية التعديل بنجاح.";
 
-            Assert.assertEquals(ActualResult , ExpectedResult , "لم تتم عملية التعديل بنجاح");
+            Assert.assertEquals(ActualResult, ExpectedResult, "لم تتم عملية التعديل بنجاح");
 
 
         } else {
@@ -226,7 +227,7 @@ public class VisitsTypes {
             String ActualResult = browserQA.findElement(MessageLocator).getText();
             String ExpectedResult = "تمت عملية التعديل بنجاح.";
 
-            Assert.assertEquals(ActualResult , ExpectedResult , "لم تتم عملية التعديل بنجاح");
+            Assert.assertEquals(ActualResult, ExpectedResult, "لم تتم عملية التعديل بنجاح");
         }
 
 
@@ -238,11 +239,11 @@ public class VisitsTypes {
 
     @Test
 
-    public void deleteVisitsTypes() {
+    public void deleteVisitsTypes() throws InterruptedException {
         browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
+        browserQA.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
 
-
+        Thread.sleep(500);
         WebElement SettingsMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SettingsMenuLoactor));
         SettingsMenuLoactorWait.click();
 
@@ -272,7 +273,7 @@ public class VisitsTypes {
             String ActualResult = browserQA.findElement(MessageLocatorDelete).getText();
             String ExpectedResult = "تمت عملية الحذف بنجاح";
 
-            Assert.assertEquals(ActualResult , ExpectedResult , "لم تتم عملية الحذف بنجاح");
+            Assert.assertEquals(ActualResult, ExpectedResult, "لم تتم عملية الحذف بنجاح");
 
 
         } else {

@@ -311,6 +311,7 @@ public class SafetyForms {
 
         By UpadteMessageLOcator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
 
+        Thread.sleep(1000);
         WebElement UpadteMessageLOcatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UpadteMessageLOcator));
 
         String ActualResult = browserQA.findElement(UpadteMessageLOcator).getText();
