@@ -59,7 +59,7 @@ public class SafetyForms {
         browserQA.manage().window().maximize();
         browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
-
+        System.out.println();
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
         List FormsTableList = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[3]/div[2]/div/div/table[1]/tbody/tr/td[1]"));
@@ -358,13 +358,13 @@ public class SafetyForms {
         WebElement YesButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(YesButtonLocator));
         YesButtonLocatorWait.click();
 
-        By MessageResult=By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
-        WebElement MessageResultWait=waitQA.until(ExpectedConditions.visibilityOfElementLocated(MessageResult));
+        By MessageResult = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+        WebElement MessageResultWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(MessageResult));
 
-        String ActualResult=browserQA.findElement(MessageResult).getText();
-        String ExcpectedResultaa="تم حذف النموذج بنجاح.";
+        String ActualResult = browserQA.findElement(MessageResult).getText();
+        String ExcpectedResultaa = "تم حذف النموذج بنجاح.";
 
-        Assert.assertEquals(ActualResult,ExcpectedResultaa,"لم تتم عملية الحذف بنجاح");
+        Assert.assertEquals(ActualResult , ExcpectedResultaa , "لم تتم عملية الحذف بنجاح");
 
 
     }
