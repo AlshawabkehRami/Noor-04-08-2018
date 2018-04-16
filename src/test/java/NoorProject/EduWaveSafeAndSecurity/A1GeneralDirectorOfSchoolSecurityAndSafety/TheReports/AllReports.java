@@ -319,14 +319,10 @@ public class AllReports {
         WebElement txt_male_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLGenderSearchLocatorSR));
         txt_male_wait.sendKeys("بنين", Keys.ENTER);
 
-        try {
-            WebElement drop_down_managements_LocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLDistrictLocatorSR));
-            drop_down_managements_LocatorWait.click();
-        } catch (Exception e) {
-            WebElement drop_down_managements_LocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLDistrictLocatorSR));
-            drop_down_managements_LocatorWait.click();
+        Thread.sleep(1000);
+        WebElement drop_down_managements_LocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLDistrictLocatorSR));
+        drop_down_managements_LocatorWait.click();
 
-        }
 
         WebElement txt_drop_down_managements_LocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDLDistrictSearchLocatorSR));
         txt_drop_down_managements_LocatorWait.sendKeys("الحد الغربي", Keys.ENTER);
