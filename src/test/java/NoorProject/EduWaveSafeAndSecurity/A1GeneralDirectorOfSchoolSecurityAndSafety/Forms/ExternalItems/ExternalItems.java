@@ -560,54 +560,151 @@ public class ExternalItems {
 
         browserQA.manage().window().maximize();
         browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
-
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
-
-
         WebElement FormStatusLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusLocator));
         FormStatusLocatorWait.click();
-
         WebElement FormStatusSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusSearchLocator));
         FormStatusSearchLocatorWait.sendKeys("غير منشور" , Keys.ENTER);
-
         Thread.sleep(1000);
         WebElement SerachButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachButtonLocator));
         SerachButtonLocatorWait.click();
-
-
         WebElement SectionsLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionsLinkLocator));
         SectionsLinkLocatorWait.click();
+        List SectionTableListDelet = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[1]/div[2]/div/div/table[1]/tbody/tr/td[1]"));
 
-        WebElement ExternalItemsLinkviewWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ExternalItemsLinkviewLocator));
-        ExternalItemsLinkviewWait.click();
+        int TableSizeForSections = SectionTableListDelet.size();
 
+        if (TableSizeForSections <= 1) {
 
-        WebElement EditExternalItemsLinkLocatoreWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(EditExternalItemsLinkLocatore));
-        EditExternalItemsLinkLocatoreWait.click();
+            By SectionDescLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl03_tbAddFormSectionDesc");
+            WebElement SectionDescLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionDescLocator));
+            SectionDescLocatorWait.sendKeys("Test");
+            By AddLinkLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl03_lbtnAddFormSectionDesc");
+            WebElement AddLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddLinkLocator));
+            AddLinkLocatorWait.click();
+            By ExternalLinkLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl02_lbtnItems");
+            WebElement ExternalLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ExternalLinkLocator));
+            ExternalLinkLocatorWait.click();
 
-        By SectionDescLoactor = By.id("ctl00_PlaceHolderMain_gvItems_ctl02_tbFormItemDesc");
-        Random Rand = new Random();
-        int RandomNumber = Rand.nextInt(1000000);
+            By ExternalDescLocator = By.id("ctl00_PlaceHolderMain_gvItems_ctl03_tbAddFormItemDesc");
+            WebElement ExternalDescLocatorWasit = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ExternalDescLocator));
+            ExternalDescLocatorWasit.sendKeys("Test");
 
-        WebElement SectionDescLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionDescLoactor));
-        SectionDescLoactorWait.clear();
-        SectionDescLoactorWait.sendKeys("Rami" + RandomNumber);
-
-        WebElement UpdateExternalItemsLinkLocatoreWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UpdateExternalItemsLinkLocatore));
-        UpdateExternalItemsLinkLocatoreWait.click();
-
-
-        By MessgaeLocator = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
-
-        WebElement MessgaeLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(MessgaeLocator));
-
-        String ActualResult = browserQA.findElement(MessgaeLocator).getText();
-        String ExcpectedResult = "تم تعديل البند الخارجي بنجاح.";
-
-        Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم عملية التعديل بنجاح");
+            By AddExternaLink = By.id("ctl00_PlaceHolderMain_gvItems_ctl03_lbtnAddFormItemDesc");
+            WebElement AddExternaLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddExternaLink));
+            AddExternaLinkWait.click();
 
 
+            By EditLink = By.id("ctl00_PlaceHolderMain_gvItems_ctl02_lbtnEdit");
+            Thread.sleep(1000);
+
+            WebElement EditLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(EditLink));
+            EditLinkWait.click();
+
+
+            By UpdateLink = By.id("ctl00_PlaceHolderMain_gvItems_ctl02_lbtnUpdate");
+            WebElement UpdateLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UpdateLink));
+            UpdateLinkWait.click();
+
+
+            By EditMessage = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+            WebElement EditMessageWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(EditMessage));
+
+            String EditActualREsult = browserQA.findElement(EditMessage).getText();
+            String EditExcprctedResult = "تم تعديل البند الخارجي بنجاح.";
+
+            if (EditActualREsult.equals("تم تعديل البند الخارجي بنجاح.")) {
+
+                System.out.println("تم تعديل البند الخارجي بنجاح.");
+
+            } else {
+                Assert.assertEquals(EditActualREsult , EditExcprctedResult , "حدث خلل ");
+            }
+        } else {
+
+
+            By ExternalLinkLocator = By.id("ctl00_PlaceHolderMain_gvSections_ctl02_lbtnItems");
+            WebElement ExternalLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ExternalLinkLocator));
+            ExternalLinkLocatorWait.click();
+
+            List ExternalList = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[1]/div[2]/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr/td[1]"));
+            int ExternalListSize = ExternalList.size();
+
+            if (ExternalListSize <= 1) {
+
+                By ExternalDescLocator = By.id("ctl00_PlaceHolderMain_gvItems_ctl03_tbAddFormItemDesc");
+                WebElement ExternalDescLocatorWasit = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ExternalDescLocator));
+                ExternalDescLocatorWasit.sendKeys("Test");
+
+                By AddExternaLink = By.id("ctl00_PlaceHolderMain_gvItems_ctl03_lbtnAddFormItemDesc");
+                WebElement AddExternaLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddExternaLink));
+                AddExternaLinkWait.click();
+
+
+                Thread.sleep(1000);
+
+                By EditLink = By.id("ctl00_PlaceHolderMain_gvItems_ctl02_lbtnEdit");
+                Thread.sleep(1000);
+
+                WebElement EditLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(EditLink));
+                EditLinkWait.click();
+
+
+                By UpdateLink = By.id("ctl00_PlaceHolderMain_gvItems_ctl02_lbtnUpdate");
+                WebElement UpdateLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UpdateLink));
+                UpdateLinkWait.click();
+
+
+                By EditMessage = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+                WebElement EditMessageWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(EditMessage));
+
+                String EditActualREsult = browserQA.findElement(EditMessage).getText();
+                String EditExcprctedResult = "تم تعديل البند الخارجي بنجاح.";
+
+                if (EditActualREsult.equals("تم تعديل البند الخارجي بنجاح.")) {
+
+                    System.out.println("تم تعديل البند الخارجي بنجاح.");
+
+                } else {
+                    Assert.assertEquals(EditActualREsult , EditExcprctedResult , "حدث خلل ");
+                }
+
+
+            } else {
+
+                Thread.sleep(1000);
+
+                By EditLink = By.id("ctl00_PlaceHolderMain_gvItems_ctl02_lbtnEdit");
+                Thread.sleep(1000);
+
+                WebElement EditLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(EditLink));
+                EditLinkWait.click();
+
+
+                By UpdateLink = By.id("ctl00_PlaceHolderMain_gvItems_ctl02_lbtnUpdate");
+                WebElement UpdateLinkWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UpdateLink));
+                UpdateLinkWait.click();
+
+
+                By EditMessage = By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
+                WebElement EditMessageWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(EditMessage));
+
+                String EditActualREsult = browserQA.findElement(EditMessage).getText();
+                String EditExcprctedResult = "تم تعديل البند الخارجي بنجاح.";
+
+                if (EditActualREsult.equals("تم تعديل البند الخارجي بنجاح.")) {
+
+                    System.out.println("تم تعديل البند الخارجي بنجاح.");
+
+                } else {
+                    Assert.assertEquals(EditActualREsult , EditExcprctedResult , "حدث خلل ");
+                }
+
+
+            }
+
+        }
     }
 
 
