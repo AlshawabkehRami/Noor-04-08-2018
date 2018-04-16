@@ -7,35 +7,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 
-<suite name="مدير مدرسة">
-
-    <test name="التقارير لمدرسة ثانوية">
-        <classes>
-            <class name="NoorProject.Other.NoorLogin">
-                <methods>
-                    <include name="schoolAdminsecondary"/>
-                </methods>
-            </class>
-            <class name="NoorProject.SchoolAdmin.Reports.Reports">
-                <methods>
-                    <include name="loginAndSwitch"/>
-                    <include name="healthRegistry"/>
-<!--
-                    <include name="userTypesPermissions"/>
--->
-<!--
-                    <include name="myPrivilege"/>
--->
+<suite name="AllTestCase">
 
 
-                </methods>
-            </class>
-<!--
-            <class name="NoorProject.Other.NoorLogOut"/>
--->
+    <suite-files>
+        <suite-file path="QA/SafetyAndSecurity/A1GeneralDirectorOfSchoolSecurityAndSafety/AllTestSuit.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/A2SSOfficerInMinstry/AllTestSuit.xml"/>
 
-        </classes>
-    </test>
-
+    </suite-files>
 
 </suite>
