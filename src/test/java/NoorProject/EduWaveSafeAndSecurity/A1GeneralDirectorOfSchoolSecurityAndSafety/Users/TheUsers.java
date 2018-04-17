@@ -119,6 +119,7 @@ public class TheUsers {
         WebElement IbtnCheckIdentificationIDLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(IbtnCheckIdentificationIDLocator));
         IbtnCheckIdentificationIDLocatorWait.click();
 
+        Thread.sleep(1000);
         WebElement DDlNationalityLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DDlNationalityLocator));
         DDlNationalityLocatorWait.click();
 
