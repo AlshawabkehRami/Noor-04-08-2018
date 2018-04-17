@@ -31,7 +31,7 @@ public class ExternalItems {
     public void switchProfile() {
 
         browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
         WebElement SwitchProfileLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SwitchProfileLocator));
         SwitchProfileLocatorWait.click();
@@ -48,7 +48,7 @@ public class ExternalItems {
     public void addExI() throws InterruptedException {
 
         browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
         SafetyForms AddForm = new SafetyForms();
         AddForm.addSafetyForms();
@@ -61,7 +61,7 @@ public class ExternalItems {
         FormStatusLocatorWait.click();
 
         WebElement FormStatusSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusSearchLocator));
-        FormStatusSearchLocatorWait.sendKeys("غير منشور", Keys.ENTER);
+        FormStatusSearchLocatorWait.sendKeys("غير منشور" , Keys.ENTER);
 
         Thread.sleep(1000);
         WebElement SerachButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachButtonLocator));
@@ -98,7 +98,7 @@ public class ExternalItems {
 
                 if (TableSize <= 1) {
                     int TableSizeAdd = ExternalItemsTableList.size() + 2;
-                    String TableSizeAddFormat = String.format("%02d", TableSizeAdd);
+                    String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
                     System.out.println("TableSizeAdd::" + TableSizeAdd);
                     System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
 
@@ -122,7 +122,7 @@ public class ExternalItems {
                     String ActualResult = browserQA.findElement(MeesageResultLocator).getText();
                     String ExcpectedResult = "تم إضافة البند الخارجي بنجاح.";
 
-                    Assert.assertEquals(ActualResult, ExcpectedResult, "لم تتم إضافة البند  الخارجي بنجاح.");
+                    Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم إضافة البند  الخارجي بنجاح.");
 
 
                 }
@@ -130,7 +130,7 @@ public class ExternalItems {
                 if (TableSize >= 2 && TableSize < 22) {
 
                     int TableSizeAdd = ExternalItemsTableList.size() + 1;
-                    String TableSizeAddFormat = String.format("%02d", TableSizeAdd);
+                    String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
                     System.out.println("TableSizeAdd::" + TableSizeAdd);
                     System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
 
@@ -154,13 +154,13 @@ public class ExternalItems {
                     String ActualResult = browserQA.findElement(MeesageResultLocator2).getText();
                     String ExcpectedResult = "تم إضافة البند الخارجي بنجاح.";
 
-                    Assert.assertEquals(ActualResult, ExcpectedResult, "لم تتم إضافة البند  الخارجي بنجاح.");
+                    Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم إضافة البند  الخارجي بنجاح.");
 
 
                 }
                 if (TableSize >= 22) {
                     int TableSizeAdd = ExternalItemsTableList.size();
-                    String TableSizeAddFormat = String.format("%02d", TableSizeAdd);
+                    String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
                     System.out.println("TableSizeAdd::" + TableSizeAdd);
                     System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
 
@@ -184,7 +184,7 @@ public class ExternalItems {
                     String ActualResult = browserQA.findElement(MeesageResultLocator3).getText();
                     String ExcpectedResult = "تم إضافة البند الخارجي بنجاح.";
 
-                    Assert.assertEquals(ActualResult, ExcpectedResult, "لم تتم إضافة البند  الخارجي بنجاح.");
+                    Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم إضافة البند  الخارجي بنجاح.");
                 }
 
 
@@ -202,7 +202,7 @@ public class ExternalItems {
 
                 if (TableSize <= 1) {
                     int TableSizeAdd = ExternalItemsTableList.size() + 2;
-                    String TableSizeAddFormat = String.format("%02d", TableSizeAdd);
+                    String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
                     System.out.println("TableSizeAdd::" + TableSizeAdd);
                     System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
 
@@ -226,7 +226,7 @@ public class ExternalItems {
                     String ActualResult = browserQA.findElement(MeesageResultLocator).getText();
                     String ExcpectedResult = "تم إضافة البند الخارجي بنجاح.";
 
-                    Assert.assertEquals(ActualResult, ExcpectedResult, "لم تتم إضافة البند  الخارجي بنجاح.");
+                    Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم إضافة البند  الخارجي بنجاح.");
 
 
                 }
@@ -234,7 +234,7 @@ public class ExternalItems {
                 if (TableSize >= 2 && TableSize < 22) {
 
                     int TableSizeAdd = ExternalItemsTableList.size() + 1;
-                    String TableSizeAddFormat = String.format("%02d", TableSizeAdd);
+                    String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
                     System.out.println("TableSizeAdd::" + TableSizeAdd);
                     System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
 
@@ -258,13 +258,13 @@ public class ExternalItems {
                     String ActualResult = browserQA.findElement(MeesageResultLocator2).getText();
                     String ExcpectedResult = "تم إضافة البند الخارجي بنجاح.";
 
-                    Assert.assertEquals(ActualResult, ExcpectedResult, "لم تتم إضافة البند  الخارجي بنجاح.");
+                    Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم إضافة البند  الخارجي بنجاح.");
 
 
                 }
                 if (TableSize >= 22) {
                     int TableSizeAdd = ExternalItemsTableList.size();
-                    String TableSizeAddFormat = String.format("%02d", TableSizeAdd);
+                    String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
                     System.out.println("TableSizeAdd::" + TableSizeAdd);
                     System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
 
@@ -288,7 +288,7 @@ public class ExternalItems {
                     String ActualResult = browserQA.findElement(MeesageResultLocator3).getText();
                     String ExcpectedResult = "تم إضافة البند الخارجي بنجاح.";
 
-                    Assert.assertEquals(ActualResult, ExcpectedResult, "لم تتم إضافة البند  الخارجي بنجاح.");
+                    Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم إضافة البند  الخارجي بنجاح.");
                 }
             }
         } else {
@@ -311,7 +311,7 @@ public class ExternalItems {
 
                 if (TableSize <= 1) {
                     int TableSizeAdd = ExternalItemsTableList.size() + 2;
-                    String TableSizeAddFormat = String.format("%02d", TableSizeAdd);
+                    String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
                     System.out.println("TableSizeAdd::" + TableSizeAdd);
                     System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
 
@@ -335,7 +335,7 @@ public class ExternalItems {
                     String ActualResult = browserQA.findElement(MeesageResultLocator).getText();
                     String ExcpectedResult = "تم إضافة البند الخارجي بنجاح.";
 
-                    Assert.assertEquals(ActualResult, ExcpectedResult, "لم تتم إضافة البند  الخارجي بنجاح.");
+                    Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم إضافة البند  الخارجي بنجاح.");
 
 
                 }
@@ -343,7 +343,7 @@ public class ExternalItems {
                 if (TableSize >= 2 && TableSize < 22) {
 
                     int TableSizeAdd = ExternalItemsTableList.size() + 1;
-                    String TableSizeAddFormat = String.format("%02d", TableSizeAdd);
+                    String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
                     System.out.println("TableSizeAdd::" + TableSizeAdd);
                     System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
 
@@ -367,13 +367,13 @@ public class ExternalItems {
                     String ActualResult = browserQA.findElement(MeesageResultLocator2).getText();
                     String ExcpectedResult = "تم إضافة البند الخارجي بنجاح.";
 
-                    Assert.assertEquals(ActualResult, ExcpectedResult, "لم تتم إضافة البند  الخارجي بنجاح.");
+                    Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم إضافة البند  الخارجي بنجاح.");
 
 
                 }
                 if (TableSize >= 22) {
                     int TableSizeAdd = ExternalItemsTableList.size();
-                    String TableSizeAddFormat = String.format("%02d", TableSizeAdd);
+                    String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
                     System.out.println("TableSizeAdd::" + TableSizeAdd);
                     System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
 
@@ -397,7 +397,7 @@ public class ExternalItems {
                     String ActualResult = browserQA.findElement(MeesageResultLocator3).getText();
                     String ExcpectedResult = "تم إضافة البند الخارجي بنجاح.";
 
-                    Assert.assertEquals(ActualResult, ExcpectedResult, "لم تتم إضافة البند  الخارجي بنجاح.");
+                    Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم إضافة البند  الخارجي بنجاح.");
                 }
 
 
@@ -415,7 +415,7 @@ public class ExternalItems {
 
                 if (TableSize <= 1) {
                     int TableSizeAdd = ExternalItemsTableList.size() + 2;
-                    String TableSizeAddFormat = String.format("%02d", TableSizeAdd);
+                    String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
                     System.out.println("TableSizeAdd::" + TableSizeAdd);
                     System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
 
@@ -439,7 +439,7 @@ public class ExternalItems {
                     String ActualResult = browserQA.findElement(MeesageResultLocator).getText();
                     String ExcpectedResult = "تم إضافة البند الخارجي بنجاح.";
 
-                    Assert.assertEquals(ActualResult, ExcpectedResult, "لم تتم إضافة البند  الخارجي بنجاح.");
+                    Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم إضافة البند  الخارجي بنجاح.");
 
 
                 }
@@ -447,7 +447,7 @@ public class ExternalItems {
                 if (TableSize >= 2 && TableSize < 22) {
 
                     int TableSizeAdd = ExternalItemsTableList.size() + 1;
-                    String TableSizeAddFormat = String.format("%02d", TableSizeAdd);
+                    String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
                     System.out.println("TableSizeAdd::" + TableSizeAdd);
                     System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
 
@@ -471,13 +471,13 @@ public class ExternalItems {
                     String ActualResult = browserQA.findElement(MeesageResultLocator2).getText();
                     String ExcpectedResult = "تم إضافة البند الخارجي بنجاح.";
 
-                    Assert.assertEquals(ActualResult, ExcpectedResult, "لم تتم إضافة البند  الخارجي بنجاح.");
+                    Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم إضافة البند  الخارجي بنجاح.");
 
 
                 }
                 if (TableSize >= 22) {
                     int TableSizeAdd = ExternalItemsTableList.size();
-                    String TableSizeAddFormat = String.format("%02d", TableSizeAdd);
+                    String TableSizeAddFormat = String.format("%02d" , TableSizeAdd);
                     System.out.println("TableSizeAdd::" + TableSizeAdd);
                     System.out.println("TableSizeAddFormat::" + TableSizeAddFormat);
 
@@ -501,7 +501,7 @@ public class ExternalItems {
                     String ActualResult = browserQA.findElement(MeesageResultLocator3).getText();
                     String ExcpectedResult = "تم إضافة البند الخارجي بنجاح.";
 
-                    Assert.assertEquals(ActualResult, ExcpectedResult, "لم تتم إضافة البند  الخارجي بنجاح.");
+                    Assert.assertEquals(ActualResult , ExcpectedResult , "لم تتم إضافة البند  الخارجي بنجاح.");
                 }
             }
         }
@@ -517,7 +517,7 @@ public class ExternalItems {
     public void viewExI() throws InterruptedException {
 
         browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
@@ -526,7 +526,7 @@ public class ExternalItems {
         FormStatusLocatorWait.click();
 
         WebElement FormStatusSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusSearchLocator));
-        FormStatusSearchLocatorWait.sendKeys("غير منشور", Keys.ENTER);
+        FormStatusSearchLocatorWait.sendKeys("غير منشور" , Keys.ENTER);
 
         Thread.sleep(1000);
 
@@ -557,13 +557,13 @@ public class ExternalItems {
     public void editExI() throws InterruptedException {
 
         browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
         WebElement FormStatusLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusLocator));
         FormStatusLocatorWait.click();
         WebElement FormStatusSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusSearchLocator));
-        FormStatusSearchLocatorWait.sendKeys("غير منشور", Keys.ENTER);
+        FormStatusSearchLocatorWait.sendKeys("غير منشور" , Keys.ENTER);
         Thread.sleep(1000);
         WebElement SerachButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachButtonLocator));
         SerachButtonLocatorWait.click();
@@ -617,7 +617,7 @@ public class ExternalItems {
                 System.out.println("تم تعديل البند الخارجي بنجاح.");
 
             } else {
-                Assert.assertEquals(EditActualREsult, EditExcprctedResult, "حدث خلل ");
+                Assert.assertEquals(EditActualREsult , EditExcprctedResult , "حدث خلل ");
             }
         } else {
 
@@ -665,7 +665,7 @@ public class ExternalItems {
                     System.out.println("تم تعديل البند الخارجي بنجاح.");
 
                 } else {
-                    Assert.assertEquals(EditActualREsult, EditExcprctedResult, "حدث خلل ");
+                    Assert.assertEquals(EditActualREsult , EditExcprctedResult , "حدث خلل ");
                 }
 
 
@@ -696,7 +696,7 @@ public class ExternalItems {
                     System.out.println("تم تعديل البند الخارجي بنجاح.");
 
                 } else {
-                    Assert.assertEquals(EditActualREsult, EditExcprctedResult, "حدث خلل ");
+                    Assert.assertEquals(EditActualREsult , EditExcprctedResult , "حدث خلل ");
                 }
 
 
@@ -713,7 +713,7 @@ public class ExternalItems {
     public void deleteExI() throws InterruptedException, IOException {
 
         browserQA.manage().window().maximize();
-        browserQA.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+        browserQA.manage().timeouts().pageLoadTimeout(5 , TimeUnit.SECONDS);
 
 
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
@@ -723,7 +723,7 @@ public class ExternalItems {
         FormStatusLocatorWait.click();
 
         WebElement FormStatusSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusSearchLocator));
-        FormStatusSearchLocatorWait.sendKeys("غير منشور", Keys.ENTER);
+        FormStatusSearchLocatorWait.sendKeys("غير منشور" , Keys.ENTER);
 
         Thread.sleep(1000);
         WebElement SerachButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachButtonLocator));
@@ -790,7 +790,7 @@ public class ExternalItems {
             if (DeleteActualREsult.equals("لا يمكن حذف البند  الخارجي لارتباطه بمحددات ادخال.")) {
                 System.out.println("لا يمكن حذف البند  الخارجي لارتباطه بمحددات ادخال.");
             } else {
-                Assert.assertEquals(DeleteActualREsult, DeleteExcprctedResult, "حدث خلل ");
+                Assert.assertEquals(DeleteActualREsult , DeleteExcprctedResult , "حدث خلل ");
             }
         } else {
 
@@ -843,7 +843,7 @@ public class ExternalItems {
                 if (DeleteActualREsult.equals("لا يمكن حذف البند  الخارجي لارتباطه بمحددات ادخال.")) {
                     System.out.println("لا يمكن حذف البند  الخارجي لارتباطه بمحددات ادخال.");
                 } else {
-                    Assert.assertEquals(DeleteActualREsult, DeleteExcprctedResult, "حدث خلل ");
+                    Assert.assertEquals(DeleteActualREsult , DeleteExcprctedResult , "حدث خلل ");
                 }
 
 
@@ -865,21 +865,20 @@ public class ExternalItems {
                 String DeleteActualREsult = browserQA.findElement(DeleteMessage).getText();
                 String DeleteExcprctedResult = "تم حذف البند بنجاح.";
 
+
                 if (DeleteActualREsult.equals("تم حذف البند بنجاح.")) {
 
                     System.out.println("تم حذف البند بنجاح.");
 
-                }
-                if (DeleteActualREsult.equals("لا يمكن الحذف لان هناك بند داخلي مرتبط به.")) {
+                } else if (DeleteActualREsult.equals("لا يمكن الحذف لان هناك بند داخلي مرتبط به.")) {
+
                     System.out.println("لا يمكن الحذف لان هناك بند داخلي مرتبط به.");
 
 
-                }
-
-                if (DeleteActualREsult.equals("لا يمكن حذف البند  الخارجي لارتباطه بمحددات ادخال.")) {
+                } else if (DeleteActualREsult.equals("لا يمكن حذف البند  الخارجي لارتباطه بمحددات ادخال.")) {
                     System.out.println("لا يمكن حذف البند  الخارجي لارتباطه بمحددات ادخال.");
-                }
-                if (!DeleteActualREsult.equals(DeleteExcprctedResult)) {
+                } else {
+
                     Assert.fail();
                 }
 
