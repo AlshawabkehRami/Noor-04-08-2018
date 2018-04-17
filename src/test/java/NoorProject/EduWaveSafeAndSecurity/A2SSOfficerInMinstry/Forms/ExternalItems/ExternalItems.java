@@ -880,14 +880,11 @@ public class ExternalItems {
 
                     System.out.println("تم حذف البند بنجاح.");
 
-                }
-                if (DeleteActualREsult.equals("لا يمكن الحذف لان هناك بند داخلي مرتبط به.")) {
+                } else if (DeleteActualREsult.equals("لا يمكن الحذف لان هناك بند داخلي مرتبط به.")) {
                     System.out.println("لا يمكن الحذف لان هناك بند داخلي مرتبط به.");
 
 
-                }
-
-                if (DeleteActualREsult.equals("لا يمكن حذف البند  الخارجي لارتباطه بمحددات ادخال.")) {
+                } else if (DeleteActualREsult.equals("لا يمكن حذف البند  الخارجي لارتباطه بمحددات ادخال.")) {
                     System.out.println("لا يمكن حذف البند  الخارجي لارتباطه بمحددات ادخال.");
                 } else {
                     Assert.assertEquals(DeleteActualREsult , DeleteExcprctedResult , "حدث خلل ");
