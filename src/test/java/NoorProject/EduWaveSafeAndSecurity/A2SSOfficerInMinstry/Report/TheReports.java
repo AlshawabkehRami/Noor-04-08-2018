@@ -381,6 +381,7 @@ public class TheReports {
     public void inputRatio() throws InterruptedException {
 
 
+        Thread.sleep(1000);
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
         ReportsMainMenuLocatorWait.click();
 
@@ -520,14 +521,10 @@ public class TheReports {
         ddlDistrictLocatorWait.click();
 
         browserQA.findElement(ddlDistrictSearchLocatorSWO).sendKeys("ادارة تعليم الحد الغربي(بنين)", Keys.ENTER);
-        Thread.sleep(1000);
-        try {
-            WebElement ddlSupervisionCenteLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlSupervisionCenteLocatorSWO));
-            ddlSupervisionCenteLocatorWait.click();
-        } catch (Exception e) {
-            WebElement ddlSupervisionCenteLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlSupervisionCenteLocatorSWO));
-            ddlSupervisionCenteLocatorWait.click();
-        }
+        Thread.sleep(2000);
+
+        WebElement ddlSupervisionCenteLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlSupervisionCenteLocatorSWO));
+        ddlSupervisionCenteLocatorWait.click();
 
         browserQA.findElement(ddlSupervisionCenteSearchLocatorSWO).sendKeys("مكتب الخالدية الشمالية", Keys.ENTER);
 
@@ -564,12 +561,12 @@ public class TheReports {
     @Test
     public void userDataInTheSchools() throws InterruptedException {
 
+        Thread.sleep(1000);
 
         WebElement ReportsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportsMainMenuLocator));
         ReportsMainMenuLocatorWait.click();
 
         browserQA.findElement(SerachLoactor).click();
-
         WebElement reports_LocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(TheReportNameLocatorUDS));
         reports_LocatorWait.click();
 

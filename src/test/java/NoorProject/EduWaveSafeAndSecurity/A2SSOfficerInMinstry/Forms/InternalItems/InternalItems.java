@@ -475,7 +475,7 @@ public class InternalItems {
         FormStatusLocatorWait.click();
         WebElement FormStatusSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormStatusSearchLocator));
         FormStatusSearchLocatorWait.sendKeys("غير منشور" , Keys.ENTER);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         WebElement SerachButtonLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachButtonLocator));
         SerachButtonLocatorWait.click();
         WebElement SectionsLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SectionsLinkLocator));
