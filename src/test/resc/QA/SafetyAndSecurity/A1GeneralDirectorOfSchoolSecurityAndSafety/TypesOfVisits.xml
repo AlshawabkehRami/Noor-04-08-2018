@@ -26,7 +26,7 @@
                     <include name="switchProfile"/>
                     <include name="addVisitsTypes"/>
                     <include name="editVisitsTypes"/>
-                    <include name="deleteVisitsTypes"/>
+                  <include name="deleteVisitsTypes"/>
                 </methods>
             </class>
             <class name="NoorProject.Other.NoorLogOut"/>

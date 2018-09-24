@@ -51,10 +51,12 @@ public class VisitsTypes {
         browserQA.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
         Thread.sleep(500);
         WebElement SettingsMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SettingsMenuLoactor));
+        Thread.sleep(1000);
         SettingsMenuLoactorWait.click();
 
 
         WebElement VisitsTypesLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(VisitsTypesLocator));
+        Thread.sleep(1000);
         VisitsTypesLocatorWait.click();
 
         List VisitsTypesTableListAdd = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[1]/div[2]/div/div/table[1]/tbody/tr/td[1]"));
